@@ -1,0 +1,82 @@
+FindAFrameInterpolation License
+Version 2.0, 2026
+
+Copyright (c) 2026 Marco Aurelio Fattizzo (eVersor-HN). All rights reserved.
+
+This is a proprietary license. The Software is NOT open source. Source code is
+not provided or licensed under this document.
+
+
+1. Grant of Rights
+
+   Subject to the conditions below, permission is hereby granted, free of charge,
+   to any person or organization obtaining a copy of this software in binary form
+   and its accompanying documentation and data files (the "Software"), to:
+
+   (a) install and use the Software for any purpose, including commercial use; and
+   (b) reproduce and redistribute verbatim, unmodified copies of the Software,
+       free of charge, provided every copy keeps the notices required by Section 4.
+
+
+2. No Sale of the Software
+
+   You may NOT sell the Software, license it for a fee, rent, lease, or otherwise
+   charge any price or fee for the Software itself -- whether distributed alone or
+   as the primary component of a larger product or bundle. The Software, and any
+   product whose principal value is the Software, must be distributed free of
+   charge.
+
+   This restriction concerns the Software itself only. You MAY charge for genuinely
+   separate and independent goods or services (for example: support, consulting,
+   integration, or hosting), provided that what you charge for is not, in substance,
+   the Software.
+
+
+3. No Modification, No Reverse Engineering
+
+   You may NOT modify, adapt, translate, or create derivative works of the Software,
+   and you may NOT decompile, disassemble, or otherwise reverse engineer it, or
+   attempt to derive its source code.
+
+   EXCEPTION -- bundled third-party components: This restriction applies only to the
+   parts of the Software authored by the copyright holder. The third-party components
+   listed in THIRD_PARTY_LICENSES are governed by their own licenses, which may grant
+   you broader rights. In particular, the FFmpeg libraries are licensed under the GNU
+   LGPL v2.1 and are shipped as separate, dynamically linked DLLs: as that license
+   requires, you may replace those DLLs with your own compatible versions and may
+   reverse engineer the Software to the limited extent necessary to debug and use
+   such replacements. Nothing in this Section removes or restricts any right granted
+   to you by the license of a bundled third-party component.
+
+
+4. Attribution and Notices
+
+   The above copyright notice, this license, and the accompanying
+   THIRD_PARTY_LICENSES file (together with any third-party license texts it
+   references) shall be included with all copies or redistributions of the Software.
+
+
+5. Third-Party Components
+
+   This Software incorporates third-party libraries (and may load a separately
+   obtained neural-network model) that are licensed by their respective authors
+   (see THIRD_PARTY_LICENSES). Those components remain governed by their own
+   licenses; nothing in this license removes or restricts any rights or obligations
+   you have under them.
+
+
+6. Termination
+
+   Any breach of Sections 2 or 3 automatically terminates the rights granted to you
+   under this license. The third-party components' own licenses are unaffected by
+   such termination.
+
+
+7. Disclaimer
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+   FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+   COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+   AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+   WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
