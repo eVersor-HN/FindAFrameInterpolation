@@ -35,10 +35,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.0 — `FAFI-Setup.exe`:**
+**v1.1 — `FAFI-Setup.exe`:**
 
 ```
-dade8e3b2f35b7bfac592352b3a1fc5320eeced253d0580bd7dd24d27e936ac4
+337a9f2d761f55b68028558ef3f73bafe30114ea0ce6222054a5341167a120d2
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -61,8 +61,9 @@ The printed hash must match the value above (case-insensitive). If it does **not
   estimation + occlusion-aware synthesis, runs on any modern GPU) and **RIFE** (neural
   intermediate-flow via ncnn-Vulkan; optional, needs a separately obtained model).
 - **Hardware decode** (D3D11VA / NVDEC), zero-copy NV12 → RGBA on the GPU.
-- **Smooth network streaming** — pick a source quality; for YouTube and similar, FAFI can
-  buffer the clip locally first so playback never stutters from server throttling.
+- **Smooth network streaming** — pick a source quality; short clips can be buffered locally
+  first for stutter-free playback, while long videos and live streams start instantly and play
+  as they load (with automatic reconnect on drop-outs).
 - **Upscaling** — Lanczos-3 with halo-free adaptive sharpening; optional internal 4K target.
 - **Image filters** (brightness/contrast/saturation/sharpness/temperature, presets) and a
   **10-band equalizer** with presets.
