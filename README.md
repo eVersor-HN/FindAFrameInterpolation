@@ -1,9 +1,9 @@
 # FindAFrameInterpolation (FAFI)
 
-**FAFI** is a Windows video player with **real-time motion interpolation**. It decodes on
-the GPU (Direct3D 11 / D3D11VA hardware decode, zero-copy) and interpolates source frames
-up to your monitor's refresh rate — so 24 / 30 / 60 fps material plays back smooth — using
-either a fast block-based engine (**MEMC**) or a neural engine (**RIFE**, optional).
+**FAFI** is a Windows video player with **real-time motion interpolation**. It decodes on the
+GPU (Direct3D 11 / D3D11VA hardware decode, zero-copy) and interpolates source frames up to your
+monitor's refresh rate — so 24 / 30 / 60 fps material plays back smooth — using either a fast
+block-based engine (**MEMC**) or a neural engine (**RIFE**, optional).
 
 > **Closed-source, proprietary application.** Free to use (including commercially) and to
 > share verbatim — **not for sale, not modifiable, no reverse-engineering.**
@@ -57,23 +57,31 @@ The printed hash must match the value above (case-insensitive). If it does **not
 
 ## Features
 
-- **Two interpolation engines, switchable live** — **MEMC** (D3D11 compute-shader motion
-  estimation + occlusion-aware synthesis, runs on any modern GPU) and **RIFE** (neural
+- **Two interpolation engines, switchable live (`E`)** — **MEMC** (Direct3D 11 compute-shader
+  motion estimation + occlusion-aware synthesis; runs on any modern GPU) and **RIFE** (neural
   intermediate-flow via ncnn-Vulkan; optional, needs a separately obtained model).
 - **Hardware decode** (D3D11VA / NVDEC), zero-copy NV12 → RGBA on the GPU.
-- **Smooth network streaming** — pick a source quality; short clips can be buffered locally
-  first for stutter-free playback, while long videos and live streams start instantly and play
-  as they load (with automatic reconnect on drop-outs).
-- **Upscaling** — Lanczos-3 with halo-free adaptive sharpening; optional internal 4K target.
-- **Image filters** (brightness/contrast/saturation/sharpness/temperature, presets) and a
-  **10-band equalizer** with presets.
-- **Audio** — WASAPI master clock, device-loss recovery, multi-track, A/V offset, 5.1/7.1.
-- **Subtitles** — external `.srt` and `.ass`/`.ssa` (full styling via libass) plus embedded
-  text tracks, on a sharp separate layer (never interpolated).
-- **Offline export** — render the presented image (interpolation + filters + upscale) to a
-  file via an external `ffmpeg`.
-- **UI** — slim auto-hiding seekbar and a themed right-click menu holding every control,
-  plus an **About** dialog (author, repository, authenticity hint).
+- **Plays virtually any format** — the bundled FFmpeg carries every native decoder (H.264, HEVC,
+  VP8/VP9, AV1, MPEG-1/2/4, VC-1, WMV, ProRes, DNxHD, Theora, MJPEG, …) across all common
+  containers (MP4, MKV, WebM, AVI, MOV, TS, FLV, …).
+- **Smooth network streaming** — platform pages (YouTube, Vimeo, …) resolve via **yt-dlp**; a
+  network video **downloads while it plays** (full quality with local-file smoothness), live
+  streams start instantly, and drop-outs reconnect automatically. A bundled JavaScript runtime
+  keeps YouTube working even without Node/Deno installed.
+- **Upscaling** — Lanczos-3 with halo-free adaptive sharpening when the output is larger than the
+  source (`L`); optional internal 4K render target (`K`).
+- **Image filters** (brightness / contrast / saturation / sharpness / colour temperature, presets
+  `C`) and a **10-band graphic equalizer** with presets (`Q`).
+- **Audio** — WASAPI output as the master clock, device-loss recovery, multi-track selection, A/V
+  offset, correct 5.1 / 7.1 speaker mapping.
+- **Subtitles** — external `.srt` and `.ass`/`.ssa` (full styling via libass) plus embedded text
+  tracks, on a sharp separate layer that is **never interpolated**.
+- **Repeat** — off, repeat the current video, or repeat the whole folder playlist (`R`).
+- **Offline export** — render the *presented* image (interpolation + filters + upscale) to a file
+  via an external `ffmpeg` (`X`).
+- **UI** — a slim auto-hiding seekbar and a themed **right-click menu** holding every control; the
+  title bar and controls fade away together when idle, and fullscreen (`F11`) is truly borderless.
+  **About** dialog with author, repository and authenticity hint.
 
 ## System requirements
 
