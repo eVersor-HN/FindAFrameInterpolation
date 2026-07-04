@@ -102,7 +102,8 @@ FAFI is **proprietary, closed-source** software under the **FindAFrameInterpolat
   otherwise (the LGPL FFmpeg DLLs stay replaceable; see below).
 
 It bundles third-party components under their own licenses — **FFmpeg** (LGPL-2.1, dynamically
-linked, replaceable DLLs), **ncnn** (BSD-3) and the **rife-ncnn-vulkan** warp layer (MIT).
+linked, replaceable DLLs), **ncnn** (BSD-3), the **rife-ncnn-vulkan** warp layer (MIT) and a
+bundled **QuickJS** (quickjs-ng) JavaScript runtime (MIT, used by yt-dlp).
 Full details and texts: [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md).
 
 No warranty — see [`DISCLAIMER.md`](DISCLAIMER.md).
