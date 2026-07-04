@@ -35,10 +35,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.1 — `FAFI-Setup.exe`:**
+**v1.2 — `FAFI-Setup.exe`:**
 
 ```
-337a9f2d761f55b68028558ef3f73bafe30114ea0ce6222054a5341167a120d2
+6490b127d32d39c20e7989e3633d7d6de7bb8a09d879fbb067db1f720f30c15c
 ```
 
 The authoritative value for each release is in that release's notes and in its
