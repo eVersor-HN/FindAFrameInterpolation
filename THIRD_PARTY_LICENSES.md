@@ -123,3 +123,39 @@ DEALINGS IN THE SOFTWARE.
 - Optional runtime tool used to resolve platform URLs (e.g. YouTube) to a stream URL.
 - Invoked as an external process if present on `PATH`; **not bundled** with FAFI.
 - yt-dlp is released into the public domain (Unlicense). Source: https://github.com/yt-dlp/yt-dlp
+
+---
+
+## QuickJS (quickjs-ng) — bundled JavaScript runtime (`qjs.exe`)
+- **License:** MIT.
+- **Bundling:** shipped as a standalone `qjs.exe` next to the player. It is used only as yt-dlp's
+  JavaScript runtime (to solve YouTube's "n" signature) on machines that have neither Node.js nor
+  Deno installed. FAFI does not link against it; it is launched by yt-dlp as an external process.
+- **Source / build:** https://github.com/quickjs-ng/quickjs (release v0.15.1, `qjs-windows-x86_64.exe`).
+
+```
+The MIT License (MIT)
+
+Copyright (c) 2017-2026 Fabrice Bellard
+Copyright (c) 2017-2024 Charlie Gordon
+Copyright (c) 2023-2026 Ben Noordhuis
+Copyright (c) 2023-2026 Saúl Ibarra Corretgé
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
