@@ -95,14 +95,19 @@ carry their own terms (possibly non-commercial), so FAFI does not redistribute t
 the model is a one-time, two-minute step:
 
 1. Download a release of the **rife-ncnn-vulkan** project (the ncnn-format models are inside
-   the release zip): https://github.com/nihui/rife-ncnn-vulkan/releases
+   the release zip): https://github.com/nihui/rife-ncnn-vulkan/releases — or grab the
+   **mirrored, unmodified copy of that zip** attached to the FAFI release page (MIT-licensed;
+   its `LICENSE` file is inside the archive).
 2. Open the zip and copy the **`rife-v4.6`** folder (it contains `flownet.param` and
-   `flownet.bin`) into a `models` folder next to the installed player:
+   `flownet.bin`) into the player's `models` folder. Easiest way: in FAFI,
+   **right-click → Interpolation → Open models folder** — it opens the right place
+   (the installer pre-creates it with a README), so it reads:
    ```
-   %LOCALAPPDATA%\Programs\FAFI-Player\models\rife-v4.6\flownet.param
-   %LOCALAPPDATA%\Programs\FAFI-Player\models\rife-v4.6\flownet.bin
+   ...\FAFI-Player\models\rife-v4.6\flownet.param
+   ...\FAFI-Player\models\rife-v4.6\flownet.bin
    ```
-3. Start FAFI and press **`E`** (or use *right-click → Engine*) to switch MEMC ↔ RIFE.
+3. Press **`E`** (or *right-click → Interpolation → Engine*) — FAFI picks the model up
+   on the fly, **no restart needed**, and switches over as soon as it is loaded.
 
 Without the model FAFI simply keeps using the default MEMC engine. Other RIFE model variants
 work too, as long as the folder holds `flownet.param`/`flownet.bin` — put them under
