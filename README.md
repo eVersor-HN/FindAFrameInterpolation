@@ -58,10 +58,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.5.6 — `FAFI-Setup.exe`:**
+**v1.5.7 — `FAFI-Setup.exe`:**
 
 ```
-0729597bf099141fba5575080343f53439ea868f6a330aa15fd93621c9830c16
+679c658247c2e1b72d4929ee509f2a18d8f44ce664068607b5b73f6e7d0f091b
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -96,6 +96,9 @@ The printed hash must match the value above (case-insensitive). If it does **not
   source (`L`); optional internal 4K render target (`K`).
 - **Image filters** (brightness / contrast / saturation / sharpness / colour temperature, presets
   `C`) and a **10-band graphic equalizer** with presets (`Q`).
+- **Display filters** — optional retro screen emulation over the picture: **CRT** (scanlines +
+  phosphor shadow mask), **curved CRT** (tube curvature + vignette), **Trinitron** (aperture
+  grille) and **LCD / TFT** (subpixel grid). Right-click → *Picture → Display filter*.
 - **Audio** — WASAPI output as the master clock, device-loss recovery, multi-track selection, A/V
   offset, correct 5.1 / 7.1 speaker mapping.
 - **Subtitles** — external `.srt` and `.ass`/`.ssa` (full styling via libass) plus embedded text
