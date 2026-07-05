@@ -26,9 +26,11 @@ is about.
   that ever happens is the one **you** explicitly trigger — opening a stream URL (resolved
   and fetched via yt-dlp on your machine) or its subtitles. Play local files and FAFI is
   100% offline.
-- Transparency note: when you open a YouTube URL, yt-dlp may use your own browser's cookies
-  **locally** to get past YouTube's bot check — they go to YouTube only, nowhere else, and
-  never leave your machine otherwise.
+- Transparency note: when you open a YouTube URL, FAFI keeps its own YouTube session
+  **locally** in `%LOCALAPPDATA%\FAFI\cookies.txt` to get past YouTube's bot check. It is
+  imported **once** from your browser's signed-in cookies (via yt-dlp) and then maintained by
+  the player itself — the cookies go to YouTube only, nowhere else, and never leave your
+  machine otherwise. Delete that file (or set `FAFI_YTDLP_BROWSER=0`) to opt out.
 
 Author / copyright: **© 2026 Marco Aurelio Fattizzo** ([@eVersor-HN](https://github.com/eVersor-HN)).
 This is the **official** distribution repository — get FAFI only from here:
@@ -56,10 +58,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.5.3 — `FAFI-Setup.exe`:**
+**v1.5.4 — `FAFI-Setup.exe`:**
 
 ```
-3b58a0d976512a2751a8667df2c5a7c52c60b791f6e58a30738d5bab3abb2096
+c0358ec046cbae9c8aadee0cb629ae3accd1e039c77cf9ba4de5de58f1391984
 ```
 
 The authoritative value for each release is in that release's notes and in its
