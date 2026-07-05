@@ -53,8 +53,11 @@ repackaged, re-hosted or otherwise altered copies obtained from any other source
 
 ## Third-party components
 
-The Software includes third-party components under their own licenses (FFmpeg/LGPL-2.1, ncnn/
-BSD-3, rife-ncnn-vulkan warp layer/MIT). See [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md).
+The Software includes third-party components under their own licenses (FFmpeg/LGPL-2.1,
+libass/ISC, FreeType/FTL, HarfBuzz/MIT, FriBidi/LGPL-2.1, ncnn/BSD-3, rife-ncnn-vulkan warp
+layer/MIT, QuickJS/MIT, plus permissively licensed support libraries — Brotli, bzip2, libpng,
+zlib). Portions of this software are copyright © The FreeType Project (www.freetype.org).
+All rights reserved. See [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md).
 Nothing in this disclaimer or the license removes or restricts any rights or obligations you
 have under those licenses.
 
