@@ -41,11 +41,11 @@ not provided or licensed under this document.
    EXCEPTION -- bundled third-party components: This restriction applies only to the
    parts of the Software authored by the copyright holder. The third-party components
    listed in THIRD_PARTY_LICENSES are governed by their own licenses, which may grant
-   you broader rights. In particular, the FFmpeg libraries are licensed under the GNU
-   LGPL v2.1 and are shipped as separate, dynamically linked DLLs: as that license
-   requires, you may replace those DLLs with your own compatible versions and may
-   reverse engineer the Software to the limited extent necessary to debug and use
-   such replacements. Nothing in this Section removes or restricts any right granted
+   you broader rights. In particular, the FFmpeg libraries and FriBidi are licensed
+   under the GNU LGPL v2.1 and are shipped as separate, dynamically linked DLLs: as
+   that license requires, you may replace those DLLs with your own compatible versions
+   and may reverse engineer the Software to the limited extent necessary to debug and
+   use such replacements. Nothing in this Section removes or restricts any right granted
    to you by the license of a bundled third-party component.
 
 

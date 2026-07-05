@@ -9,6 +9,9 @@ block-based engine (**MEMC**) or a neural engine (**RIFE**, optional).
 > share verbatim — **not for sale, not modifiable, no reverse-engineering.**
 > See [LICENSE](LICENSE) and [DISCLAIMER](DISCLAIMER.md).
 
+> 💛 **FAFI is free.** If it makes your videos smoother, you can support development with a
+> donation: **PayPal [paypal.me/FAMarco](https://paypal.me/FAMarco)** (`@FAMarco`). Thank you!
+
 Author / copyright: **© 2026 Marco Aurelio Fattizzo** ([@eVersor-HN](https://github.com/eVersor-HN)).
 This is the **official** distribution repository — get FAFI only from here:
 **https://github.com/eVersor-HN/FindAFrameInterpolation**
@@ -38,7 +41,7 @@ are shown inside the app under **right-click → About FAFI**.)
 **v1.4.1 — `FAFI-Setup.exe`:**
 
 ```
-10e479275e2c7f37ba5f860eebaee7432968c8ac667f79390cae877f71ffbde7
+3fecd5cdf2e919c72d4f0a469ffbf8f2849388a39e41ea6c998e429f425b5d35
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -99,11 +102,15 @@ FAFI is **proprietary, closed-source** software under the **FindAFrameInterpolat
 - ✅ **Share** verbatim, unmodified copies **free of charge**.
 - ❌ **No selling** the software, **no modifying / adapting**, **no reverse-engineering,
   decompiling or disassembling** — except where a bundled third-party license requires
-  otherwise (the LGPL FFmpeg DLLs stay replaceable; see below).
+  otherwise (the LGPL FFmpeg and FriBidi DLLs stay replaceable; see below).
 
 It bundles third-party components under their own licenses — **FFmpeg** (LGPL-2.1, dynamically
-linked, replaceable DLLs), **ncnn** (BSD-3), the **rife-ncnn-vulkan** warp layer (MIT) and a
-bundled **QuickJS** (quickjs-ng) JavaScript runtime (MIT, used by yt-dlp).
-Full details and texts: [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md).
+linked, replaceable DLLs), the subtitle stack **libass** (ISC) / **FreeType** (FTL) /
+**HarfBuzz** (MIT) / **FriBidi** (LGPL-2.1, replaceable DLL), **ncnn** (BSD-3), the
+**rife-ncnn-vulkan** warp layer (MIT), a bundled **QuickJS** (quickjs-ng) JavaScript runtime
+(MIT, used by yt-dlp), and permissive support libraries (Brotli, bzip2, libpng, zlib).
+Portions of this software are copyright © The FreeType Project (www.freetype.org).
+All rights reserved. Full details and texts:
+[`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md).
 
 No warranty — see [`DISCLAIMER.md`](DISCLAIMER.md).
