@@ -56,10 +56,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.5.2 — `FAFI-Setup.exe`:**
+**v1.5.3 — `FAFI-Setup.exe`:**
 
 ```
-bc86e48e4657bcae1b1e929069a350d9cbb1f1e1b13b194e9b8dc1ae80beb7e6
+3b58a0d976512a2751a8667df2c5a7c52c60b791f6e58a30738d5bab3abb2096
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -100,7 +100,8 @@ The printed hash must match the value above (case-insensitive). If it does **not
   tracks, on a sharp separate layer that is **never interpolated**.
 - **Repeat** — off, repeat the current video, or repeat the whole folder playlist (`R`).
 - **Offline export** — render the *presented* image (interpolation + filters + upscale) to a file
-  via an external `ffmpeg` (`X`).
+  via an external `ffmpeg` (`X`). The active subtitle goes along as an **own track** (with your
+  live timing correction baked in) or **burned into the image** — selectable in the File menu.
 - **UI** — a slim auto-hiding seekbar and a themed **right-click menu** holding every control; the
   title bar and controls fade away together when idle, and fullscreen (`F11`) is truly borderless.
   **About** dialog with author, repository and authenticity hint.

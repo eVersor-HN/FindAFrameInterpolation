@@ -1,2 +1,2 @@
-bc86e48e4657bcae1b1e929069a350d9cbb1f1e1b13b194e9b8dc1ae80beb7e6 *FAFI-Setup.exe
+3b58a0d976512a2751a8667df2c5a7c52c60b791f6e58a30738d5bab3abb2096 *FAFI-Setup.exe
 d8e4d772d26cd8006ef0ad0bc82eb191b53c68677d1ae2f42506d74cbbbea606 *rife-ncnn-vulkan-20221029-windows.zip
