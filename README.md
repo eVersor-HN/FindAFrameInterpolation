@@ -1,9 +1,11 @@
 # FindAFrameInterpolation (FAFI)
 
-**FAFI** is a Windows video player with **real-time motion interpolation**. It decodes on the
-GPU (Direct3D 11 / D3D11VA hardware decode, zero-copy) and interpolates source frames up to your
-monitor's refresh rate — so 24 / 30 / 60 fps material plays back smooth — using either a fast
-block-based engine (**MEMC**) or a neural engine (**RIFE**, optional).
+**FAFI** is a Windows video player with **real-time motion interpolation** — built for playing
+**your local video files**, offline, with no ads, no account and no data leaving your machine.
+It decodes on the GPU (Direct3D 11 / D3D11VA hardware decode, zero-copy) and interpolates source
+frames up to your monitor's refresh rate — so 24 / 30 / 60 fps material plays back smooth — using
+either a fast block-based engine (**MEMC**) or a neural engine (**RIFE**, optional). Network
+streaming is included as a nice extra, but the heart of FAFI is local playback.
 
 > **Closed-source, proprietary application.** Free to use (including commercially) and to
 > share verbatim — **not for sale, not modifiable, no reverse-engineering.**
@@ -11,6 +13,22 @@ block-based engine (**MEMC**) or a neural engine (**RIFE**, optional).
 
 > 💛 **FAFI is free.** If it makes your videos smoother, you can support development with a
 > donation: **PayPal [paypal.me/FAMarco](https://paypal.me/FAMarco)** (`@FAMarco`). Thank you!
+
+## Local first, private by design
+
+FAFI is built first and foremost as an **offline player for your own video files** — that is
+the core, and it works with the network cable pulled. Everything around network streaming
+(YouTube URLs, automatic subtitles) is a **convenience extra on top**, not what the player
+is about.
+
+- **No ads. No account. No subscription.** Install it, open a video, done.
+- **No telemetry, no phone-home:** FAFI sends nothing anywhere. The only network activity
+  that ever happens is the one **you** explicitly trigger — opening a stream URL (resolved
+  and fetched via yt-dlp on your machine) or its subtitles. Play local files and FAFI is
+  100% offline.
+- Transparency note: when you open a YouTube URL, yt-dlp may use your own browser's cookies
+  **locally** to get past YouTube's bot check — they go to YouTube only, nowhere else, and
+  never leave your machine otherwise.
 
 Author / copyright: **© 2026 Marco Aurelio Fattizzo** ([@eVersor-HN](https://github.com/eVersor-HN)).
 This is the **official** distribution repository — get FAFI only from here:
