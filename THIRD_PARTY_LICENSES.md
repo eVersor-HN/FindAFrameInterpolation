@@ -218,6 +218,14 @@ DEALINGS IN THE SOFTWARE.
   the upstream project.** Do not redistribute the weights through FAFI unless their
   license permits it.
 - Sources: https://github.com/hzwer/Practical-RIFE  /  https://github.com/megvii-research/ECCV2022-RIFE
+- **Optional mirror on the release page:** FAFI releases may attach the **unmodified**
+  upstream archive `rife-ncnn-vulkan-<date>-windows.zip` (from
+  https://github.com/nihui/rife-ncnn-vulkan/releases) as a separate, optional download —
+  a fallback in case the upstream page goes away. It is redistributed **as-is** under its
+  own **MIT license** (the `LICENSE` file is inside the archive, Copyright (c) 2020 nihui;
+  the converted weights originate from the MIT-licensed RIFE research project). FAFI does
+  **not** install or load it automatically — extracting a model folder into `models\`
+  remains a manual step by the user, subject to the terms above.
 
 ---
 
