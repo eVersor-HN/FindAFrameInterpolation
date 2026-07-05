@@ -62,7 +62,8 @@ The printed hash must match the value above (case-insensitive). If it does **not
 
 - **Two interpolation engines, switchable live (`E`)** — **MEMC** (Direct3D 11 compute-shader
   motion estimation + occlusion-aware synthesis; runs on any modern GPU) and **RIFE** (neural
-  intermediate-flow via ncnn-Vulkan; optional, needs a separately obtained model).
+  intermediate-flow via ncnn-Vulkan; optional, needs a separately obtained model — see
+  [Enabling the RIFE engine](#enabling-the-rife-engine-optional)).
 - **Hardware decode** (D3D11VA / NVDEC), zero-copy NV12 → RGBA on the GPU.
 - **Plays virtually any format** — the bundled FFmpeg carries every native decoder (H.264, HEVC,
   VP8/VP9, AV1, MPEG-1/2/4, VC-1, WMV, ProRes, DNxHD, Theora, MJPEG, …) across all common
@@ -85,6 +86,31 @@ The printed hash must match the value above (case-insensitive). If it does **not
 - **UI** — a slim auto-hiding seekbar and a themed **right-click menu** holding every control; the
   title bar and controls fade away together when idle, and fullscreen (`F11`) is truly borderless.
   **About** dialog with author, repository and authenticity hint.
+
+## Enabling the RIFE engine (optional)
+
+The neural **RIFE** engine needs a model (two files: `flownet.param` + `flownet.bin`) that is
+**not bundled** with FAFI — the model weights originate from the RIFE research project and may
+carry their own terms (possibly non-commercial), so FAFI does not redistribute them. Getting
+the model is a one-time, two-minute step:
+
+1. Download a release of the **rife-ncnn-vulkan** project (the ncnn-format models are inside
+   the release zip): https://github.com/nihui/rife-ncnn-vulkan/releases
+2. Open the zip and copy the **`rife-v4.6`** folder (it contains `flownet.param` and
+   `flownet.bin`) into a `models` folder next to the installed player:
+   ```
+   %LOCALAPPDATA%\Programs\FAFI-Player\models\rife-v4.6\flownet.param
+   %LOCALAPPDATA%\Programs\FAFI-Player\models\rife-v4.6\flownet.bin
+   ```
+3. Start FAFI and press **`E`** (or use *right-click → Engine*) to switch MEMC ↔ RIFE.
+
+Without the model FAFI simply keeps using the default MEMC engine. Other RIFE model variants
+work too, as long as the folder holds `flownet.param`/`flownet.bin` — put them under
+`models\<name>` and select them with the environment variable `FAFI_RIFE_MODEL=<name>`
+(faster "lite" variants are a good choice on older GPUs).
+
+> ⚠️ By downloading a model you accept the **model's own license terms** (see the upstream
+> project); using it with FAFI is your responsibility — see [`DISCLAIMER.md`](DISCLAIMER.md).
 
 ## System requirements
 
