@@ -58,10 +58,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.5.9 — `FAFI-Setup.exe`:**
+**v1.6.1 — `FAFI-Setup.exe`:**
 
 ```
-083e509924ebae0c6561efb8a86c04d2f42922c7e3429f55e0e777d1835c779f
+e562afc04a4022194297651c192ab116b24fc13526be03d669ac0913ff8ee687
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -84,21 +84,29 @@ The printed hash must match the value above (case-insensitive). If it does **not
   motion estimation + occlusion-aware synthesis; runs on any modern GPU) and **RIFE** (neural
   intermediate-flow via ncnn-Vulkan; optional, needs a separately obtained model — see
   [Enabling the RIFE engine](#enabling-the-rife-engine-optional)).
-- **Hardware decode** (D3D11VA / NVDEC), zero-copy NV12 → RGBA on the GPU.
+- **Hardware decode** (D3D11VA / NVDEC), zero-copy NV12 **and 10-bit P010** → RGBA on the GPU.
+- **HDR playback** — HDR10 / HLG sources are detected automatically and **tone-mapped to SDR**
+  (hue-preserving **Hable** filmic or **Reinhard**, selectable under *Picture → HDR tone
+  mapping*), using the stream's real mastering peak and a debanding pass for dark gradients.
+  The `F` overlay shows an `HDR→SDR` badge when active; SDR content is untouched. For network
+  streams, *Quality → Prefer HDR* optionally fetches the HDR version of a video.
 - **Plays virtually any format** — the bundled FFmpeg carries every native decoder (H.264, HEVC,
   VP8/VP9, AV1, MPEG-1/2/4, VC-1, WMV, ProRes, DNxHD, Theora, MJPEG, …) across all common
   containers (MP4, MKV, WebM, AVI, MOV, TS, FLV, …).
 - **Smooth network streaming** — platform pages (YouTube, Vimeo, …) resolve via **yt-dlp**; a
   network video **downloads while it plays** (full quality with local-file smoothness), live
-  streams start instantly, and drop-outs reconnect automatically. A bundled JavaScript runtime
-  keeps YouTube working even without Node/Deno installed.
+  streams start instantly, drop-outs reconnect automatically, and a **progress bar** shows the
+  resolve/buffer phases until playback starts. A bundled JavaScript runtime keeps YouTube
+  working even without Node/Deno installed.
 - **Upscaling** — Lanczos-3 with halo-free adaptive sharpening when the output is larger than the
   source (`L`); optional internal 4K render target (`K`).
 - **Image filters** (brightness / contrast / saturation / sharpness / colour temperature, presets
   `C`) and a **10-band graphic equalizer** with presets (`Q`).
-- **Display filters** — optional retro screen emulation over the picture: **CRT** (scanlines +
-  phosphor shadow mask), **curved CRT** (tube curvature + vignette), **Trinitron** (aperture
-  grille) and **LCD / TFT** (subpixel grid). Right-click → *Picture → Display filter*.
+- **Display filters** — ten optional retro looks over the picture: **CRT** (scanlines + phosphor
+  shadow mask), **curved CRT** (tube curvature + vignette), **Trinitron** (aperture grille),
+  **LCD / TFT** (subpixel grid), and five animated ones — **VHS Camcorder** (tape wobble, chroma
+  bleed, head-switching band), **NTSC Composite** (dot crawl), **Film 35mm** (grain, gate weave,
+  warm print), **Glitch** and **Game Boy**. Right-click → *Picture → Display filter*.
 - **A/B compare** (`V`) — a draggable before/after wipe: left half the plain original, right
   half the full FAFI treatment (interpolation + filters). See the difference live.
 - **Audio** — WASAPI output as the master clock, device-loss recovery, multi-track selection, A/V
@@ -109,9 +117,10 @@ The printed hash must match the value above (case-insensitive). If it does **not
 - **Offline export** — render the *presented* image (interpolation + filters + upscale) to a file
   via an external `ffmpeg` (`X`). The active subtitle goes along as an **own track** (with your
   live timing correction baked in) or **burned into the image** — selectable in the File menu.
-- **UI** — a slim auto-hiding seekbar and a themed **right-click menu** holding every control; the
-  title bar and controls fade away together when idle, and fullscreen (`F11`) is truly borderless.
-  **About** dialog with author, repository and authenticity hint.
+- **UI** — a slim auto-hiding seekbar and a themed **right-click menu** with every setting in
+  clean categories (Playback / Quality / Interpolation / Picture / Audio / Subtitles / View /
+  File); the title bar and controls fade away together when idle, and fullscreen (`F11`) is
+  truly borderless. **About** dialog with author, repository and authenticity hint.
 
 ## Enabling the RIFE engine (optional)
 
