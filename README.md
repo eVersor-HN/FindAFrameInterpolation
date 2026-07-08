@@ -11,8 +11,7 @@ streaming is included as a nice extra, but the heart of FAFI is local playback.
 > share verbatim — **not for sale, not modifiable, no reverse-engineering.**
 > See [LICENSE](LICENSE) and [DISCLAIMER](DISCLAIMER.md).
 
-> 💸 **PayPal: [paypal.me/FAMarco](https://paypal.me/FAMarco).** This thing runs on electricity and
-> pure spite. You cover the electricity — the spite is on the house. No reward tier; that's the joke.
+> 💸 You extracted joy and gave nothing back. History's worst people started exactly this small: **PayPal [paypal.me/FAMarco](https://paypal.me/FAMarco)**.
 
 ## Local first, private by design
 
@@ -25,7 +24,7 @@ is about.
 - **No telemetry, no phone-home:** FAFI sends nothing anywhere. The only network activity
   that ever happens is the one **you** explicitly trigger — opening a stream URL (resolved
   and fetched via yt-dlp on your machine) or its subtitles. Play local files and FAFI is
-  100% offline.
+  100% offline. *(No, really — zero. This player has no friends to phone home to.)*
 - Transparency note: when you open a YouTube URL, FAFI keeps its own YouTube session
   **locally** in `%LOCALAPPDATA%\FAFI\cookies.txt` to get past YouTube's bot check. It is
   imported **once** from your browser's signed-in cookies (via yt-dlp) and then maintained by
@@ -79,6 +78,8 @@ The printed hash must match the value above (case-insensitive). If it does **not
 ---
 
 ## Features
+
+*Built by one person, fuelled by spite and instant coffee — it shows, mostly in a good way.*
 
 - **Two interpolation engines, switchable live (`E`)** — **MEMC** (Direct3D 11 compute-shader
   motion estimation + occlusion-aware synthesis; runs on any modern GPU) and **RIFE** (neural
@@ -168,6 +169,7 @@ work too, as long as the folder holds `flownet.param`/`flownet.bin` — put them
 
 - **Windows 10 / 11 (64-bit).**
 - A **Direct3D 11** GPU. For the optional RIFE engine, a **Vulkan-capable** GPU/driver.
+- *If it won't run, that's a conversation between you and your GPU. Leave me out of it.*
 - Optional, for their respective features only: an external `ffmpeg.exe` (export) and
   `yt-dlp` (resolving platform URLs). Neither is bundled.
 
