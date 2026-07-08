@@ -11,8 +11,8 @@ streaming is included as a nice extra, but the heart of FAFI is local playback.
 > share verbatim — **not for sale, not modifiable, no reverse-engineering.**
 > See [LICENSE](LICENSE) and [DISCLAIMER](DISCLAIMER.md).
 
-> 💛 **FAFI is free.** If it makes your videos smoother, you can support development with a
-> donation: **PayPal [paypal.me/FAMarco](https://paypal.me/FAMarco)** (`@FAMarco`). Thank you!
+> 💸 **PayPal: [paypal.me/FAMarco](https://paypal.me/FAMarco).** This thing runs on electricity and
+> pure spite. You cover the electricity — the spite is on the house. No reward tier; that's the joke.
 
 ## Local first, private by design
 
@@ -100,23 +100,35 @@ The printed hash must match the value above (case-insensitive). If it does **not
   working even without Node/Deno installed.
 - **Upscaling** — Lanczos-3 with halo-free adaptive sharpening when the output is larger than the
   source (`L`); optional internal 4K render target (`K`).
-- **Image filters** (brightness / contrast / saturation / sharpness / colour temperature, presets
-  `C`) and a **10-band graphic equalizer** with presets (`Q`).
-- **Display filters** — ten optional retro looks over the picture: **CRT** (scanlines + phosphor
-  shadow mask), **curved CRT** (tube curvature + vignette), **Trinitron** (aperture grille),
-  **LCD / TFT** (subpixel grid), and five animated ones — **VHS Camcorder** (tape wobble, chroma
-  bleed, head-switching band), **NTSC Composite** (dot crawl), **Film 35mm** (grain, gate weave,
-  warm print), **Glitch** and **Game Boy**. Right-click → *Picture → Display filter*.
+- **Image filters** (brightness / contrast / saturation / sharpness / colour temperature + black
+  point, presets `C`) and a **10-band graphic equalizer** with presets (`Q`).
+- **Smart picture** — auto-tunes sharpness and colour from the content itself (resolution, line-art
+  detection, muted-colour boost), so most videos look right without touching a slider.
+- **Display filters** — a set of optional looks laid over the picture, each with an adjustable
+  strength: **CRT** (scanlines + phosphor shadow mask), **curved CRT** (tube curvature + vignette),
+  **Trinitron** (aperture grille), **LCD / TFT** (subpixel grid), animated **VHS Camcorder** (tape
+  wobble, chroma bleed, head-switching band), **NTSC Composite** (dot crawl), **Film 35mm** (grain,
+  gate weave, warm print), **Glitch**, **Game Boy**, **E-Ink**, **Technicolor** and a clean-master
+  **Blu-ray Anime** sharpen. Right-click → *Picture → Display filter* — the menu stays open so you
+  can flick through them live. Off by default (zero cost).
 - **A/B compare** (`V`) — a draggable before/after wipe: left half the plain original, right
   half the full FAFI treatment (interpolation + filters). See the difference live.
 - **Audio** — WASAPI output as the master clock, device-loss recovery, multi-track selection, A/V
-  offset, correct 5.1 / 7.1 speaker mapping.
+  offset, correct 5.1 / 7.1 speaker mapping, **Smart loudness** (transparent auto-gain + soft
+  limiter so quiet and loud sources sit at an even level), a **virtual surround** downmix for
+  headphones, and preferred-language auto-selection.
 - **Subtitles** — external `.srt` and `.ass`/`.ssa` (full styling via libass) plus embedded text
   tracks, on a sharp separate layer that is **never interpolated**.
+- **Ambient light / RGB sync** — drive **WLED** LED strips (UDP) and **OpenRGB** devices (TCP) from
+  the average on-screen colour for real-time bias lighting.
 - **Repeat** — off, repeat the current video, or repeat the whole folder playlist (`R`).
+- **Screenshot** (`F9`) — save the exact presented frame (interpolation + filters + upscale) as a BMP.
 - **Offline export** — render the *presented* image (interpolation + filters + upscale) to a file
   via an external `ffmpeg` (`X`). The active subtitle goes along as an **own track** (with your
   live timing correction baked in) or **burned into the image** — selectable in the File menu.
+- **Reset to defaults** — one menu click restores picture, filters, display filter and audio EQ to
+  their defaults (your engine, volume, languages and window preferences are kept). Every setting is
+  saved and restored across sessions.
 - **UI** — a slim auto-hiding seekbar and a themed **right-click menu** with every setting in
   clean categories (Playback / Quality / Interpolation / Picture / Audio / Subtitles / View /
   File); the title bar and controls fade away together when idle, and fullscreen (`F11`) is
