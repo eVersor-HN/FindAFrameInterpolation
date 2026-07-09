@@ -48,8 +48,10 @@ repackaged, re-hosted or otherwise altered copies obtained from any other source
   optional URL resolution uses **`yt-dlp`** — both external programs that are **not part of and
   not bundled with** the Software and are governed by their own licenses and terms. The author
   makes no representations about them.
-- The optional **RIFE** neural engine requires a model that is **not bundled**; obtaining and
-  using any such model is subject to that model's own license and is your responsibility.
+- The optional **RIFE** neural engine requires a model that is **not part of the installed app**.
+  An MIT-licensed model archive is offered as an optional, separate download on the release page
+  (see [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md)); using any model — that one or another
+  you supply — is subject to that model's own license and is your responsibility.
 
 ## Third-party components
 
