@@ -205,23 +205,22 @@ DEALINGS IN THE SOFTWARE.
 
 ---
 
-## RIFE flownet model weights (MIT; not part of the installed app)
-- The RIFE engine, when enabled, loads a `flownet` model from `models\<name>\` at runtime. A model
-  is **not** part of the installed application, and the default MEMC engine works without any model.
+## RIFE flownet model weights — MIT
 - **License: MIT.** The trained `rife-v4.x` weights come from the RIFE research project — hzwer's
   **Practical-RIFE**, whose README states the model downloads are "under the same MIT license as
   this project" (Copyright (c) 2021 hzwer), building on **ECCV2022-RIFE** (Copyright (c) Megvii
   Inc., MIT). The ncnn conversion + runtime and the `rife.Warp` layer are MIT (Copyright (c) nihui).
   Redistribution — including commercially — is therefore permitted, provided the MIT notice is kept.
+- **Bundled model:** the recommended **`rife-v4.22-lite`** weights (`flownet.param` + `flownet.bin`)
+  are **embedded in `FindAFrameInterpolation.exe`** (RCDATA) so RIFE works out of the box, offline —
+  on first use the player writes them into `models\rife-v4.22-lite\`. These are the unmodified
+  upstream weights, redistributed under the MIT license above.
+- **Other models are optional and not bundled:** you may drop any compatible `rife-v4.x` folder into
+  `models\` (the player auto-selects the best present). Get them from
+  https://github.com/nihui/rife-ncnn-vulkan (e.g. `rife-v4.6`) or
+  https://github.com/TNTwise/rife-ncnn-vulkan (newer). Verify and comply with each model's own terms.
 - Sources: https://github.com/hzwer/Practical-RIFE  /  https://github.com/megvii-research/ECCV2022-RIFE
   /  https://github.com/nihui/rife-ncnn-vulkan  /  https://github.com/TNTwise/rife-ncnn-vulkan
-- **Getting a model:** the FAFI release page attaches the **unmodified** MIT archive
-  `rife-ncnn-vulkan-<date>-windows.zip` (nihui's build; `LICENSE` inside, Copyright (c) 2020 nihui)
-  as a convenience — it contains `rife-v4.6`, so RIFE works out of the box. Newer/sharper models
-  (`rife-v4.22-lite` etc.) are **not** bundled — download them from
-  https://github.com/TNTwise/rife-ncnn-vulkan. **No model is embedded in the app itself**; the
-  player only loads folders you place in `models\` (and auto-selects the best present). If you use a
-  model from another source, verify and comply with that model's own terms.
 
 ---
 
