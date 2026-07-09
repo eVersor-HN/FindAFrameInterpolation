@@ -57,10 +57,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.6.6 — `FAFI-Setup.exe`:**
+**v1.6.7 — `FAFI-Setup.exe`:**
 
 ```
-14a01e5366257534cffe7914cc3f51d2ba1cff2cc2a839a695e1d81033782228
+d926ccbc4d915f6874654605845573f7ecff18ad207a014cb90f3fd81ece8446
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -137,37 +137,47 @@ The printed hash must match the value above (case-insensitive). If it does **not
 
 ## Enabling the RIFE engine (optional)
 
-The neural **RIFE** engine needs a model (two files: `flownet.param` + `flownet.bin`) that is
-**not bundled** with FAFI — the model weights originate from the RIFE research project and may
-carry their own terms (possibly non-commercial), so FAFI does not redistribute them. Getting
-the model is a one-time, two-minute step:
+FAFI plays fine on the default **MEMC** engine with no download. The neural **RIFE** engine is
+optional and needs a model folder (`flownet.param` + `flownet.bin`) dropped into `models\`.
 
-1. Download a **rife-ncnn-vulkan** release — the ncnn-format models are inside the Windows zip:
-   [TNTwise/rife-ncnn-vulkan](https://github.com/TNTwise/rife-ncnn-vulkan/releases) has the whole
-   `rife-v4.x` line (incl. the recommended `rife-v4.22-lite`); nihui's original has `rife-v4.6`.
-   All MIT-licensed (the `LICENSE` is inside the archive).
-2. Open the zip and copy a model folder — e.g. **`rife-v4.6`** (it contains `flownet.param` and
-   `flownet.bin`) into the player's `models` folder. Easiest way: in FAFI,
-   **right-click → Interpolation → Open models folder** — it opens the right place
-   (the installer pre-creates it with a README), so it reads:
-   ```
-   ...\FAFI-Player\models\rife-v4.6\flownet.param
-   ...\FAFI-Player\models\rife-v4.6\flownet.bin
-   ```
-3. Press **`E`** (or *right-click → Interpolation → Engine*) — FAFI picks the model up
-   on the fly, **no restart needed**, and switches over as soon as it is loaded.
+- **Fastest way (works out of the box):** the release page bundles
+  `rife-ncnn-vulkan-<date>-windows.zip` — open it, copy the **`rife-v4.6`** folder into `models\`,
+  press **`E`**. Done.
+- **For sharper motion:** grab a newer model from
+  [TNTwise/rife-ncnn-vulkan](https://github.com/TNTwise/rife-ncnn-vulkan) (the `models/` folder) —
+  e.g. the recommended **`rife-v4.22-lite`** — and drop it in the same way.
 
-Without the model FAFI simply keeps using the default MEMC engine.
+Easiest place to drop models: **right-click → Interpolation → Open models folder** (it opens the
+folder next to the player, with a `PUT-RIFE-MODEL-HERE.txt` guide). So it reads:
 
-**Which model?** The zip contains the whole `rife-v4.x` line. If several are present, FAFI
-auto-picks the best available; the measured sweet spot is **`rife-v4.22-lite`**, which fixes the
-soft "melty" warping the old `rife-v4.6` shows on fast motion — so copy that folder instead of (or
-alongside) `rife-v4.6`. Heads-up: the newer nets are *heavier*, so on older (Pascal-class) GPUs they
-run a touch slower than `v4.6` — cleaner, not faster. Force a specific one with the environment
-variable `FAFI_RIFE_MODEL=<folder name>`.
+```
+...\FAFI-Player\models\rife-v4.6\flownet.param
+...\FAFI-Player\models\rife-v4.6\flownet.bin
+```
 
-> ⚠️ By downloading a model you accept the **model's own license terms** (see the upstream
-> project); using it with FAFI is your responsibility — see [`DISCLAIMER.md`](DISCLAIMER.md).
+Press **`E`** — FAFI loads the model on the fly (no restart) and a short **"RIFE active — <model>"**
+note confirms which one is running. Without a model FAFI simply stays on MEMC.
+
+### Which model?
+Drop in **several** if you like — FAFI auto-picks the best present (order: `v4.22-lite` →
+`v4.25-lite` → `v4.26` → `v4.25` → `v4.6`, then any other `rife-v4.*`). Extra folders are ignored,
+nothing breaks. Force a specific one with `FAFI_RIFE_MODEL=<folder name>`.
+
+| Model | From | Quality | Speed¹ | Best for |
+|-------|------|---------|--------|----------|
+| **`rife-v4.6`** | bundled zip (nihui) | good; softer + more warping on fast motion | **fastest** | older/weak GPUs, max smoothness, out-of-box |
+| **`rife-v4.22-lite`** | TNTwise (link) | sharp; fixes the warping | a bit slower | **best all-round (recommended)** |
+| **`rife-v4.25-lite`** | TNTwise (link) | a touch cleaner | slower | max quality, speed no object |
+| **`rife-v4.25` / `v4.26`** | TNTwise (link) | highest | heaviest | strong RTX-class GPUs |
+
+¹ Measured on a GTX 1080 Ti @1080p. Counter-intuitively the newer nets are **heavier** (slower),
+not lighter — on Pascal-class GPUs `v4.6` stays the fastest, just a little softer. Only the
+`rife-v4.x` line works; the old `rife-v2/v3/anime/HD/UHD` folders use a different network and are
+ignored.
+
+All `rife-v4.x` model weights are **MIT-licensed** (Practical-RIFE / ECCV2022-RIFE / ncnn — see
+[`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md)); using any model is your responsibility
+(see [`DISCLAIMER.md`](DISCLAIMER.md)).
 
 ## System requirements
 
