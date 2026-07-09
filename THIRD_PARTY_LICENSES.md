@@ -370,6 +370,18 @@ jloup@gzip.org          madler@alumni.caltech.edu
 
 ---
 
+## Rajdhani — menu typeface (embedded) — SIL Open Font License 1.1
+- **License:** SIL Open Font License, Version 1.1.
+- **Bundling:** the `Rajdhani SemiBold` weight, **subset to Latin + punctuation**, is embedded as an
+  `RCDATA` resource inside `FindAFrameInterpolation.exe` and loaded at runtime (via
+  `AddFontMemResourceEx`) for the aurora-glass right-click menu. Its OFL copyright declares **no
+  Reserved Font Name**, so the subset keeps the original family name.
+- **Copyright:** Copyright (c) 2014, Indian Type Foundry (info@indiantypefoundry.com).
+- **License text:** included as `licenses/OFL-Rajdhani.txt` with binary distributions.
+- **Source:** https://github.com/google/fonts/tree/main/ofl/rajdhani
+
+---
+
 ## QuickJS (quickjs-ng) — bundled JavaScript runtime (`qjs.exe`)
 - **License:** MIT.
 - **Bundling:** shipped as a standalone `qjs.exe` next to the player. It is used only as yt-dlp's
