@@ -57,10 +57,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.6.7 — `FAFI-Setup.exe`:**
+**v1.6.8 — `FAFI-Setup.exe`:**
 
 ```
-d926ccbc4d915f6874654605845573f7ecff18ad207a014cb90f3fd81ece8446
+848c6596615a61e3e4ce2853dc67e81a8ee5c1cc28466710c5c3d3d1a6a63682
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -139,6 +139,11 @@ The printed hash must match the value above (case-insensitive). If it does **not
 
 FAFI plays fine on the default **MEMC** engine with no download. The neural **RIFE** engine is
 optional and needs a model folder (`flownet.param` + `flownet.bin`) dropped into `models\`.
+
+> **Lazy path:** just press **`E`**. With no model yet, FAFI offers to **auto-download** the
+> recommended one (~10 MB) — press `E` again to confirm, and it fetches + switches over by itself.
+> And on a fast **RTX-class GPU** FAFI **defaults to RIFE automatically** on first run (older cards
+> stay on MEMC). The manual steps below are only if you'd rather choose the model yourself.
 
 - **Fastest way (works out of the box):** the release page bundles
   `rife-ncnn-vulkan-<date>-windows.zip` — open it, copy the **`rife-v4.6`** folder into `models\`,
