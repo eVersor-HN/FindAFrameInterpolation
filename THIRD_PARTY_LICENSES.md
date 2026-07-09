@@ -205,27 +205,23 @@ DEALINGS IN THE SOFTWARE.
 
 ---
 
-## RIFE flownet model weights (NOT bundled)
-- The RIFE engine, when enabled, loads a `flownet` model (e.g. `rife-v4.6`) at runtime.
-- **These model weights are NOT distributed with FAFI** and are not part of this
-  repository. The RIFE engine is optional; the default MEMC interpolation engine works
-  without any model.
-- The trained weights originate from the RIFE project (Huang et al., "Real-Time
-  Intermediate Flow Estimation for Video Frame Interpolation"). The *training/inference
-  code* is MIT-licensed, but the *model weights* may carry separate terms (including
-  possible non-commercial or redistribution restrictions).
-- **If you choose to obtain and use a RIFE model, verify and comply with its terms with
-  the upstream project.** Do not redistribute the weights through FAFI unless their
-  license permits it.
+## RIFE flownet model weights (MIT; not part of the installed app)
+- The RIFE engine, when enabled, loads a `flownet` model from `models\<name>\` at runtime. A model
+  is **not** part of the installed application, and the default MEMC engine works without any model.
+- **License: MIT.** The trained `rife-v4.x` weights come from the RIFE research project — hzwer's
+  **Practical-RIFE**, whose README states the model downloads are "under the same MIT license as
+  this project" (Copyright (c) 2021 hzwer), building on **ECCV2022-RIFE** (Copyright (c) Megvii
+  Inc., MIT). The ncnn conversion + runtime and the `rife.Warp` layer are MIT (Copyright (c) nihui).
+  Redistribution — including commercially — is therefore permitted, provided the MIT notice is kept.
 - Sources: https://github.com/hzwer/Practical-RIFE  /  https://github.com/megvii-research/ECCV2022-RIFE
-- **Optional mirror on the release page:** FAFI releases may attach the **unmodified**
-  upstream archive `rife-ncnn-vulkan-<date>-windows.zip` (from
-  https://github.com/nihui/rife-ncnn-vulkan/releases) as a separate, optional download —
-  a fallback in case the upstream page goes away. It is redistributed **as-is** under its
-  own **MIT license** (the `LICENSE` file is inside the archive, Copyright (c) 2020 nihui;
-  the converted weights originate from the MIT-licensed RIFE research project). FAFI does
-  **not** install or load it automatically — extracting a model folder into `models\`
-  remains a manual step by the user, subject to the terms above.
+  /  https://github.com/nihui/rife-ncnn-vulkan  /  https://github.com/TNTwise/rife-ncnn-vulkan
+- **Model archive on the release page:** FAFI releases attach the **unmodified**, MIT-licensed
+  archive `rife-ncnn-vulkan-TNTwise-<date>-windows.zip` (an as-is mirror of the
+  https://github.com/TNTwise/rife-ncnn-vulkan Windows build) as a separate, optional download. It
+  bundles the ncnn `rife-v4.x` model folders; its `LICENSE` (Copyright (c) 2020 nihui) is inside the
+  archive. FAFI does **not** extract or install it for you — placing a model folder into `models\`
+  stays a manual, user-initiated step, after which FAFI auto-selects the best model present. If you
+  supply a *different* model from elsewhere, verify and comply with that model's own terms.
 
 ---
 
