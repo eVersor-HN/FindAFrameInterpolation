@@ -1,17 +1,16 @@
 # FindAFrameInterpolation (FAFI)
 
-**FAFI** is a Windows video player with **real-time motion interpolation** — built for playing
-**your local video files**, offline, with no ads, no account and no data leaving your machine.
-It decodes on the GPU (Direct3D 11 / D3D11VA hardware decode, zero-copy) and interpolates source
-frames up to your monitor's refresh rate — so 24 / 30 / 60 fps material plays back smooth — using
-either a fast block-based engine (**MEMC**) or a neural engine (**RIFE**, optional). Network
-streaming is included as a nice extra, but the heart of FAFI is local playback.
+**FAFI** turns choppy video into **liquid-smooth motion, in real time.** Aim it at **your own
+files**, hit play, and 24 / 30 / 60 fps footage flows as fast as your screen can refresh — no ads,
+no account, no telemetry, nothing leaving your machine. Two engines pull it off: **MEMC** (fast,
+always ready) and the optional neural **RIFE** (slower, but razor-clean). Web streaming rides along
+as a bonus — but the heart of FAFI is your own offline library. Runs fully on the GPU, so it stays light.
 
 > **Closed-source, proprietary application.** Free to use (including commercially) and to
 > share verbatim — **not for sale, not modifiable, no reverse-engineering.**
 > See [LICENSE](LICENSE) and [DISCLAIMER](DISCLAIMER.md).
 
-> 💸 You extracted joy and gave nothing back. History's worst people started exactly this small: **PayPal [paypal.me/FAMarco](https://paypal.me/FAMarco)**.
+> 💸 You extracted joy and gave nothing back. History's worst people started exactly this small: **PayPal [paypal.me/FAMarco](https://paypal.me/FAMarco)** · **Bitcoin** `bc1qv92c3eyeqvhgfnez7spfd7v2aytkhpshsl65yv`.
 
 ## Local first, private by design
 
