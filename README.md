@@ -57,10 +57,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.6.8 — `FAFI-Setup.exe`:**
+**v1.6.9 — `FAFI-Setup.exe`:**
 
 ```
-848c6596615a61e3e4ce2853dc67e81a8ee5c1cc28466710c5c3d3d1a6a63682
+a14db0543dfb4e3bcaaf43ad9f6344da3bb85207deeaf1f9d68bc159d0545ee0
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -83,7 +83,7 @@ The printed hash must match the value above (case-insensitive). If it does **not
 
 - **Two interpolation engines, switchable live (`E`)** — **MEMC** (Direct3D 11 compute-shader
   motion estimation + occlusion-aware synthesis; runs on any modern GPU) and **RIFE** (neural
-  intermediate-flow via ncnn-Vulkan; optional, needs a separately obtained model — see
+  intermediate-flow via ncnn-Vulkan; optional, the recommended model is **built in** — see
   [Enabling the RIFE engine](#enabling-the-rife-engine-optional)).
 - **Hardware decode** (D3D11VA / NVDEC), zero-copy NV12 **and 10-bit P010** → RGBA on the GPU.
 - **HDR playback** — HDR10 / HLG sources are detected automatically and **tone-mapped to SDR**
@@ -137,52 +137,36 @@ The printed hash must match the value above (case-insensitive). If it does **not
 
 ## Enabling the RIFE engine (optional)
 
-FAFI plays fine on the default **MEMC** engine with no download. The neural **RIFE** engine is
-optional and needs a model folder (`flownet.param` + `flownet.bin`) dropped into `models\`.
+FAFI plays on the default **MEMC** engine out of the box. The neural **RIFE** engine (higher quality
+on hard motion) is built in too — **just press `E`**. The recommended model (`rife-v4.22-lite`) is
+**embedded in the app**, so the first time you switch to RIFE it sets itself up instantly, offline —
+no download, no file juggling. A short **"RIFE active — <model>"** note confirms it's running.
 
-> **Lazy path:** just press **`E`**. With no model yet, FAFI offers to **auto-download** the
-> recommended one (~10 MB) — press `E` again to confirm, and it fetches + switches over by itself.
-> And on a fast **RTX-class GPU** FAFI **defaults to RIFE automatically** on first run (older cards
-> stay on MEMC). The manual steps below are only if you'd rather choose the model yourself.
+**It even chooses for you:** on a fast **RTX-class GPU** FAFI defaults to RIFE automatically (it's
+real-time there); on older cards it stays on MEMC. Your own `E` choice is remembered from then on.
 
-- **Fastest way (works out of the box):** the release page bundles
-  `rife-ncnn-vulkan-<date>-windows.zip` — open it, copy the **`rife-v4.6`** folder into `models\`,
-  press **`E`**. Done.
-- **For sharper motion:** grab a newer model from
-  [TNTwise/rife-ncnn-vulkan](https://github.com/TNTwise/rife-ncnn-vulkan) (the `models/` folder) —
-  e.g. the recommended **`rife-v4.22-lite`** — and drop it in the same way.
+### Want a different model?
+FAFI loads any compatible `rife-v4.x` folder you drop into `models\` and **auto-picks the best
+present** (order: `v4.22-lite` → `v4.25-lite` → `v4.26` → `v4.25` → `v4.6`, then any other
+`rife-v4.*`). Easiest place: **right-click → Interpolation → Open models folder**. Get other models
+from [nihui](https://github.com/nihui/rife-ncnn-vulkan) (`rife-v4.6`) or
+[TNTwise](https://github.com/TNTwise/rife-ncnn-vulkan) (newer). Force one with
+`FAFI_RIFE_MODEL=<folder name>`.
 
-Easiest place to drop models: **right-click → Interpolation → Open models folder** (it opens the
-folder next to the player, with a `PUT-RIFE-MODEL-HERE.txt` guide). So it reads:
-
-```
-...\FAFI-Player\models\rife-v4.6\flownet.param
-...\FAFI-Player\models\rife-v4.6\flownet.bin
-```
-
-Press **`E`** — FAFI loads the model on the fly (no restart) and a short **"RIFE active — <model>"**
-note confirms which one is running. Without a model FAFI simply stays on MEMC.
-
-### Which model?
-Drop in **several** if you like — FAFI auto-picks the best present (order: `v4.22-lite` →
-`v4.25-lite` → `v4.26` → `v4.25` → `v4.6`, then any other `rife-v4.*`). Extra folders are ignored,
-nothing breaks. Force a specific one with `FAFI_RIFE_MODEL=<folder name>`.
-
-| Model | From | Quality | Speed¹ | Best for |
-|-------|------|---------|--------|----------|
-| **`rife-v4.6`** | bundled zip (nihui) | good; softer + more warping on fast motion | **fastest** | older/weak GPUs, max smoothness, out-of-box |
-| **`rife-v4.22-lite`** | TNTwise (link) | sharp; fixes the warping | a bit slower | **best all-round (recommended)** |
-| **`rife-v4.25-lite`** | TNTwise (link) | a touch cleaner | slower | max quality, speed no object |
-| **`rife-v4.25` / `v4.26`** | TNTwise (link) | highest | heaviest | strong RTX-class GPUs |
+| Model | Quality | Speed¹ | Best for |
+|-------|---------|--------|----------|
+| **`rife-v4.22-lite`** *(built in)* | sharp; fixes fast-motion warping | balanced | **the default — works out of the box** |
+| **`rife-v4.6`** *(download)* | good; softer + more warping | **fastest** | older/weak GPUs wanting max smoothness |
+| **`rife-v4.25-lite`** *(download)* | a touch cleaner | slower | maximum quality, speed no object |
+| **`rife-v4.25` / `v4.26`** *(download)* | highest | heaviest | strong RTX-class GPUs |
 
 ¹ Measured on a GTX 1080 Ti @1080p. Counter-intuitively the newer nets are **heavier** (slower),
-not lighter — on Pascal-class GPUs `v4.6` stays the fastest, just a little softer. Only the
-`rife-v4.x` line works; the old `rife-v2/v3/anime/HD/UHD` folders use a different network and are
-ignored.
+not lighter — on Pascal-class GPUs `v4.6` stays the fastest, just softer. Only the `rife-v4.x` line
+works; the old `rife-v2/v3/anime/HD/UHD` folders use a different network and are ignored.
 
 All `rife-v4.x` model weights are **MIT-licensed** (Practical-RIFE / ECCV2022-RIFE / ncnn — see
-[`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md)); using any model is your responsibility
-(see [`DISCLAIMER.md`](DISCLAIMER.md)).
+[`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md)); using any model is your responsibility (see
+[`DISCLAIMER.md`](DISCLAIMER.md)).
 
 ## System requirements
 
