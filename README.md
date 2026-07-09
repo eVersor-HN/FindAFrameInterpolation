@@ -23,8 +23,9 @@ is about.
 - **No ads. No account. No subscription.** Install it, open a video, done.
 - **No telemetry, no phone-home:** FAFI sends nothing anywhere. The only network activity
   that ever happens is the one **you** explicitly trigger — opening a stream URL (resolved
-  and fetched via yt-dlp on your machine) or its subtitles. Play local files and FAFI is
-  100% offline. *(No, really — zero. This player has no friends to phone home to.)*
+  and fetched via yt-dlp on your machine) or its subtitles, or clicking **Check for updates**
+  in the menu (a one-off request to GitHub — never automatic, never on startup). Play local
+  files and FAFI is 100% offline. *(No, really — zero. This player has no friends to phone home to.)*
 - Transparency note: when you open a YouTube URL, FAFI keeps its own YouTube session
   **locally** in `%LOCALAPPDATA%\FAFI\cookies.txt` to get past YouTube's bot check. It is
   imported **once** from your browser's signed-in cookies (via yt-dlp) and then maintained by
@@ -57,10 +58,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.6.10 — `FAFI-Setup.exe`:**
+**v1.6.11 — `FAFI-Setup.exe`:**
 
 ```
-5256b00efc6667044de48d46ea576de9939a01567fd035064e479c13bb0bc777
+659be7fb07cf943f26eafcfb5c8c64298ea69c770e06841603eea08627dc410d
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -126,6 +127,8 @@ The printed hash must match the value above (case-insensitive). If it does **not
 - **Screenshot** (`F9`) — save the exact presented frame (interpolation + filters + upscale) as a BMP.
 - **Backup & restore** — save your settings + RIFE models, or the **whole portable player**, to one
   `.zip`, and import it on another machine (right-click → *File*).
+- **Update check** — a manual **Check for updates** in the menu asks GitHub for the latest version
+  and points you to the download. User-triggered only — nothing phones home on its own.
 - **Offline export** — render the *presented* image (interpolation + filters + upscale) to a file
   via an external `ffmpeg` (`X`). The active subtitle goes along as an **own track** (with your
   live timing correction baked in) or **burned into the image** — selectable in the File menu.
