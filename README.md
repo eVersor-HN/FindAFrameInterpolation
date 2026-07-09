@@ -107,11 +107,9 @@ The printed hash must match the value above (case-insensitive). If it does **not
 - **Smart picture** — auto-tunes sharpness and colour from the content itself (resolution, line-art
   detection, muted-colour boost), so most videos look right without touching a slider.
 - **Display filters** — a set of optional looks laid over the picture, each with an adjustable
-  strength: **CRT** (scanlines + phosphor shadow mask), **curved CRT** (tube curvature + vignette),
-  **Trinitron** (aperture grille), **LCD / TFT** (subpixel grid), animated **VHS Camcorder** (tape
-  wobble, chroma bleed, head-switching band), **NTSC Composite** (dot crawl), **Film 35mm** (grain,
-  gate weave, warm print), **Glitch**, **Game Boy**, **E-Ink**, **Technicolor** and a clean-master
-  **Blu-ray Anime** sharpen. Right-click → *Picture → Display filter* — the menu stays open so you
+  strength: **CRT** (scanlines + phosphor shadow mask), **Trinitron** (aperture grille), **LCD / TFT** (subpixel grid), **NTSC Composite** (dot crawl), **Film 35mm** (grain,
+  gate weave, warm print), **Glitch**, **old handheld**, **E-Ink**, **Technicolor** and a clean-master
+  **Blu-ray Anime** sharpen. A **StayPlaytion 1** filter fakes the PlayStation-1 look (chunky low-res pixels + ordered dither), and a separate **curved screen** toggle bends any filter onto a CRT tube. Right-click → *Picture → Display filter* — the menu stays open so you
   can flick through them live. Off by default (zero cost).
 - **A/B compare** (`V`) — a draggable before/after wipe: left half the plain original, right
   half the full FAFI treatment (interpolation + filters). See the difference live.
