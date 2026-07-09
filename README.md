@@ -79,66 +79,70 @@ The printed hash must match the value above (case-insensitive). If it does **not
 
 *Built by one person, fuelled by spite and instant coffee — it shows, mostly in a good way.*
 
-- **Two interpolation engines, switchable live (`E`)** — **MEMC** (fast, lightweight, runs on
-  any modern GPU) and **RIFE** (neural, razor-clean on hard motion; optional). RIFE **works out
-  of the box** — the recommended model is built in (see
-  [RIFE engine](#enabling-the-rife-engine-optional)).
-- **Hardware-accelerated GPU decode**, including 10-bit HDR video.
-- **HDR playback** — HDR10 / HLG sources are detected automatically and **tone-mapped to SDR**
-  so bright highlights keep their detail on an ordinary display (with a couple of looks to pick
-  from, under *Picture → HDR tone mapping*); SDR content is untouched. For network streams,
-  *Quality → Prefer HDR* optionally fetches the HDR version of a video.
-- **Plays virtually any format** — the bundled FFmpeg carries every native decoder (H.264, HEVC,
-  VP8/VP9, AV1, MPEG-1/2/4, VC-1, WMV, ProRes, DNxHD, Theora, MJPEG, …) across all common
-  containers (MP4, MKV, WebM, AVI, MOV, TS, FLV, …).
-- **Smooth network streaming** — platform pages (YouTube, Vimeo, …) just play; a network video
-  **downloads while it plays** (full quality with local-file smoothness), live streams start
-  instantly, drop-outs reconnect automatically, and a **progress bar** shows the buffer phase
-  until playback starts. Because the stream comes straight to you, **playback is completely
-  ad-free** — no pre-roll, no mid-roll, no interruptions, ever. Recent URLs are remembered (`H`).
-- **Upscaling** — high-quality upscaling with halo-free sharpening when the output is larger than
-  the source (`L`); optional internal 4K render target (`K`).
-- **Image filters** (brightness / contrast / saturation / sharpness / colour temperature + black
-  point, presets `C`) and a **10-band graphic equalizer** with presets (`Q`).
-- **Smart picture** — auto-tunes sharpness and colour from the content itself (resolution, line-art
-  detection, muted-colour boost), so most videos look right without touching a slider.
-- **Display filters** — a set of optional looks laid over the picture, each with an adjustable
-  strength: **CRT** (scanlines + phosphor shadow mask), **Trinitron** (aperture grille), **LCD / TFT** (subpixel grid), **NTSC Composite** (dot crawl), **Film 35mm** (grain,
-  gate weave, warm print), **Glitch**, **old handheld**, **E-Ink**, **Technicolor** and a clean-master
-  **Blu-ray Anime** sharpen. A **StayPlaytion 1** filter gives chunky low-res pixels with ordered dither, and a separate **curved screen** toggle bends any filter onto a CRT tube. Right-click → *Picture → Display filter* — the menu stays open so you
-  can flick through them live. Off by default (zero cost).
-- **A/B compare** (`V`) — a draggable before/after wipe: left half the plain original, right
-  half the full FAFI treatment (interpolation + filters). See the difference live.
-- **Audio** — WASAPI output as the master clock, device-loss recovery, multi-track selection, A/V
-  offset, correct 5.1 / 7.1 speaker mapping, **Smart loudness** (transparent auto-gain + soft
-  limiter so quiet and loud sources sit at an even level), a **virtual surround** downmix for
-  headphones, and preferred-language auto-selection.
-- **Subtitles** — external `.srt` / `.ass` / `.ssa` / `.vtt` (full ASS styling) plus embedded
-  tracks, on a sharp separate layer that is **never interpolated**. Platform subtitles are
-  fetched automatically in your language; drag & drop your own, nudge the timing live
-  (`Ctrl+,` / `Ctrl+.`) and move them up or down to taste.
-- **Accessibility (Meatware Mods)** — a built-in toolkit for real needs: colour-blind assist
-  modes, dialogue boost / mono downmix / amplify for hard-to-hear audio, a flash guard and
-  calmer UI for photosensitivity, and pitch-preserving slow-motion that can kick in
-  automatically while subtitles are on.
-- **Ambient light / RGB sync** — drive **WLED** LED strips (UDP) and **OpenRGB** devices (TCP) from
-  the average on-screen colour for real-time bias lighting.
-- **Repeat** — off, repeat the current video, or repeat the whole folder playlist (`R`).
-- **Screenshot** (`F9`) — save the exact presented frame (interpolation + filters + upscale) as a BMP.
-- **Backup & restore** — save your settings + RIFE models, or the **whole portable player**, to one
-  `.zip`, and import it on another machine (right-click → *File*).
-- **Update check** — a manual **Check for updates** in the menu asks GitHub for the latest version
-  and points you to the download. User-triggered only — nothing phones home on its own.
-- **Offline export** — render the *presented* image (interpolation + filters + upscale) to a file
-  via an external `ffmpeg` (`X`). The active subtitle goes along as an **own track** (with your
-  live timing correction baked in) or **burned into the image** — selectable in the File menu.
-- **Reset to defaults** — one menu click restores picture, filters, display filter and audio EQ to
-  their defaults (your engine, volume, languages and window preferences are kept). Every setting is
-  saved and restored across sessions.
-- **UI** — a slim auto-hiding seekbar and a themed **right-click menu** with every setting in
-  clean categories (Playback / Quality / Interpolation / Picture / Audio / Subtitles / View /
-  File); the title bar and controls fade away together when idle, and fullscreen (`F11`) is
-  truly borderless. **About** dialog with author, repository and authenticity hint.
+### Smooth motion
+- **Two interpolation engines, switchable live (`E`)** — **MEMC** (fast, lightweight, runs on any
+  modern GPU) and **RIFE** (neural, razor-clean on hard motion). RIFE **works out of the box** — the
+  recommended model is built in (see [RIFE engine](#enabling-the-rife-engine-optional)).
+- **A/B compare (`V`)** — a draggable before/after wipe: the plain original on the left, the full
+  FAFI treatment on the right. See the difference live.
+
+### Picture
+- **HDR playback** — HDR10 / HLG sources are tone-mapped to SDR so bright highlights keep their
+  detail on an ordinary display (a couple of looks to choose from); SDR content is untouched.
+  Network streams can optionally fetch the HDR version.
+- **Upscaling (`L`)** — high-quality upscaling with halo-free sharpening, plus an optional internal
+  4K render target (`K`).
+- **Smart picture** — auto-tunes sharpness and colour from the content itself, so most videos look
+  right without touching a slider.
+- **Image filters (`C`)** — brightness, contrast, saturation, sharpness, colour temperature and
+  black point, with presets.
+- **Display filters** — optional retro / creative looks over the picture, each with adjustable
+  strength: **CRT**, **Trinitron**, **LCD/TFT**, **NTSC**, **35 mm film**, **Glitch**, **old
+  handheld**, **E-Ink**, **Technicolor**, **StayPlaytion 1**, and a clean **Blu-ray Anime** sharpen —
+  plus a **curved-screen** toggle. The menu stays open so you can flick through them live. Off by
+  default (zero cost).
+
+### Sound
+- **Full audio suite** — multi-track selection, A/V offset, correct 5.1 / 7.1 speaker mapping,
+  **Smart loudness** (quiet and loud sources sit at an even level), a **virtual surround** downmix
+  for headphones, and preferred-language auto-selection.
+- **10-band graphic equalizer (`Q`)** — with presets.
+
+### Subtitles & accessibility
+- **Subtitles** — external `.srt` / `.ass` / `.ssa` / `.vtt` (full ASS styling) and embedded tracks,
+  on a sharp separate layer that is **never interpolated**. Platform subtitles are fetched
+  automatically in your language; drag & drop your own, and nudge the timing (`Ctrl+,` / `Ctrl+.`)
+  and position live.
+- **Accessibility (Meatware Mods)** — a built-in toolkit for real needs: colour-blind assist modes,
+  dialogue boost / mono downmix / amplify for hard-to-hear audio, a flash guard and calmer UI for
+  photosensitivity, and pitch-preserving slow-motion that can kick in automatically while subtitles
+  are on.
+
+### Formats & streaming
+- **Plays virtually any format** — every common codec (H.264, HEVC, VP8/VP9, AV1, MPEG, VC-1, WMV,
+  ProRes, DNxHD, …) across all common containers (MP4, MKV, WebM, AVI, MOV, TS, FLV, …), decoded on
+  your GPU.
+- **Smooth network streaming** — paste a YouTube / Vimeo link and it just plays: **downloads while
+  it plays** (full quality with local-file smoothness), live streams start instantly, drop-outs
+  reconnect on their own, and it's **completely ad-free** — no pre-roll, no mid-roll, ever. Recent
+  URLs are remembered (`H`).
+
+### Everyday
+- **Offline export (`X`)** — render the presented image (interpolation + filters + upscale) to a
+  file; the active subtitle goes along as its own track (timing correction baked in) or burned in.
+- **Screenshot (`F9`)** — save the exact presented frame.
+- **Ambient light / RGB sync** — drive **WLED** strips and **OpenRGB** devices from the average
+  on-screen colour for real-time bias lighting.
+- **Repeat (`R`)** — off, the current video, or the whole folder playlist.
+- **Backup & restore** — pack your settings + models, or the whole portable player, into one `.zip`
+  and import it on another machine.
+- **Update check** — a manual **Check for updates** in the menu. User-triggered only — nothing
+  phones home on its own.
+- **Reset & remembered settings** — one click restores picture, filters and EQ to defaults; every
+  choice is saved and restored across sessions.
+- **Clean UI** — a slim auto-hiding seekbar and a themed **right-click menu** with every control in
+  tidy categories; the title bar and controls fade away when idle, and fullscreen (`F11`) is truly
+  borderless.
 
 ## Enabling the RIFE engine (optional)
 
