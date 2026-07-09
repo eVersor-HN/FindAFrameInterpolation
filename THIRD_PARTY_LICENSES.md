@@ -215,13 +215,11 @@ DEALINGS IN THE SOFTWARE.
   Redistribution — including commercially — is therefore permitted, provided the MIT notice is kept.
 - Sources: https://github.com/hzwer/Practical-RIFE  /  https://github.com/megvii-research/ECCV2022-RIFE
   /  https://github.com/nihui/rife-ncnn-vulkan  /  https://github.com/TNTwise/rife-ncnn-vulkan
-- **Model archive on the release page:** FAFI releases attach the **unmodified**, MIT-licensed
-  archive `rife-ncnn-vulkan-TNTwise-<date>-windows.zip` (an as-is mirror of the
-  https://github.com/TNTwise/rife-ncnn-vulkan Windows build) as a separate, optional download. It
-  bundles the ncnn `rife-v4.x` model folders; its `LICENSE` (Copyright (c) 2020 nihui) is inside the
-  archive. FAFI does **not** extract or install it for you — placing a model folder into `models\`
-  stays a manual, user-initiated step, after which FAFI auto-selects the best model present. If you
-  supply a *different* model from elsewhere, verify and comply with that model's own terms.
+- **Obtaining a model:** download the ncnn `rife-v4.x` model folders from the upstream project —
+  https://github.com/TNTwise/rife-ncnn-vulkan (or nihui's original for `rife-v4.6`) — and place one
+  into `models\`. **FAFI does not bundle or mirror the model weights**; it only loads whatever you
+  put there (and auto-selects the best folder present). If you use a model from another source,
+  verify and comply with that model's own terms.
 
 ---
 
