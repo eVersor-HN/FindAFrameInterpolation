@@ -383,6 +383,14 @@ jloup@gzip.org          madler@alumni.caltech.edu
 
 ---
 
+## miniz — zip read/write (backup & restore)
+- **License:** public domain (Unlicense) / MIT dual — no attribution required; noted for completeness.
+- **Linking:** compiled into `FindAFrameInterpolation.exe` (`third_party/miniz/`). Used to pack/unpack
+  the settings-and-models **backup** `.zip`.
+- **Source:** https://github.com/richgel999/miniz (3.1.2)
+
+---
+
 ## QuickJS (quickjs-ng) — bundled JavaScript runtime (`qjs.exe`)
 - **License:** MIT.
 - **Bundling:** shipped as a standalone `qjs.exe` next to the player. It is used only as yt-dlp's
