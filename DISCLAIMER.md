@@ -48,16 +48,16 @@ repackaged, re-hosted or otherwise altered copies obtained from any other source
   optional URL resolution uses **`yt-dlp`** — both external programs that are **not part of and
   not bundled with** the Software and are governed by their own licenses and terms. The author
   makes no representations about them.
-- The optional **RIFE** neural engine requires a model that is **not bundled** with the app. RIFE
-  models are MIT-licensed and downloaded from the upstream project (see
-  [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md)); using any model is subject to that model's
-  own license and is your responsibility.
+- The optional **RIFE** neural engine uses a model. The recommended one (`rife-v4.22-lite`, MIT) is
+  **bundled** (embedded in the app); any other model is an optional download (see
+  [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md)) and subject to its own license — your
+  responsibility.
 
 ## Third-party components
 
 The Software includes third-party components under their own licenses (FFmpeg/LGPL-2.1,
 libass/ISC, FreeType/FTL, HarfBuzz/MIT, FriBidi/LGPL-2.1, ncnn/BSD-3, Rajdhani font/OFL-1.1,
-rife-ncnn-vulkan warp
+RIFE model rife-v4.22-lite/MIT, rife-ncnn-vulkan warp
 layer/MIT, QuickJS/MIT, plus permissively licensed support libraries — Brotli, bzip2, libpng,
 zlib). Portions of this software are copyright © The FreeType Project (www.freetype.org).
 All rights reserved. See [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md).
