@@ -369,7 +369,7 @@ jloup@gzip.org          madler@alumni.caltech.edu
 - Provided by the user's GPU driver / Vulkan SDK. Not redistributed with FAFI.
 
 ## yt-dlp (optional, external)
-- Optional runtime tool used to resolve platform URLs (e.g. YouTube) to a stream URL.
+- Optional runtime tool used to resolve supported page URLs to a direct stream URL.
 - Invoked as an external process if present on `PATH`; **not bundled** with FAFI.
 - yt-dlp is released into the public domain (Unlicense). Source: https://github.com/yt-dlp/yt-dlp
 
@@ -398,7 +398,7 @@ jloup@gzip.org          madler@alumni.caltech.edu
 ## QuickJS (quickjs-ng) — bundled JavaScript runtime (`qjs.exe`)
 - **License:** MIT.
 - **Bundling:** shipped as a standalone `qjs.exe` next to the player. It is used only as yt-dlp's
-  JavaScript runtime (to solve YouTube's "n" signature) on machines that have neither Node.js nor
+  JavaScript runtime (to solve certain sites' JavaScript challenges) on machines that have neither Node.js nor
   Deno installed. FAFI does not link against it; it is launched by yt-dlp as an external process.
 - **Source / build:** https://github.com/quickjs-ng/quickjs (release v0.15.1, `qjs-windows-x86_64.exe`).
 

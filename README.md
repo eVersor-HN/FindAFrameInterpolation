@@ -16,7 +16,7 @@ as a bonus — but the heart of FAFI is your own offline library. Runs fully on 
 
 FAFI is built first and foremost as an **offline player for your own video files** — that is
 the core, and it works with the network cable pulled. Everything around network streaming
-(YouTube URLs, automatic subtitles) is a **convenience extra on top**, not what the player
+(online video URLs, automatic subtitles) is a **convenience extra on top**, not what the player
 is about.
 
 - **No ads. No account. No subscription.** Install it, open a video, done.
@@ -25,9 +25,9 @@ is about.
   subtitles, or clicking **Check for updates** in the menu (a one-off request to GitHub —
   never automatic, never on startup). Play local files and FAFI is 100% offline.
   *(No, really — zero. This player has no friends to phone home to.)*
-- Transparency note: when you open a YouTube URL, FAFI keeps a small local YouTube session in
+- Transparency note: when you open a streaming URL, FAFI keeps a small local session cookie in
   `%LOCALAPPDATA%\FAFI\cookies.txt` so playback keeps working. It stays on your machine and is
-  used for YouTube only, nowhere else. Delete that file (or set `FAFI_YTDLP_BROWSER=0`) to opt out.
+  used for that streaming source only, nowhere else. Delete that file (or set `FAFI_YTDLP_BROWSER=0`) to opt out.
 
 Author / copyright: **© 2026 Marco Aurelio Fattizzo** ([@eVersor-HN](https://github.com/eVersor-HN)).
 This is the **official** distribution repository — get FAFI only from here:
@@ -122,7 +122,7 @@ The printed hash must match the value above (case-insensitive). If it does **not
 - **Plays virtually any format** — every common codec (H.264, HEVC, VP8/VP9, AV1, MPEG, VC-1, WMV,
   ProRes, DNxHD, …) across all common containers (MP4, MKV, WebM, AVI, MOV, TS, FLV, …), decoded on
   your GPU.
-- **Smooth network streaming** — paste a YouTube / Vimeo link and it just plays: **downloads while
+- **Smooth network streaming** — paste a web video link and it just plays: **downloads while
   it plays** (full quality with local-file smoothness), live streams start instantly, drop-outs
   reconnect on their own, and it's **completely ad-free** — no pre-roll, no mid-roll, ever. Recent
   URLs are remembered (`H`).
