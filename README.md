@@ -57,10 +57,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.6.3 — `FAFI-Setup.exe`:**
+**v1.6.6 — `FAFI-Setup.exe`:**
 
 ```
-59143ea735e2bf81e45e77b7877d44a050f351f838a9d91840a0d1c05b3cf0d1
+14a01e5366257534cffe7914cc3f51d2ba1cff2cc2a839a695e1d81033782228
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -142,11 +142,11 @@ The neural **RIFE** engine needs a model (two files: `flownet.param` + `flownet.
 carry their own terms (possibly non-commercial), so FAFI does not redistribute them. Getting
 the model is a one-time, two-minute step:
 
-1. Download a release of the **rife-ncnn-vulkan** project (the ncnn-format models are inside
-   the release zip): https://github.com/nihui/rife-ncnn-vulkan/releases — or grab the
-   **mirrored, unmodified copy of that zip** attached to the FAFI release page (MIT-licensed;
-   its `LICENSE` file is inside the archive).
-2. Open the zip and copy the **`rife-v4.6`** folder (it contains `flownet.param` and
+1. Grab the **`rife-ncnn-vulkan-TNTwise-20250112-windows.zip`** attached to the FAFI release
+   page — an unmodified, MIT-licensed mirror of the
+   [TNTwise rife-ncnn-vulkan](https://github.com/TNTwise/rife-ncnn-vulkan) build that contains
+   **every `rife-v4.x` model** (its `LICENSE` is inside the archive). Upstream releases work too.
+2. Open the zip and copy a model folder — e.g. **`rife-v4.6`** (it contains `flownet.param` and
    `flownet.bin`) into the player's `models` folder. Easiest way: in FAFI,
    **right-click → Interpolation → Open models folder** — it opens the right place
    (the installer pre-creates it with a README), so it reads:
@@ -157,10 +157,14 @@ the model is a one-time, two-minute step:
 3. Press **`E`** (or *right-click → Interpolation → Engine*) — FAFI picks the model up
    on the fly, **no restart needed**, and switches over as soon as it is loaded.
 
-Without the model FAFI simply keeps using the default MEMC engine. Other RIFE model variants
-work too, as long as the folder holds `flownet.param`/`flownet.bin` — put them under
-`models\<name>` and select them with the environment variable `FAFI_RIFE_MODEL=<name>`
-(faster "lite" variants are a good choice on older GPUs).
+Without the model FAFI simply keeps using the default MEMC engine.
+
+**Which model?** The zip contains the whole `rife-v4.x` line. If several are present, FAFI
+auto-picks the best available; the measured sweet spot is **`rife-v4.22-lite`**, which fixes the
+soft "melty" warping the old `rife-v4.6` shows on fast motion — so copy that folder instead of (or
+alongside) `rife-v4.6`. Heads-up: the newer nets are *heavier*, so on older (Pascal-class) GPUs they
+run a touch slower than `v4.6` — cleaner, not faster. Force a specific one with the environment
+variable `FAFI_RIFE_MODEL=<folder name>`.
 
 > ⚠️ By downloading a model you accept the **model's own license terms** (see the upstream
 > project); using it with FAFI is your responsibility — see [`DISCLAIMER.md`](DISCLAIMER.md).
