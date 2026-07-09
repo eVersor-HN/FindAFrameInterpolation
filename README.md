@@ -21,15 +21,13 @@ is about.
 
 - **No ads. No account. No subscription.** Install it, open a video, done.
 - **No telemetry, no phone-home:** FAFI sends nothing anywhere. The only network activity
-  that ever happens is the one **you** explicitly trigger — opening a stream URL (resolved
-  and fetched via yt-dlp on your machine) or its subtitles, or clicking **Check for updates**
-  in the menu (a one-off request to GitHub — never automatic, never on startup). Play local
-  files and FAFI is 100% offline. *(No, really — zero. This player has no friends to phone home to.)*
-- Transparency note: when you open a YouTube URL, FAFI keeps its own YouTube session
-  **locally** in `%LOCALAPPDATA%\FAFI\cookies.txt` to get past YouTube's bot check. It is
-  imported **once** from your browser's signed-in cookies (via yt-dlp) and then maintained by
-  the player itself — the cookies go to YouTube only, nowhere else, and never leave your
-  machine otherwise. Delete that file (or set `FAFI_YTDLP_BROWSER=0`) to opt out.
+  that ever happens is the one **you** explicitly trigger — opening a stream URL or its
+  subtitles, or clicking **Check for updates** in the menu (a one-off request to GitHub —
+  never automatic, never on startup). Play local files and FAFI is 100% offline.
+  *(No, really — zero. This player has no friends to phone home to.)*
+- Transparency note: when you open a YouTube URL, FAFI keeps a small local YouTube session in
+  `%LOCALAPPDATA%\FAFI\cookies.txt` so playback keeps working. It stays on your machine and is
+  used for YouTube only, nowhere else. Delete that file (or set `FAFI_YTDLP_BROWSER=0`) to opt out.
 
 Author / copyright: **© 2026 Marco Aurelio Fattizzo** ([@eVersor-HN](https://github.com/eVersor-HN)).
 This is the **official** distribution repository — get FAFI only from here:
@@ -81,27 +79,25 @@ The printed hash must match the value above (case-insensitive). If it does **not
 
 *Built by one person, fuelled by spite and instant coffee — it shows, mostly in a good way.*
 
-- **Two interpolation engines, switchable live (`E`)** — **MEMC** (Direct3D 11 compute-shader
-  motion estimation + occlusion-aware synthesis; runs on any modern GPU) and **RIFE** (neural
-  intermediate-flow via ncnn-Vulkan; optional, the recommended model is **built in** — see
-  [Enabling the RIFE engine](#enabling-the-rife-engine-optional)).
-- **Hardware decode** (D3D11VA / NVDEC), zero-copy NV12 **and 10-bit P010** → RGBA on the GPU.
+- **Two interpolation engines, switchable live (`E`)** — **MEMC** (fast, lightweight, runs on
+  any modern GPU) and **RIFE** (neural, razor-clean on hard motion; optional). RIFE **works out
+  of the box** — the recommended model is built in (see
+  [RIFE engine](#enabling-the-rife-engine-optional)).
+- **Hardware-accelerated GPU decode**, including 10-bit HDR video.
 - **HDR playback** — HDR10 / HLG sources are detected automatically and **tone-mapped to SDR**
-  (hue-preserving **Hable** filmic or **Reinhard**, selectable under *Picture → HDR tone
-  mapping*), using the stream's real mastering peak and a debanding pass for dark gradients.
-  The `F` overlay shows an `HDR→SDR` badge when active; SDR content is untouched. For network
-  streams, *Quality → Prefer HDR* optionally fetches the HDR version of a video.
+  so bright highlights keep their detail on an ordinary display (with a couple of looks to pick
+  from, under *Picture → HDR tone mapping*); SDR content is untouched. For network streams,
+  *Quality → Prefer HDR* optionally fetches the HDR version of a video.
 - **Plays virtually any format** — the bundled FFmpeg carries every native decoder (H.264, HEVC,
   VP8/VP9, AV1, MPEG-1/2/4, VC-1, WMV, ProRes, DNxHD, Theora, MJPEG, …) across all common
   containers (MP4, MKV, WebM, AVI, MOV, TS, FLV, …).
-- **Smooth network streaming** — platform pages (YouTube, Vimeo, …) resolve via **yt-dlp**; a
-  network video **downloads while it plays** (full quality with local-file smoothness), live
-  streams start instantly, drop-outs reconnect automatically, and a **progress bar** shows the
-  resolve/buffer phases until playback starts. Because the stream is fetched directly,
-  **playback is completely ad-free** — no pre-roll, no mid-roll, no interruptions, ever. A bundled
-  JavaScript runtime keeps YouTube working even without Node/Deno installed.
-- **Upscaling** — Lanczos-3 with halo-free adaptive sharpening when the output is larger than the
-  source (`L`); optional internal 4K render target (`K`).
+- **Smooth network streaming** — platform pages (YouTube, Vimeo, …) just play; a network video
+  **downloads while it plays** (full quality with local-file smoothness), live streams start
+  instantly, drop-outs reconnect automatically, and a **progress bar** shows the buffer phase
+  until playback starts. Because the stream comes straight to you, **playback is completely
+  ad-free** — no pre-roll, no mid-roll, no interruptions, ever. Recent URLs are remembered (`H`).
+- **Upscaling** — high-quality upscaling with halo-free sharpening when the output is larger than
+  the source (`L`); optional internal 4K render target (`K`).
 - **Image filters** (brightness / contrast / saturation / sharpness / colour temperature + black
   point, presets `C`) and a **10-band graphic equalizer** with presets (`Q`).
 - **Smart picture** — auto-tunes sharpness and colour from the content itself (resolution, line-art
@@ -109,7 +105,7 @@ The printed hash must match the value above (case-insensitive). If it does **not
 - **Display filters** — a set of optional looks laid over the picture, each with an adjustable
   strength: **CRT** (scanlines + phosphor shadow mask), **Trinitron** (aperture grille), **LCD / TFT** (subpixel grid), **NTSC Composite** (dot crawl), **Film 35mm** (grain,
   gate weave, warm print), **Glitch**, **old handheld**, **E-Ink**, **Technicolor** and a clean-master
-  **Blu-ray Anime** sharpen. A **StayPlaytion 1** filter fakes the PlayStation-1 look (chunky low-res pixels + ordered dither), and a separate **curved screen** toggle bends any filter onto a CRT tube. Right-click → *Picture → Display filter* — the menu stays open so you
+  **Blu-ray Anime** sharpen. A **StayPlaytion 1** filter gives chunky low-res pixels with ordered dither, and a separate **curved screen** toggle bends any filter onto a CRT tube. Right-click → *Picture → Display filter* — the menu stays open so you
   can flick through them live. Off by default (zero cost).
 - **A/B compare** (`V`) — a draggable before/after wipe: left half the plain original, right
   half the full FAFI treatment (interpolation + filters). See the difference live.
@@ -117,8 +113,14 @@ The printed hash must match the value above (case-insensitive). If it does **not
   offset, correct 5.1 / 7.1 speaker mapping, **Smart loudness** (transparent auto-gain + soft
   limiter so quiet and loud sources sit at an even level), a **virtual surround** downmix for
   headphones, and preferred-language auto-selection.
-- **Subtitles** — external `.srt` and `.ass`/`.ssa` (full styling via libass) plus embedded text
-  tracks, on a sharp separate layer that is **never interpolated**.
+- **Subtitles** — external `.srt` / `.ass` / `.ssa` / `.vtt` (full ASS styling) plus embedded
+  tracks, on a sharp separate layer that is **never interpolated**. Platform subtitles are
+  fetched automatically in your language; drag & drop your own, nudge the timing live
+  (`Ctrl+,` / `Ctrl+.`) and move them up or down to taste.
+- **Accessibility (Meatware Mods)** — a built-in toolkit for real needs: colour-blind assist
+  modes, dialogue boost / mono downmix / amplify for hard-to-hear audio, a flash guard and
+  calmer UI for photosensitivity, and pitch-preserving slow-motion that can kick in
+  automatically while subtitles are on.
 - **Ambient light / RGB sync** — drive **WLED** LED strips (UDP) and **OpenRGB** devices (TCP) from
   the average on-screen colour for real-time bias lighting.
 - **Repeat** — off, repeat the current video, or repeat the whole folder playlist (`R`).
@@ -153,8 +155,7 @@ FAFI loads any compatible `rife-v4.x` folder you drop into `models\` and **auto-
 present** (order: `v4.22-lite` → `v4.25-lite` → `v4.26` → `v4.25` → `v4.6`, then any other
 `rife-v4.*`). Easiest place: **right-click → Interpolation → Open models folder**. Get other models
 from [nihui](https://github.com/nihui/rife-ncnn-vulkan) (`rife-v4.6`) or
-[TNTwise](https://github.com/TNTwise/rife-ncnn-vulkan) (newer). Force one with
-`FAFI_RIFE_MODEL=<folder name>`.
+[TNTwise](https://github.com/TNTwise/rife-ncnn-vulkan) (newer); FAFI picks up whatever you add.
 
 | Model | Quality | Speed¹ | Best for |
 |-------|---------|--------|----------|

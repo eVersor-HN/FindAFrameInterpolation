@@ -10,12 +10,16 @@ When you redistribute FAFI in binary form, keep this file and the referenced
 license texts alongside the binaries.
 
 **Source code of the LGPL components:** the FFmpeg (8.1.2) and FriBidi (1.0.16)
-libraries shipped with FAFI are unmodified builds produced with vcpkg. Their complete
-corresponding source code is freely available from the upstream projects
-(https://ffmpeg.org/download.html, https://github.com/fribidi/fribidi/releases) and via
-the vcpkg registry (https://github.com/microsoft/vcpkg — ports `ffmpeg` 8.1.2 /
-`fribidi` 1.0.16). On request, the author will additionally provide a copy of these
-sources at no more than the cost of distribution (open an issue at
+libraries shipped with FAFI are built from upstream sources with vcpkg. The author makes
+no source changes of their own; the builds do carry vcpkg's standard build/portability
+patches for that port (e.g. MSVC/Windows fixes). The **complete corresponding source
+code, including those patches**, is exactly the referenced vcpkg port and is freely
+available: upstream at https://ffmpeg.org/download.html and
+https://github.com/fribidi/fribidi/releases, and the full patched port at the vcpkg
+registry (https://github.com/microsoft/vcpkg — ports `ffmpeg` 8.1.2 / `fribidi` 1.0.16,
+whose `portfile.cmake` + `*.patch` files are the applied modifications). On request, the
+author will additionally provide a copy of these sources at no more than the cost of
+distribution (open an issue at
 https://github.com/eVersor-HN/FindAFrameInterpolation/issues); this offer is valid for
 three years from the corresponding FAFI release.
 
