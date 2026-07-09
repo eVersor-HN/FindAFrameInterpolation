@@ -98,8 +98,9 @@ The printed hash must match the value above (case-insensitive). If it does **not
 - **Smooth network streaming** — platform pages (YouTube, Vimeo, …) resolve via **yt-dlp**; a
   network video **downloads while it plays** (full quality with local-file smoothness), live
   streams start instantly, drop-outs reconnect automatically, and a **progress bar** shows the
-  resolve/buffer phases until playback starts. A bundled JavaScript runtime keeps YouTube
-  working even without Node/Deno installed.
+  resolve/buffer phases until playback starts. Because the stream is fetched directly,
+  **playback is completely ad-free** — no pre-roll, no mid-roll, no interruptions, ever. A bundled
+  JavaScript runtime keeps YouTube working even without Node/Deno installed.
 - **Upscaling** — Lanczos-3 with halo-free adaptive sharpening when the output is larger than the
   source (`L`); optional internal 4K render target (`K`).
 - **Image filters** (brightness / contrast / saturation / sharpness / colour temperature + black
