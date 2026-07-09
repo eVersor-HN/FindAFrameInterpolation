@@ -57,10 +57,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.6.9 — `FAFI-Setup.exe`:**
+**v1.6.10 — `FAFI-Setup.exe`:**
 
 ```
-a14db0543dfb4e3bcaaf43ad9f6344da3bb85207deeaf1f9d68bc159d0545ee0
+5256b00efc6667044de48d46ea576de9939a01567fd035064e479c13bb0bc777
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -124,6 +124,8 @@ The printed hash must match the value above (case-insensitive). If it does **not
   the average on-screen colour for real-time bias lighting.
 - **Repeat** — off, repeat the current video, or repeat the whole folder playlist (`R`).
 - **Screenshot** (`F9`) — save the exact presented frame (interpolation + filters + upscale) as a BMP.
+- **Backup & restore** — save your settings + RIFE models, or the **whole portable player**, to one
+  `.zip`, and import it on another machine (right-click → *File*).
 - **Offline export** — render the *presented* image (interpolation + filters + upscale) to a file
   via an external `ffmpeg` (`X`). The active subtitle goes along as an **own track** (with your
   live timing correction baked in) or **burned into the image** — selectable in the File menu.
