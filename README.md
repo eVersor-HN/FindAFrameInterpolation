@@ -142,10 +142,10 @@ The neural **RIFE** engine needs a model (two files: `flownet.param` + `flownet.
 carry their own terms (possibly non-commercial), so FAFI does not redistribute them. Getting
 the model is a one-time, two-minute step:
 
-1. Grab the **`rife-ncnn-vulkan-TNTwise-20250112-windows.zip`** attached to the FAFI release
-   page — an unmodified, MIT-licensed mirror of the
-   [TNTwise rife-ncnn-vulkan](https://github.com/TNTwise/rife-ncnn-vulkan) build that contains
-   **every `rife-v4.x` model** (its `LICENSE` is inside the archive). Upstream releases work too.
+1. Download a **rife-ncnn-vulkan** release — the ncnn-format models are inside the Windows zip:
+   [TNTwise/rife-ncnn-vulkan](https://github.com/TNTwise/rife-ncnn-vulkan/releases) has the whole
+   `rife-v4.x` line (incl. the recommended `rife-v4.22-lite`); nihui's original has `rife-v4.6`.
+   All MIT-licensed (the `LICENSE` is inside the archive).
 2. Open the zip and copy a model folder — e.g. **`rife-v4.6`** (it contains `flownet.param` and
    `flownet.bin`) into the player's `models` folder. Easiest way: in FAFI,
    **right-click → Interpolation → Open models folder** — it opens the right place
