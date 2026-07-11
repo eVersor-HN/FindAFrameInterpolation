@@ -12,7 +12,9 @@ so it stays light.
 > share verbatim — **not for sale, not modifiable, no reverse-engineering.**
 > See [LICENSE](LICENSE) and [DISCLAIMER](DISCLAIMER.md).
 
-> 💸 You extracted joy and gave nothing back. History's worst people started exactly this small: **PayPal [paypal.me/FAMarco](https://paypal.me/FAMarco)** · **Bitcoin** `bc1qv92c3eyeqvhgfnez7spfd7v2aytkhpshsl65yv`.
+> 💸 You extracted joy and gave nothing back. History's worst people started exactly this small.<br>
+> **PayPal:** [paypal.me/FAMarco](https://paypal.me/FAMarco)<br>
+> **Bitcoin:** `bc1qv92c3eyeqvhgfnez7spfd7v2aytkhpshsl65yv`
 
 ## Local first, private by design
 
