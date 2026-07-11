@@ -1,40 +1,40 @@
-﻿# FindAFrameInterpolation (FAFI)
+# FindAFrameInterpolation (FAFI)
 
 **FAFI** turns choppy video into **liquid-smooth motion, in real time.** Aim it at **your own
-files**, hit play, and 24 / 30 / 60 fps footage flows as fast as your screen can refresh â€” no ads,
+files**, hit play, and 24 / 30 / 60 fps footage flows as fast as your screen can refresh — no ads,
 no account, no telemetry, nothing leaving your machine. Two engines pull it off: **MEMC** (fast,
 always ready) and the optional neural **RIFE** (slower, but razor-clean). Feed it **music instead**
 and it flips into a full-screen **reactive light show** that moves to every beat. Web streaming
-rides along as a bonus â€” but the heart of FAFI is your own offline library. Runs fully on the GPU,
+rides along as a bonus — but the heart of FAFI is your own offline library. Runs fully on the GPU,
 so it stays light.
 
 > **Closed-source, proprietary application.** Free to use (including commercially) and to
-> share verbatim â€” **not for sale, not modifiable, no reverse-engineering.**
+> share verbatim — **not for sale, not modifiable, no reverse-engineering.**
 > See [LICENSE](LICENSE) and [DISCLAIMER](DISCLAIMER.md).
 
-> ðŸ’¸ You extracted joy and gave nothing back. History's worst people started exactly this small.<br>
+> 💸 You extracted joy and gave nothing back. History's worst people started exactly this small.<br>
 > **PayPal:** [paypal.me/FAMarco](https://paypal.me/FAMarco)<br>
 > **Bitcoin:** `bc1qv92c3eyeqvhgfnez7spfd7v2aytkhpshsl65yv`
 
 ## Local first, private by design
 
-FAFI is built first and foremost as an **offline player for your own video files** â€” that is
+FAFI is built first and foremost as an **offline player for your own video files** — that is
 the core, and it works with the network cable pulled. Everything around network streaming
 (online video URLs, automatic subtitles) is a **convenience extra on top**, not what the player
 is about.
 
 - **No ads. No account. No subscription.** Install it, open a video, done.
 - **No telemetry, no phone-home:** FAFI sends nothing anywhere. The only network activity
-  that ever happens is the one **you** explicitly trigger â€” opening a stream URL or its
-  subtitles, or clicking **Check for updates** in the menu (a one-off request to GitHub â€”
+  that ever happens is the one **you** explicitly trigger — opening a stream URL or its
+  subtitles, or clicking **Check for updates** in the menu (a one-off request to GitHub —
   never automatic, never on startup). Play local files and FAFI is 100% offline.
-  *(No, really â€” zero. This player has no friends to phone home to.)*
+  *(No, really — zero. This player has no friends to phone home to.)*
 - Transparency note: when you open a streaming URL, FAFI keeps a small local session cookie in
   `%LOCALAPPDATA%\FAFI\cookies.txt` so playback keeps working. It stays on your machine and is
   used for that streaming source only, nowhere else. Delete that file (or set `FAFI_YTDLP_BROWSER=0`) to opt out.
 
-Author / copyright: **Â© 2026 Marco Aurelio Fattizzo** ([@eVersor-HN](https://github.com/eVersor-HN)).
-This is the **official** distribution repository â€” get FAFI only from here:
+Author / copyright: **© 2026 Marco Aurelio Fattizzo** ([@eVersor-HN](https://github.com/eVersor-HN)).
+This is the **official** distribution repository — get FAFI only from here:
 **https://github.com/eVersor-HN/FindAFrameInterpolation**
 
 ---
@@ -48,18 +48,18 @@ This is the **official** distribution repository â€” get FAFI only from her
    `%LOCALAPPDATA%\Programs\FAFI-Player` (no administrator rights), adds Start-menu / Desktop
    shortcuts and an entry under *Apps & Features* for clean uninstalling.
 
-There is nothing else to install â€” the player ships with everything it needs.
+There is nothing else to install — the player ships with everything it needs.
 
 ---
 
-## âœ… Verify authenticity (SHA-256)
+## ✅ Verify authenticity (SHA-256)
 
 Every official release publishes the **SHA-256 checksum** of `FAFI-Setup.exe`. Comparing the
 checksum of your download against the published value proves the file is the **unmodified
 original** and was not tampered with. (The same repository address and this verification hint
-are shown inside the app under **right-click â†’ About FAFI**.)
+are shown inside the app under **right-click → About FAFI**.)
 
-**v1.8.0 â€” `FAFI-Setup.exe`:**
+**v1.8.0 — `FAFI-Setup.exe`:**
 
 ```
 d87affa7c2dd1c8fef13a5430e8fcf6935615e802a215d011ec62b9431810c51
@@ -75,124 +75,124 @@ Get-FileHash .\FAFI-Setup.exe -Algorithm SHA256
 ```
 
 The printed hash must match the value above (case-insensitive). If it does **not** match, do
-**not** run the file â€” it is not the genuine FAFI build.
+**not** run the file — it is not the genuine FAFI build.
 
 ---
 
 ## Features
 
-*Built by one person, fuelled by spite and instant coffee â€” it shows, mostly in a good way.*
+*Built by one person, fuelled by spite and instant coffee — it shows, mostly in a good way.*
 
 ### Smooth motion
-- **Two interpolation engines, switchable live (`E`)** â€” **MEMC** (fast, lightweight, runs on any
-  modern GPU) and **RIFE** (neural, razor-clean on hard motion). RIFE **works out of the box** â€” the
+- **Two interpolation engines, switchable live (`E`)** — **MEMC** (fast, lightweight, runs on any
+  modern GPU) and **RIFE** (neural, razor-clean on hard motion). RIFE **works out of the box** — the
   recommended model is built in (see [RIFE engine](#enabling-the-rife-engine-optional)).
-- **A/B compare (`V`)** â€” a draggable before/after wipe: the plain original on the left, the full
+- **A/B compare (`V`)** — a draggable before/after wipe: the plain original on the left, the full
   FAFI treatment on the right. See the difference live.
 
-### Music mode â€” the room is the show
+### Music mode — the room is the show
 Feed FAFI an audio file and it stops pretending to be a video player and becomes a **reactive
 visualiser**: full-screen, edge to edge, running at your monitor's refresh, moving to every beat,
 drop and breath of the track.
 
-- **A whole gallery of live visuals** â€” from slow drifting fields to hard strobing spectra. Flick
+- **A whole gallery of live visuals** — from slow drifting fields to hard strobing spectra. Flick
   through them with the arrow keys, or let **shuffle** deal you a fresh one on a timer. Every one of
-  them reacts hard and on the beat â€” no lazy "it wiggles a bit if you squint" filler.
-- **Hide the controls and it's just you, the track, and the light** â€” nothing on screen but the show.
+  them reacts hard and on the beat — no lazy "it wiggles a bit if you squint" filler.
+- **Hide the controls and it's just you, the track, and the light** — nothing on screen but the show.
 - **Still a player.** Open a file, paste a URL, or drag a video onto the window at any moment and
   FAFI snaps straight back to picture. *Your eyes and your ears take turns; you don't have to choose.*
 
 ### Picture
-- **HDR playback** â€” HDR10 / HLG sources are tone-mapped to SDR so bright highlights keep their
+- **HDR playback** — HDR10 / HLG sources are tone-mapped to SDR so bright highlights keep their
   detail on an ordinary display (a couple of looks to choose from); SDR content is untouched.
   Network streams can optionally fetch the HDR version.
-- **Upscaling (`L`)** â€” high-quality upscaling with halo-free sharpening, plus an optional internal
+- **Upscaling (`L`)** — high-quality upscaling with halo-free sharpening, plus an optional internal
   4K render target (`K`).
-- **Smart picture** â€” auto-tunes sharpness and colour from the content itself, so most videos look
+- **Smart picture** — auto-tunes sharpness and colour from the content itself, so most videos look
   right without touching a slider.
-- **Image filters (`C`)** â€” brightness, contrast, saturation, sharpness, colour temperature and
+- **Image filters (`C`)** — brightness, contrast, saturation, sharpness, colour temperature and
   black point, with presets.
-- **Display filters** â€” optional retro / creative looks over the picture, each with adjustable
+- **Display filters** — optional retro / creative looks over the picture, each with adjustable
   strength: **CRT**, **Trinitron**, **LCD/TFT**, **NTSC**, **35 mm film**, **Glitch**, **old
-  handheld**, **E-Ink**, **Technicolor**, **StayPlaytion 1**, and a clean **Blu-ray Anime** sharpen â€”
+  handheld**, **E-Ink**, **Technicolor**, **StayPlaytion 1**, and a clean **Blu-ray Anime** sharpen —
   plus a **curved-screen** toggle. The menu stays open so you can flick through them live. Off by
   default (zero cost).
 
 ### Sound
-- **Full audio suite** â€” multi-track selection, A/V offset, correct 5.1 / 7.1 speaker mapping,
+- **Full audio suite** — multi-track selection, A/V offset, correct 5.1 / 7.1 speaker mapping,
   **Smart loudness** (quiet and loud sources sit at an even level), a **virtual surround** downmix
   for headphones, per-ear **balance**, pitch-preserving **tempo**, and preferred-language auto-selection.
-- **10-band graphic equalizer (`Q`)** â€” with presets.
+- **10-band graphic equalizer (`Q`)** — with presets.
 
 ### Subtitles & accessibility
-- **Subtitles** â€” external `.srt` / `.ass` / `.ssa` / `.vtt` (full ASS styling) and embedded tracks,
+- **Subtitles** — external `.srt` / `.ass` / `.ssa` / `.vtt` (full ASS styling) and embedded tracks,
   on a sharp separate layer that is **never interpolated**. Platform subtitles are fetched
   automatically in your language; drag & drop your own, and nudge the timing (`Ctrl+,` / `Ctrl+.`)
   and position live.
-- **Accessibility (Meatware Mods)** â€” a built-in toolkit for real needs: colour-blind assist modes,
+- **Accessibility (Meatware Mods)** — a built-in toolkit for real needs: colour-blind assist modes,
   dialogue boost / mono downmix / amplify for hard-to-hear audio, a flash guard and calmer UI for
   photosensitivity, and pitch-preserving slow-motion that can kick in automatically while subtitles
   are on.
 
 ### Formats & streaming
-- **Plays virtually any format** â€” every common codec (H.264, HEVC, VP8/VP9, AV1, MPEG, VC-1, WMV,
-  ProRes, DNxHD, â€¦) across all common containers (MP4, MKV, WebM, AVI, MOV, TS, FLV, â€¦), decoded on
-  your GPU. Music files (MP3, FLAC, Opus, M4A, WAV, OGG, â€¦) open **instantly** into music mode.
-- **Smooth network streaming** â€” paste a web video link and it just plays: **downloads while
+- **Plays virtually any format** — every common codec (H.264, HEVC, VP8/VP9, AV1, MPEG, VC-1, WMV,
+  ProRes, DNxHD, …) across all common containers (MP4, MKV, WebM, AVI, MOV, TS, FLV, …), decoded on
+  your GPU. Music files (MP3, FLAC, Opus, M4A, WAV, OGG, …) open **instantly** into music mode.
+- **Smooth network streaming** — paste a web video link and it just plays: **downloads while
   it plays** (full quality with local-file smoothness), live streams start instantly, drop-outs
-  reconnect on their own, and it's **completely ad-free** â€” no pre-roll, no mid-roll, ever. Recent
+  reconnect on their own, and it's **completely ad-free** — no pre-roll, no mid-roll, ever. Recent
   URLs are remembered (`H`).
 
 ### Everyday
-- **A menu you can drive from the couch** â€” every control lives in a **honeycomb menu** you open
+- **A menu you can drive from the couch** — every control lives in a **honeycomb menu** you open
   with a right-click **or the Escape key**, laid out in tidy categories. It runs **entirely from the
   keyboard**: arrow keys glide between tiles, Space picks, Escape backs out. Multi-choice things
   (filters, EQ, visuals) stay open while you flick through them, so you can hear or see each one and
   change your mind. *No mouse, no squinting, no leaving the sofa.*
-- **Offline export (`X`)** â€” render the presented image (interpolation + filters + upscale) to a
+- **Offline export (`X`)** — render the presented image (interpolation + filters + upscale) to a
   file; the active subtitle goes along as its own track (timing correction baked in) or burned in.
-- **Screenshot (`F9`)** â€” save the exact presented frame.
-- **Ambient light / RGB sync** â€” drive **WLED** strips and **OpenRGB** devices from the average
+- **Screenshot (`F9`)** — save the exact presented frame.
+- **Ambient light / RGB sync** — drive **WLED** strips and **OpenRGB** devices from the average
   on-screen colour for real-time bias lighting.
-- **Repeat & shuffle (`R`)** â€” off, the current track / video, or the whole folder playlist.
-- **Backup & restore** â€” pack your settings + models, or the whole portable player, into one `.zip`
+- **Repeat & shuffle (`R`)** — off, the current track / video, or the whole folder playlist.
+- **Backup & restore** — pack your settings + models, or the whole portable player, into one `.zip`
   and import it on another machine.
-- **Update check** â€” a manual **Check for updates** in the menu. User-triggered only â€” nothing
+- **Update check** — a manual **Check for updates** in the menu. User-triggered only — nothing
   phones home on its own.
-- **Reset & remembered settings** â€” one click restores picture, filters and EQ to defaults; every
+- **Reset & remembered settings** — one click restores picture, filters and EQ to defaults; every
   choice is saved and restored across sessions.
-- **Clean UI** â€” a slim auto-hiding seekbar; the title bar and controls fade away when idle, and
+- **Clean UI** — a slim auto-hiding seekbar; the title bar and controls fade away when idle, and
   fullscreen (`F11`) is truly borderless.
 
 ## Enabling the RIFE engine (optional)
 
 FAFI plays on the default **MEMC** engine out of the box. The neural **RIFE** engine (higher quality
-on hard motion) is built in too â€” **just press `E`**. The recommended model (`rife-v4.22-lite`) is
-**embedded in the app**, so the first time you switch to RIFE it sets itself up instantly, offline â€”
-no download, no file juggling. A short **"RIFE active â€” <model>"** note confirms it's running.
+on hard motion) is built in too — **just press `E`**. The recommended model (`rife-v4.22-lite`) is
+**embedded in the app**, so the first time you switch to RIFE it sets itself up instantly, offline —
+no download, no file juggling. A short **"RIFE active — <model>"** note confirms it's running.
 
 **It even chooses for you:** on a fast **RTX-class GPU** FAFI defaults to RIFE automatically (it's
 real-time there); on older cards it stays on MEMC. Your own `E` choice is remembered from then on.
 
 ### Want a different model?
 FAFI loads any compatible `rife-v4.x` folder you drop into `models\` and **auto-picks the best
-present** (order: `v4.22-lite` â†’ `v4.25-lite` â†’ `v4.26` â†’ `v4.25` â†’ `v4.6`, then any other
-`rife-v4.*`). Easiest place: **right-click â†’ Interpolation â†’ Open models folder**. Get other models
+present** (order: `v4.22-lite` → `v4.25-lite` → `v4.26` → `v4.25` → `v4.6`, then any other
+`rife-v4.*`). Easiest place: **right-click → Interpolation → Open models folder**. Get other models
 from [nihui](https://github.com/nihui/rife-ncnn-vulkan) (`rife-v4.6`) or
 [TNTwise](https://github.com/TNTwise/rife-ncnn-vulkan) (newer); FAFI picks up whatever you add.
 
-| Model | Quality | SpeedÂ¹ | Best for |
+| Model | Quality | Speed¹ | Best for |
 |-------|---------|--------|----------|
-| **`rife-v4.22-lite`** *(built in)* | sharp; fixes fast-motion warping | balanced | **the default â€” works out of the box** |
+| **`rife-v4.22-lite`** *(built in)* | sharp; fixes fast-motion warping | balanced | **the default — works out of the box** |
 | **`rife-v4.6`** *(download)* | good; softer + more warping | **fastest** | older/weak GPUs wanting max smoothness |
 | **`rife-v4.25-lite`** *(download)* | a touch cleaner | slower | maximum quality, speed no object |
 | **`rife-v4.25` / `v4.26`** *(download)* | highest | heaviest | strong RTX-class GPUs |
 
-Â¹ Measured on a GTX 1080 Ti @1080p. Counter-intuitively the newer nets are **heavier** (slower),
-not lighter â€” on Pascal-class GPUs `v4.6` stays the fastest, just softer. Only the `rife-v4.x` line
+¹ Measured on a GTX 1080 Ti @1080p. Counter-intuitively the newer nets are **heavier** (slower),
+not lighter — on Pascal-class GPUs `v4.6` stays the fastest, just softer. Only the `rife-v4.x` line
 works; the old `rife-v2/v3/anime/HD/UHD` folders use a different network and are ignored.
 
-All `rife-v4.x` model weights are **MIT-licensed** (Practical-RIFE / ECCV2022-RIFE / ncnn â€” see
+All `rife-v4.x` model weights are **MIT-licensed** (Practical-RIFE / ECCV2022-RIFE / ncnn — see
 [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md)); using any model is your responsibility (see
 [`DISCLAIMER.md`](DISCLAIMER.md)).
 
@@ -209,19 +209,19 @@ All `rife-v4.x` model weights are **MIT-licensed** (Practical-RIFE / ECCV2022-RI
 FAFI is **proprietary, closed-source** software under the **FindAFrameInterpolation License**
 (full text in [`LICENSE`](LICENSE)):
 
-- âœ… **Use** it for any purpose, **including commercially** (companies may use it).
-- âœ… **Share** verbatim, unmodified copies **free of charge**.
-- âŒ **No selling** the software, **no modifying / adapting**, **no reverse-engineering,
-  decompiling or disassembling** â€” except where a bundled third-party license requires
+- ✅ **Use** it for any purpose, **including commercially** (companies may use it).
+- ✅ **Share** verbatim, unmodified copies **free of charge**.
+- ❌ **No selling** the software, **no modifying / adapting**, **no reverse-engineering,
+  decompiling or disassembling** — except where a bundled third-party license requires
   otherwise (the LGPL FFmpeg and FriBidi DLLs stay replaceable; see below).
 
-It bundles third-party components under their own licenses â€” **FFmpeg** (LGPL-2.1, dynamically
+It bundles third-party components under their own licenses — **FFmpeg** (LGPL-2.1, dynamically
 linked, replaceable DLLs), the subtitle stack **libass** (ISC) / **FreeType** (FTL) /
 **HarfBuzz** (MIT) / **FriBidi** (LGPL-2.1, replaceable DLL), **ncnn** (BSD-3), the
 **rife-ncnn-vulkan** warp layer (MIT), a bundled **QuickJS** (quickjs-ng) JavaScript runtime
 (MIT, used by yt-dlp), and permissive support libraries (Brotli, bzip2, libpng, zlib).
-Portions of this software are copyright Â© The FreeType Project (www.freetype.org).
+Portions of this software are copyright © The FreeType Project (www.freetype.org).
 All rights reserved. Full details and texts:
 [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md).
 
-No warranty â€” see [`DISCLAIMER.md`](DISCLAIMER.md).
+No warranty — see [`DISCLAIMER.md`](DISCLAIMER.md).
