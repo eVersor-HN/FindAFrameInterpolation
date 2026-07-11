@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FAFI — Free Windows Video Player with Real-Time Frame Interpolation (24→60/120 fps)</title>
-<meta name="description" content="FAFI (FindAFrameInterpolation) is a free, offline-first Windows video player with real-time motion interpolation: MEMC and neural RIFE engines turn 24/30 fps video into smooth 60/120 fps playback. No ads, no account, no telemetry.">
+<meta name="description" content="FAFI (FindAFrameInterpolation) is a free, offline-first Windows video player with real-time motion interpolation: MEMC and neural RIFE engines turn 24/30 fps video into smooth 60/120 fps playback. Feed it music and it becomes a reactive visualiser. No ads, no account, no telemetry.">
 <link rel="canonical" href="https://eversor-hn.github.io/FindAFrameInterpolation/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b0f14'/%3E%3Cpath d='M10 8h14v3.5h-9.5V15H23v3.5h-8.5V24H10z' fill='%2300e5ff'/%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:title" content="FAFI — Free Windows Video Player with Real-Time Frame Interpolation">
-<meta property="og:description" content="Smooth-motion video playback for Windows: MEMC + neural RIFE interpolation, GPU decode, subtitles, streaming, export. Free, offline-first, no telemetry.">
+<meta property="og:description" content="Smooth-motion video playback for Windows: MEMC + neural RIFE interpolation, GPU decode, subtitles, streaming, export — plus a reactive music-visualiser mode. Free, offline-first, no telemetry.">
 <meta property="og:url" content="https://eversor-hn.github.io/FindAFrameInterpolation/">
 <script type="application/ld+json">
 {
@@ -21,7 +21,7 @@
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
   "downloadUrl": "https://github.com/eVersor-HN/FindAFrameInterpolation/releases/latest",
   "author": { "@type": "Person", "name": "Marco Aurelio Fattizzo" },
-  "description": "Free Windows video player with real-time motion interpolation (MEMC + neural RIFE): plays 24/30 fps video as smooth 60/120 fps. Offline-first, no ads, no account, no telemetry."
+  "description": "Free Windows video player with real-time motion interpolation (MEMC + neural RIFE): plays 24/30 fps video as smooth 60/120 fps, and turns music into a full-screen reactive visualiser. Offline-first, no ads, no account, no telemetry."
 }
 </script>
 <style>
@@ -78,7 +78,8 @@
     <h1>The free Windows video player that makes <em>24 fps look like 120</em>.</h1>
     <p class="sub">FAFI plays your videos with <strong>real-time motion interpolation</strong> —
       a GPU MEMC engine or a neural RIFE engine turns 24/30/60 fps material into buttery-smooth
-      playback at your monitor's refresh rate. Offline-first: no ads, no account, no telemetry.</p>
+      playback at your monitor's refresh rate. Feed it <strong>music</strong> instead and it becomes
+      a full-screen visualiser that reacts to every beat. Offline-first: no ads, no account, no telemetry.</p>
     <a class="btn" href="https://github.com/eVersor-HN/FindAFrameInterpolation/releases/latest">Download FAFI-Setup.exe</a>
     <a class="btn ghost" href="https://github.com/eVersor-HN/FindAFrameInterpolation">GitHub</a>
     <div class="meta">Free for personal &amp; commercial use · Windows 10/11 (64-bit) · Direct3D-11 GPU (RIFE needs Vulkan)</div>
@@ -107,15 +108,36 @@
 
 <section>
   <div class="wrap">
+    <h2>Feed it <span>music</span></h2>
+    <p class="lead">Open an audio file and FAFI stops pretending to be a video player: the whole
+      screen turns into a reactive visualiser that moves to every beat, edge to edge, at your
+      monitor's refresh. Hide the controls and it's just you, the track and the light.</p>
+    <div class="grid">
+      <div class="card"><h3>Reactive, not decorative</h3>
+        <p>A whole gallery of live visuals that actually react — hard, and on the beat.
+        None of that "wiggles a bit if you squint" filler.</p></div>
+      <div class="card"><h3>Flick or shuffle</h3>
+        <p>Switch visuals with the arrow keys, or let shuffle deal you a fresh one on a timer.
+        Full-screen, sharp, nothing in the way.</p></div>
+      <div class="card"><h3>Still a player</h3>
+        <p>Drop a video in at any moment — open a file, paste a URL, drag it on — and FAFI snaps
+        straight back to picture. Your eyes and ears take turns; you don't have to choose.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
     <h2>A complete player, <span>not a demo</span></h2>
     <ul class="plain">
       <li><strong>Upscaling</strong> — high-quality upscaling with halo-free sharpening, optional internal 4K render path.</li>
       <li><strong>Subtitles</strong> — SRT/ASS/SSA/VTT with full ASS styling, embedded tracks, auto-fetched platform subtitles, live timing correction — rendered on a sharp layer that is never interpolated.</li>
       <li><strong>Accessibility</strong> — a built-in toolkit: colour-blind assist, dialogue boost / mono / amplify, a flash guard and calmer UI for photosensitivity, and pitch-preserving slow-motion.</li>
-      <li><strong>Picture &amp; sound</strong> — image filter presets, a 10-band equalizer, virtual surround, correct 5.1/7.1 mapping, smart loudness.</li>
+      <li><strong>Picture &amp; sound</strong> — image filter presets, a 10-band equalizer, virtual surround, correct 5.1/7.1 mapping, smart loudness, per-ear balance and pitch-preserving tempo.</li>
+      <li><strong>Couch-ready menu</strong> — every control lives in a honeycomb menu you open with a right-click or the Escape key, and drive entirely from the keyboard: arrows glide between tiles, Space picks, Escape backs out. No mouse, no leaving the sofa.</li>
       <li><strong>Streaming as an extra</strong> — paste a web video URL and it plays smooth: download-while-playing, robust against throttling, completely ad-free. Local playback needs no network at all.</li>
       <li><strong>Export</strong> — render the interpolated, filtered result to a file, subtitles as a real track or burned in.</li>
-      <li><strong>UI</strong> — a slim auto-hiding seekbar and a themed right-click menu that holds every control, with an explanation line for every setting.</li>
+      <li><strong>Clean UI</strong> — a slim auto-hiding seekbar; the chrome fades away when idle, and fullscreen is truly borderless.</li>
     </ul>
   </div>
 </section>

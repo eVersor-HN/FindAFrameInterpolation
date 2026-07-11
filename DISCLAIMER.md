@@ -56,7 +56,7 @@ repackaged, re-hosted or otherwise altered copies obtained from any other source
 ## Third-party components
 
 The Software includes third-party components under their own licenses (FFmpeg/LGPL-2.1,
-libass/ISC, FreeType/FTL, HarfBuzz/MIT, FriBidi/LGPL-2.1, ncnn/BSD-3, Rajdhani font/OFL-1.1,
+libass/ISC, FreeType/FTL, HarfBuzz/MIT, FriBidi/LGPL-2.1, ncnn/BSD-3, Quantico font/OFL-1.1,
 RIFE model rife-v4.22-lite/MIT, rife-ncnn-vulkan warp
 layer/MIT, QuickJS/MIT, plus permissively licensed support libraries — Brotli, bzip2, libpng,
 zlib). Portions of this software are copyright © The FreeType Project (www.freetype.org).
@@ -70,6 +70,13 @@ The Software performs frame interpolation and other processing that **alters** t
 exported video (e.g. synthesized in-between frames). Output is provided for general use and is
 **not** guaranteed to be accurate, artifact-free, or suitable for any professional, broadcast,
 forensic, medical or safety-critical purpose.
+
+## Photosensitivity
+
+The music-mode visualisers and some display filters can produce rapidly changing, flashing or
+strobing imagery. If you are prone to photosensitive seizures, enable the built-in **flash guard**
+and stop using the Software if you feel unwell. Output is provided as-is; the author accepts **no
+liability** for adverse health effects.
 
 ---
 
