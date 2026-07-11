@@ -3,8 +3,10 @@
 **FAFI** turns choppy video into **liquid-smooth motion, in real time.** Aim it at **your own
 files**, hit play, and 24 / 30 / 60 fps footage flows as fast as your screen can refresh — no ads,
 no account, no telemetry, nothing leaving your machine. Two engines pull it off: **MEMC** (fast,
-always ready) and the optional neural **RIFE** (slower, but razor-clean). Web streaming rides along
-as a bonus — but the heart of FAFI is your own offline library. Runs fully on the GPU, so it stays light.
+always ready) and the optional neural **RIFE** (slower, but razor-clean). Feed it **music instead**
+and it flips into a full-screen **reactive light show** that moves to every beat. Web streaming
+rides along as a bonus — but the heart of FAFI is your own offline library. Runs fully on the GPU,
+so it stays light.
 
 > **Closed-source, proprietary application.** Free to use (including commercially) and to
 > share verbatim — **not for sale, not modifiable, no reverse-engineering.**
@@ -55,10 +57,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.7.0 — `FAFI-Setup.exe`:**
+**v1.8.0 — `FAFI-Setup.exe`:**
 
 ```
-a9e27c16eafd21786066e6d09056aac40e1625e8610ad3fcff0c07c9cdcb707a
+e28e13eba44df0f611973eec40d13a947510fe27ad963afe71d69b505cca266b
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -86,6 +88,18 @@ The printed hash must match the value above (case-insensitive). If it does **not
 - **A/B compare (`V`)** — a draggable before/after wipe: the plain original on the left, the full
   FAFI treatment on the right. See the difference live.
 
+### Music mode — the room is the show
+Feed FAFI an audio file and it stops pretending to be a video player and becomes a **reactive
+visualiser**: full-screen, edge to edge, running at your monitor's refresh, moving to every beat,
+drop and breath of the track.
+
+- **A whole gallery of live visuals** — from slow drifting fields to hard strobing spectra. Flick
+  through them with the arrow keys, or let **shuffle** deal you a fresh one on a timer. Every one of
+  them reacts hard and on the beat — no lazy "it wiggles a bit if you squint" filler.
+- **Hide the controls and it's just you, the track, and the light** — nothing on screen but the show.
+- **Still a player.** Open a file, paste a URL, or drag a video onto the window at any moment and
+  FAFI snaps straight back to picture. *Your eyes and your ears take turns; you don't have to choose.*
+
 ### Picture
 - **HDR playback** — HDR10 / HLG sources are tone-mapped to SDR so bright highlights keep their
   detail on an ordinary display (a couple of looks to choose from); SDR content is untouched.
@@ -105,7 +119,7 @@ The printed hash must match the value above (case-insensitive). If it does **not
 ### Sound
 - **Full audio suite** — multi-track selection, A/V offset, correct 5.1 / 7.1 speaker mapping,
   **Smart loudness** (quiet and loud sources sit at an even level), a **virtual surround** downmix
-  for headphones, and preferred-language auto-selection.
+  for headphones, per-ear **balance**, pitch-preserving **tempo**, and preferred-language auto-selection.
 - **10-band graphic equalizer (`Q`)** — with presets.
 
 ### Subtitles & accessibility
@@ -121,28 +135,32 @@ The printed hash must match the value above (case-insensitive). If it does **not
 ### Formats & streaming
 - **Plays virtually any format** — every common codec (H.264, HEVC, VP8/VP9, AV1, MPEG, VC-1, WMV,
   ProRes, DNxHD, …) across all common containers (MP4, MKV, WebM, AVI, MOV, TS, FLV, …), decoded on
-  your GPU.
+  your GPU. Music files (MP3, FLAC, Opus, M4A, WAV, OGG, …) open **instantly** into music mode.
 - **Smooth network streaming** — paste a web video link and it just plays: **downloads while
   it plays** (full quality with local-file smoothness), live streams start instantly, drop-outs
   reconnect on their own, and it's **completely ad-free** — no pre-roll, no mid-roll, ever. Recent
   URLs are remembered (`H`).
 
 ### Everyday
+- **A menu you can drive from the couch** — every control lives in a **honeycomb menu** you open
+  with a right-click **or the Escape key**, laid out in tidy categories. It runs **entirely from the
+  keyboard**: arrow keys glide between tiles, Space picks, Escape backs out. Multi-choice things
+  (filters, EQ, visuals) stay open while you flick through them, so you can hear or see each one and
+  change your mind. *No mouse, no squinting, no leaving the sofa.*
 - **Offline export (`X`)** — render the presented image (interpolation + filters + upscale) to a
   file; the active subtitle goes along as its own track (timing correction baked in) or burned in.
 - **Screenshot (`F9`)** — save the exact presented frame.
 - **Ambient light / RGB sync** — drive **WLED** strips and **OpenRGB** devices from the average
   on-screen colour for real-time bias lighting.
-- **Repeat (`R`)** — off, the current video, or the whole folder playlist.
+- **Repeat & shuffle (`R`)** — off, the current track / video, or the whole folder playlist.
 - **Backup & restore** — pack your settings + models, or the whole portable player, into one `.zip`
   and import it on another machine.
 - **Update check** — a manual **Check for updates** in the menu. User-triggered only — nothing
   phones home on its own.
 - **Reset & remembered settings** — one click restores picture, filters and EQ to defaults; every
   choice is saved and restored across sessions.
-- **Clean UI** — a slim auto-hiding seekbar and a themed **right-click menu** with every control in
-  tidy categories; the title bar and controls fade away when idle, and fullscreen (`F11`) is truly
-  borderless.
+- **Clean UI** — a slim auto-hiding seekbar; the title bar and controls fade away when idle, and
+  fullscreen (`F11`) is truly borderless.
 
 ## Enabling the RIFE engine (optional)
 
