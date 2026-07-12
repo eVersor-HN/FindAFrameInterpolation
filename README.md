@@ -2,7 +2,8 @@
 
 **FAFI** turns choppy video into **liquid-smooth motion, in real time.** Aim it at **your own
 files**, hit play, and 24 / 30 / 60 fps footage flows as fast as your screen can refresh — no ads,
-no account, no telemetry, nothing leaving your machine. Two engines pull it off: **MEMC** (fast,
+no account, no telemetry, nothing leaving your machine, and **no features that switch themselves off
+after you've been offline.** Two engines pull it off: **MEMC** (fast,
 always ready) and the optional neural **RIFE** (slower, but razor-clean). Feed it **music instead**
 and it flips into a full-screen **reactive light show** that moves to every beat. Web streaming
 rides along as a bonus — but the heart of FAFI is your own offline library. Runs fully on the GPU,
@@ -24,6 +25,9 @@ the core, and it works with the network cable pulled. Everything around network 
 is about.
 
 - **No ads. No account. No subscription.** Install it, open a video, done.
+- **Never expires, never locks out.** Unlike some players, FAFI **never disables features after a
+  stretch offline** — there is no licence check, no online activation, no *"you've been offline too
+  long."* Every capability stays unlocked forever, whether you're connected or not.
 - **No telemetry, no phone-home:** FAFI sends nothing anywhere. The only network activity
   that ever happens is the one **you** explicitly trigger — opening a stream URL or its
   subtitles, or clicking **Check for updates** in the menu (a one-off request to GitHub —
@@ -49,6 +53,15 @@ This is the **official** distribution repository — get FAFI only from here:
    shortcuts and an entry under *Apps & Features* for clean uninstalling.
 
 There is nothing else to install — the player ships with everything it needs.
+
+### Updating
+
+FAFI checks for a new version **only when you ask** (right-click → *Check for updates* — never in
+the background, never on startup). When one is available, **one click updates in place**: FAFI
+downloads the setup, verifies its checksum, replaces the running player and restarts it — **you
+never have to uninstall the old version first.** Prefer to do it by hand? Just run the new
+`FAFI-Setup.exe` over your existing install and it updates cleanly, keeping your settings and
+shortcuts.
 
 ---
 
