@@ -159,7 +159,8 @@ drop and breath of the track.
 ### Formats & streaming
 - **Plays virtually any format** — every common codec (H.264, HEVC, VP8/VP9, AV1, MPEG, VC-1, WMV,
   ProRes, DNxHD, …) across all common containers (MP4, MKV, WebM, AVI, MOV, TS, FLV, …), decoded on
-  your GPU. Music files (MP3, FLAC, Opus, M4A, WAV, OGG, …) open **instantly** into music mode.
+  your GPU where possible and in software otherwise — so even AV1 on an older card just plays,
+  nothing is left unplayable. Music files (MP3, FLAC, Opus, M4A, WAV, OGG, …) open **instantly** into music mode.
 - **Smooth network streaming** — paste a web video link and it just plays: **downloads while
   it plays** (full quality with local-file smoothness), live streams start instantly, drop-outs
   reconnect on their own, and it's **completely ad-free** — no pre-roll, no mid-roll, ever. Recent
