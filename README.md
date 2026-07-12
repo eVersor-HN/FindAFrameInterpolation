@@ -1,5 +1,9 @@
 # FindAFrameInterpolation (FAFI)
 
+*Free, offline-first Windows video player with real-time motion interpolation (MEMC + neural RIFE)
+and a reactive music visualiser. No ads, no account, no telemetry — and no features that lock out
+when you're offline.*
+
 **FAFI** turns choppy video into **liquid-smooth motion, in real time.** Aim it at **your own
 files**, hit play, and 24 / 30 / 60 fps footage flows as fast as your screen can refresh — no ads,
 no account, no telemetry, nothing leaving your machine, and **no features that switch themselves off
@@ -72,10 +76,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.8.3 — `FAFI-Setup.exe`:**
+**v1.8.4 — `FAFI-Setup.exe`:**
 
 ```
-807e4e7a98b615dcb9f569953db07cff6611a773d67f8aee0e785ff5aa90e730
+f9ff6b12ebcac69ce9025379753f22f80331f343f34bd94e28f4d5111e642e86
 ```
 
 The authoritative value for each release is in that release's notes and in its
