@@ -59,10 +59,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.8.2 — `FAFI-Setup.exe`:**
+**v1.8.3 — `FAFI-Setup.exe`:**
 
 ```
-a7869be913add6e9dd29fae2000d27d0b10591f663e50b3f9557be2e5dd28fe8
+807e4e7a98b615dcb9f569953db07cff6611a773d67f8aee0e785ff5aa90e730
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -117,6 +117,11 @@ drop and breath of the track.
   handheld**, **E-Ink**, **Technicolor**, **StayPlaytion 1**, and a clean **Blu-ray Anime** sharpen —
   plus a **curved-screen** toggle. The menu stays open so you can flick through them live. Off by
   default (zero cost).
+- **In-player ambient light** — a soft, high-quality glow of the picture's own colours spills into
+  the black around the video, so your film lights up its own frame with **no LED strip or extra
+  hardware**. Fully tunable: how far it reaches (or leave a crisp black border), how soft, how
+  bright, how colourful, which sides it lights, and how small the picture floats inside the glow.
+  Composes with every look — curved tube, retro screens, upscaling — and takes on their colour too.
 
 ### Sound
 - **Full audio suite** — multi-track selection, A/V offset, correct 5.1 / 7.1 speaker mapping,
@@ -142,6 +147,9 @@ drop and breath of the track.
   it plays** (full quality with local-file smoothness), live streams start instantly, drop-outs
   reconnect on their own, and it's **completely ad-free** — no pre-roll, no mid-roll, ever. Recent
   URLs are remembered (`H`).
+- **Skip anywhere in a stream** — drag the scrubber to any point in an online video and it jumps
+  straight there, forward or back, with no re-loading the whole file and no freezing. Streaming
+  scrubs like a local file.
 
 ### Everyday
 - **A menu you can drive from the couch** — every control lives in a **honeycomb menu** you open
@@ -152,8 +160,8 @@ drop and breath of the track.
 - **Offline export (`X`)** — render the presented image (interpolation + filters + upscale) to a
   file; the active subtitle goes along as its own track (timing correction baked in) or burned in.
 - **Screenshot (`F9`)** — save the exact presented frame.
-- **Ambient light / RGB sync** — drive **WLED** strips and **OpenRGB** devices from the average
-  on-screen colour for real-time bias lighting.
+- **External bias lighting / RGB sync** — drive **WLED** strips and **OpenRGB** devices from the
+  average on-screen colour for real-time bias lighting on your own hardware.
 - **Repeat & shuffle (`R`)** — off, the current track / video, or the whole folder playlist.
 - **Backup & restore** — pack your settings + models, or the whole portable player, into one `.zip`
   and import it on another machine.
