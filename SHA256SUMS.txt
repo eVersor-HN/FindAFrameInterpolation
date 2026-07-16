@@ -1,1 +1,1 @@
-ad86d0f6f1f80c3a41f0ccba5b95a977bc9284407673dedd46e3cb2bcce9e0ad *FAFI-Setup.exe
+c93aa8998d0d39dd123d5c6e8db0f7ff8c29cde36cc4ac5acabe54b58be4568a *FAFI-Setup.exe
