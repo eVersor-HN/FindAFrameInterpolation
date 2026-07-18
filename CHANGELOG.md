@@ -4,6 +4,10 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.10.1
+- The **Aspect ratio** control is now in the honeycomb menu too (under *Picture*), not just the classic menu.
+- Menu tile text now **scales with the tiles** — labels stay neatly sized when the window is small.
+
 ## 1.10.0
 - **The player now speaks your language.** A new language picker with **12 languages** — English, German, French, Spanish, Italian, Portuguese, Dutch, Polish, Russian, Turkish, Japanese and Chinese. Switch any time; your choice is remembered.
 - **Open and view images.** Drop a PNG, JPG, WebP, BMP or TIFF onto the player and it shows the picture — with the same zoom and aspect controls as video.
