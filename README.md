@@ -76,10 +76,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.9.4 — `FAFI-Setup.exe`:**
+**v1.9.5 — `FAFI-Setup.exe`:**
 
 ```
-128eb0d7d41fa0c74b68a04511fbb02812ae98c02e1512c69ba2a18e5516b4f4
+7e7bb781639af55a5adc858c64c2fc75da73201224f858f155e011fca5e2179e
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -130,9 +130,9 @@ drop and breath of the track.
 - **Image filters (`C`)** — brightness, contrast, saturation, sharpness, colour temperature and
   black point, with presets.
 - **Display filters** — optional retro / creative looks over the picture, each with adjustable
-  strength: **CRT**, **Trinitron**, **LCD/TFT**, **NTSC**, **35 mm film**, **Glitch**, **old
-  handheld**, **E-Ink**, **Technicolor**, **StayPlaytion 1**, and a clean **Blu-ray Anime** sharpen —
-  plus a **curved-screen** toggle. The menu stays open so you can flick through them live. Off by
+  strength: **CRT**, **Aperture Grille**, **LCD/TFT**, **NTSC**, **35 mm film**, **Glitch**, **VHS**,
+  **old handheld**, **E-Paper**, **Dye Transfer**, **StayPlaytion 1**, and a clean **Anime Disc**
+  sharpen — plus a **curved-screen** toggle. The menu stays open so you can flick through them live. Off by
   default (zero cost).
 - **In-player ambient light** — a soft, high-quality glow of the picture's own colours spills into
   the black around the video, so your film lights up its own frame with **no LED strip or extra
@@ -199,7 +199,7 @@ on hard motion) is built in too — **just press `E`**. The recommended model (`
 **embedded in the app**, so the first time you switch to RIFE it sets itself up instantly, offline —
 no download, no file juggling. A short **"RIFE active — <model>"** note confirms it's running.
 
-**It even chooses for you:** on a fast **RTX-class GPU** FAFI defaults to RIFE automatically (it's
+**It even chooses for you:** on a fast **modern GPU** FAFI defaults to RIFE automatically (it's
 real-time there); on older cards it stays on MEMC. Your own `E` choice is remembered from then on.
 
 ### Want a different model?
@@ -214,10 +214,10 @@ from [nihui](https://github.com/nihui/rife-ncnn-vulkan) (`rife-v4.6`) or
 | **`rife-v4.22-lite`** *(built in)* | sharp; fixes fast-motion warping | balanced | **the default — works out of the box** |
 | **`rife-v4.6`** *(download)* | good; softer + more warping | **fastest** | older/weak GPUs wanting max smoothness |
 | **`rife-v4.25-lite`** *(download)* | a touch cleaner | slower | maximum quality, speed no object |
-| **`rife-v4.25` / `v4.26`** *(download)* | highest | heaviest | strong RTX-class GPUs |
+| **`rife-v4.25` / `v4.26`** *(download)* | highest | heaviest | strong modern GPUs |
 
-¹ Measured on a GTX 1080 Ti @1080p. Counter-intuitively the newer nets are **heavier** (slower),
-not lighter — on Pascal-class GPUs `v4.6` stays the fastest, just softer. Only the `rife-v4.x` line
+¹ Measured on a high-end 2017-era GPU @1080p. Counter-intuitively the newer nets are **heavier**
+(slower), not lighter — on GPUs of that generation `v4.6` stays the fastest, just softer. Only the `rife-v4.x` line
 works; the old `rife-v2/v3/anime/HD/UHD` folders use a different network and are ignored.
 
 All `rife-v4.x` model weights are **MIT-licensed** (Practical-RIFE / ECCV2022-RIFE / ncnn — see
