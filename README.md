@@ -76,10 +76,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.9.3 — `FAFI-Setup.exe`:**
+**v1.9.4 — `FAFI-Setup.exe`:**
 
 ```
-e4349e09ccd23b5b332d399325f0961e5760d611ff3c8b925d8a22eb135a552d
+128eb0d7d41fa0c74b68a04511fbb02812ae98c02e1512c69ba2a18e5516b4f4
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -138,6 +138,8 @@ drop and breath of the track.
   the black around the video, so your film lights up its own frame with **no LED strip or extra
   hardware**. Fully tunable: how far it reaches (or leave a crisp black border), how soft, how
   bright, how colourful, which sides it lights, and how small the picture floats inside the glow.
+  Dial the **border** all the way down and the picture's edge dissolves into its own light — round
+  corners, no rectangle, no seam — or keep it at full for a crisp, defined frame.
   Composes with every look — curved tube, retro screens, upscaling — and takes on their colour too.
 
 ### Sound
