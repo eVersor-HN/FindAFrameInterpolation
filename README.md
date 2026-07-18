@@ -125,6 +125,9 @@ drop and breath of the track.
   Network streams can optionally fetch the HDR version.
 - **Upscaling (`L`)** — high-quality upscaling with halo-free sharpening, plus an optional internal
   4K render target (`K`).
+- **Correct aspect ratio, automatically** — anamorphic video that older players show **stretched**
+  now displays at its true shape without you touching a thing. And when you *want* control, an
+  **Aspect ratio** switch offers fit, crop-to-fill (lose the black bars) or stretch.
 - **Smart picture** — auto-tunes sharpness and colour from the content itself, so most videos look
   right without touching a slider.
 - **Image filters (`C`)** — brightness, contrast, saturation, sharpness, colour temperature and
@@ -163,6 +166,8 @@ drop and breath of the track.
   ProRes, DNxHD, …) across all common containers (MP4, MKV, WebM, AVI, MOV, TS, FLV, …), decoded on
   your GPU where possible and in software otherwise — so even AV1 on an older card just plays,
   nothing is left unplayable. Music files (MP3, FLAC, Opus, M4A, WAV, OGG, …) open **instantly** into music mode.
+- **View images too** — drop a **PNG, JPG, WebP, BMP or TIFF** onto the window and FAFI shows the
+  still picture, with the same zoom and aspect controls as video.
 - **Smooth network streaming** — paste a web video link and it just plays: **downloads while
   it plays** (full quality with local-file smoothness), live streams start instantly, drop-outs
   reconnect on their own, and it's **completely ad-free** — no pre-roll, no mid-roll, ever. Recent
@@ -177,8 +182,15 @@ drop and breath of the track.
   keyboard**: arrow keys glide between tiles, Space picks, Escape backs out. Multi-choice things
   (filters, EQ, visuals) stay open while you flick through them, so you can hear or see each one and
   change your mind. *No mouse, no squinting, no leaving the sofa.*
+- **Your language, 12 of them** — the whole interface is translated into **English, German, French,
+  Spanish, Italian, Portuguese, Dutch, Polish, Russian, Turkish, Japanese and Chinese**. Pick one in
+  the menu and it sticks.
+- **Picture-in-Picture (`P`)** — pop the video out into a small, borderless, always-on-top corner
+  window and keep watching while you work.
 - **Offline export (`X`)** — render the presented image (interpolation + filters + upscale) to a
-  file; the active subtitle goes along as its own track (timing correction baked in) or burned in.
+  file — one clip, or a **whole folder in batch**; the active subtitle goes along as its own track
+  (timing correction baked in) or burned in.
+- **Interface themes** — recolour the whole UI and window accent to taste.
 - **Screenshot (`F9`)** — save the exact presented frame.
 - **External bias lighting / RGB sync** — drive **WLED** strips and **OpenRGB** devices from the
   average on-screen colour for real-time bias lighting on your own hardware.
