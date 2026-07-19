@@ -4,6 +4,9 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.10.2
+- **Finer VHS tape dropouts.** The bright streaks in the *VHS PAL* look are now hairline flickers instead of thick white bars — subtle wear, not a damaged tape.
+
 ## 1.10.1
 - The **Aspect ratio** control is now in the honeycomb menu too (under *Picture*), not just the classic menu.
 - Menu tile text now **scales with the tiles** — labels stay neatly sized when the window is small.
