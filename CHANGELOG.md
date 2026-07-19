@@ -4,6 +4,9 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.10.3
+- **The language you picked now reaches every corner.** When the 12-language update landed in 1.10.0, two places were missed: the help pages and the labels on the honeycomb menu tiles stayed English no matter which language you chose. That's fixed — help text, tile names and their values now speak all twelve languages. Sorry about that; it should have landed right the first time.
+
 ## 1.10.2
 - **Finer VHS tape dropouts.** The bright streaks in the *VHS PAL* look are now hairline flickers instead of thick white bars — subtle wear, not a damaged tape.
 
