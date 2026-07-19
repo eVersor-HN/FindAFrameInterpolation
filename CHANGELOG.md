@@ -4,6 +4,12 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.10.4
+- **See how much is left.** Click the time readout to switch between how far you've come and how much is still to go. It stays the way you set it.
+- **The title bar now says what's playing** — the file's name, or the real title for a link, instead of just the app's name.
+
+Both of these were suggested by a user. Keep them coming.
+
 ## 1.10.3
 - **The language you picked now reaches every corner.** When the 12-language update landed in 1.10.0, two places were missed: the help pages and the labels on the honeycomb menu tiles stayed English no matter which language you chose. That's fixed — help text, tile names and their values now speak all twelve languages. Sorry about that; it should have landed right the first time.
 
