@@ -4,6 +4,24 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.11.0
+- **The settings menu is sorted the way you think.** Everything that decides *when* a frame appears — interpolation, engine, frame-rate limit — now sits together under **Motion**. The old *Output* category, which mixed window settings with file export and LED strips, is gone: window things under **Window**, exports under **Export**. The LED strip controls finally live next to the on-screen glow, where you'd look for them.
+- **Bigger, readable tiles.** Menu text scales with the tile instead of being locked to one small size — up to twice as large on a big window — and shrinks to fit in languages with longer words rather than cutting them off. Tiles are the same size on every page now, and the honeycomb sits centred instead of creeping toward the top edge.
+- **A real playlist.** Under *Playback → Playlist*: the whole folder as a list, click to play, arrows to reorder, sort A-Z, Z-A or shuffle. It plays top to bottom, and your arrangement survives — moving to the next track no longer quietly re-sorts everything.
+- **Chapters.** Films that carry chapter marks show them on the seek bar, and **Ctrl + ← / →** jumps between them.
+- **The screen can follow the film.** A 24-frame film on a 60 Hz screen can never be shown evenly — that's the faint stutter in slow pans. FAFI can switch your screen to a rate that divides evenly (24 to 144 Hz, 25 to 100, 30 to 120) so it never happens. Off by default, under *Picture → Match Hz*. Your normal mode comes back when you close the player, even if it crashes.
+- **The frame-rate limit actually limits now.** If you set it to your screen's refresh rate — which is the default — it was being ignored entirely. Set 165, get 165.
+- **No more frozen window if you quit while a video is still loading.**
+- Faster, cleaner shutdown; stricter about which components it loads; updated subtitle rendering.
+
+## 1.10.5
+- **Chapters.** Films and series that carry chapter marks now show them as notches on the seek bar, and **Ctrl + ← / →** jumps between them. Back within the first few seconds of a chapter goes to the previous one, otherwise it restarts the current one — the way a CD player does it.
+- **The screen can now follow the film.** A 24-frame film on a 60 Hz screen can never be shown evenly: every second frame is held a fraction longer, which is the faint stutter you see in slow pans. FAFI can now switch your screen to a rate that divides evenly — 24 to 144 Hz, 25 to 100, 30 to 120 — so the stutter never happens instead of being smoothed over afterwards. Off by default; switch it on under *Picture → Match Hz*. Your normal screen mode comes back when you close the player, even if it crashes.
+- **No more frozen window if you quit while a video is still loading.** Close the player at exactly the wrong moment and it could lock up — window still there, nothing responding, only Task Manager left. Most likely with links, where working out the real title takes a second or two. Found, tracked down and fixed.
+- **A clean exit.** Quitting no longer leaves an error behind in Windows' event log. You'd never have seen it, but it shouldn't have been there.
+- **Stricter about what it loads.** The player now only takes its own components from where they belong, so a file dropped next to it can't slip into the app. Matters most if you run the portable version straight out of a downloads folder.
+- **Subtitle rendering brought up to date**, and small wording fixes throughout.
+
 ## 1.10.4
 - **See how much is left.** Click the time readout to switch between how far you've come and how much is still to go. It stays the way you set it.
 - **The title bar now says what's playing** — the file's name, or the real title for a link, instead of just the app's name.
