@@ -76,10 +76,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.11.0 — `FAFI-Setup.exe`:**
+**v1.13.0 — `FAFI-Setup.exe`:**
 
 ```
-9d069d557c7315492fbc204e29edba22090ed38cfd122a35fe2f080c79be0dee
+2409815ce7270dc4527cdcf342192089f56c669ba47ba804785d325aee009b2a
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -128,6 +128,8 @@ drop and breath of the track.
 - **Correct aspect ratio, automatically** — anamorphic video that older players show **stretched**
   now displays at its true shape without you touching a thing. And when you *want* control, an
   **Aspect ratio** switch offers fit, crop-to-fill (lose the black bars) or stretch.
+- **Sideways phone videos play upright** — clips recorded in portrait carry rotation metadata,
+  and FAFI honours it automatically: pixel-exact, on the GPU, nothing to configure.
 - **Smart picture** — auto-tunes sharpness and colour from the content itself, so most videos look
   right without touching a slider.
 - **Image filters (`C`)** — brightness, contrast, saturation, sharpness, colour temperature and
@@ -150,6 +152,8 @@ drop and breath of the track.
   **Smart loudness** (quiet and loud sources sit at an even level), a **virtual surround** downmix
   for headphones, per-ear **balance**, pitch-preserving **tempo**, and preferred-language auto-selection.
 - **10-band graphic equalizer (`Q`)** — with presets.
+- **Follows your device switch** — plug in a USB DAC or connect Bluetooth headphones and the
+  sound moves to the new output immediately, no restart, no silence.
 
 ### Subtitles & accessibility
 - **Subtitles** — external `.srt` / `.ass` / `.ssa` / `.vtt` (full ASS styling) and embedded tracks,
@@ -175,6 +179,10 @@ drop and breath of the track.
 - **Skip anywhere in a stream** — drag the scrubber to any point in an online video and it jumps
   straight there, forward or back, with no re-loading the whole file and no freezing. Streaming
   scrubs like a local file.
+- **SponsorBlock** — flip one switch and community-marked sponsor / self-promo segments in
+  YouTube streams are skipped automatically, with a little note telling you how much you were spared.
+- **Members-only streams** — pick which browser's login the player should borrow (*Stream login*
+  in the menu) for members-only or age-gated videos; *Auto* finds one on its own.
 
 ### Everyday
 - **A menu you can drive from the couch** — every control lives in a **honeycomb menu** you open
@@ -191,9 +199,24 @@ drop and breath of the track.
   file — one clip, or a **whole folder in batch**; the active subtitle goes along as its own track
   (timing correction baked in) or burned in.
 - **Interface themes** — recolour the whole UI and window accent to taste.
-- **Screenshot (`F9`)** — save the exact presented frame.
-- **External bias lighting / RGB sync** — drive **WLED** strips and **OpenRGB** devices from the
-  average on-screen colour for real-time bias lighting on your own hardware.
+- **Profiles** — save your entire setup under a name you type (one for anime, one for retro
+  nights, one for the kids …) and switch with a single tap. Device pairings and addresses stay put.
+- **Phone remote** — switch on the built-in web remote and open the shown address on your phone
+  (same Wi-Fi): play/pause, seek and volume from the couch, no app to install.
+- **Real couch input** — media keyboards, Bluetooth remotes and headset buttons just work
+  (play/pause, next/previous, volume). `0`–`9` jumps to 0–90%, `Shift+←/→` steps a single frame,
+  and a **sleep timer** (30–120 min) quits the player cleanly when you've long stopped watching.
+- **Chapters** — tick marks on the seekbar, hotkeys to jump, and a named chapter list in the menu.
+- **Screenshot (`F9`)** — a clean **PNG** of just the picture, your filters and looks included —
+  no seekbar or menus baked in.
+- **Stats view** — tap `F` twice for a live card: resolution, decode path, true rates, audio
+  format, glitch counter, A/V offset.
+- **Your room lights follow the film** — drive **WLED** LED strips, **OpenRGB** hardware (Corsair,
+  ASUS, Razer, MSI … — every RGB device your PC has), **sACN** receivers, **Razer Chroma** gear,
+  **Philips Hue** room lights and **Home Assistant (MQTT)** from the on-screen colour, live. A
+  top-down **Light layout** view lets you drag every output — and every single RGB device — to
+  where it physically sits around your screen, so each one glows with the colour of *its* side of
+  the picture. The first network use asks for your permission first.
 - **Repeat & shuffle (`R`)** — off, the current track / video, or the whole folder playlist.
 - **Backup & restore** — pack your settings + models, or the whole portable player, into one `.zip`
   and import it on another machine.

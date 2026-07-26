@@ -262,6 +262,58 @@ DEALINGS IN THE SOFTWARE.
 
 ---
 
+## AMD FidelityFX Super Resolution 1.0 — EASU (the "FSR" upscaling mode)
+- **License:** MIT (Copyright (c) 2021 Advanced Micro Devices, Inc.).
+- **Linking:** the EASU (edge-adaptive spatial upsampling) algorithm is ported to HLSL and
+  compiled into `FindAFrameInterpolation.exe` as part of the internal scaler. No AMD binaries
+  are shipped; the port derives from the MIT-licensed FSR 1.0 reference sources.
+- **Source:** https://github.com/GPUOpen-Effects/FidelityFX-FSR
+
+```
+Copyright (c) 2021 Advanced Micro Devices, Inc. All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
+
+---
+
+## Anime4K — line-art push algorithm (the "Anime4K" upscaling mode)
+- **License:** MIT (Copyright (c) 2019 bloc97).
+- **Linking:** the classic Anime4K v0.9 "push" algorithm (luminance push + gradient refine)
+  is reimplemented as HLSL passes compiled into `FindAFrameInterpolation.exe`. No upstream
+  code or binaries are shipped; the implementation follows the MIT-licensed reference.
+- **Source:** https://github.com/bloc97/Anime4K
+
+---
+
+## Real-ESRGAN — optional AI export upscaler (model not bundled)
+- **License:** BSD 3-Clause (Copyright (c) 2021 Xintao Wang). Code AND released model
+  weights come from the same repository under that license.
+- **Linking:** FAFI contains its own ncnn-based inference engine (`src/gfx/upscale_engine.*`,
+  compiled in). **No Real-ESRGAN model is bundled** — the AI export upscale only activates
+  when the user drops an official model pair (`realesr-animevideov3-x2/x3/x4`,
+  `realesrgan-x4plus`, `realesrgan-x4plus-anime`) into `models\`. Each model remains
+  governed by its own upstream terms.
+- **Source:** https://github.com/xinntao/Real-ESRGAN
+
+---
+
 ## Support libraries — Brotli, bzip2, libpng, zlib
 
 Dynamically linked helper libraries pulled in by FFmpeg and the subtitle stack.
@@ -403,7 +455,7 @@ jloup@gzip.org          madler@alumni.caltech.edu
 - Provided by the user's GPU driver / Vulkan SDK. Not redistributed with FAFI.
 
 ## yt-dlp (optional, external)
-- Optional runtime tool used to resolve supported page URLs to a direct stream URL.
+- Optional runtime tool used to resolve platform URLs (e.g. YouTube) to a stream URL.
 - Invoked as an external process if present on `PATH`; **not bundled** with FAFI.
 - yt-dlp is released into the public domain (Unlicense). Source: https://github.com/yt-dlp/yt-dlp
 
@@ -411,9 +463,9 @@ jloup@gzip.org          madler@alumni.caltech.edu
 
 ## Quantico — menu typeface (embedded) — SIL Open Font License 1.1
 - **License:** SIL Open Font License, Version 1.1.
-- **Bundling:** the `Quantico` regular weight is embedded **unmodified** as an `RCDATA` resource inside
-  `FindAFrameInterpolation.exe` and loaded at runtime (via `AddFontMemResourceEx`) for the aurora-glass
-  right-click menu.
+- **Bundling:** the `Quantico` regular weight is embedded **unmodified** as an `RCDATA` resource
+  inside `FindAFrameInterpolation.exe` and loaded at runtime (via `AddFontMemResourceEx`) for the
+  flat-neon right-click menu.
 - **Copyright:** Copyright (c) 2011, Matthew Desmond (http://www.madtype.com), with Reserved Font Name Quantico.
 - **License text:** included as `licenses/OFL-Quantico.txt` with binary distributions.
 - **Source:** https://github.com/google/fonts/tree/main/ofl/quantico
@@ -431,7 +483,7 @@ jloup@gzip.org          madler@alumni.caltech.edu
 ## QuickJS (quickjs-ng) — bundled JavaScript runtime (`qjs.exe`)
 - **License:** MIT.
 - **Bundling:** shipped as a standalone `qjs.exe` next to the player. It is used only as yt-dlp's
-  JavaScript runtime (to solve certain sites' JavaScript challenges) on machines that have neither Node.js nor
+  JavaScript runtime (to solve YouTube's "n" signature) on machines that have neither Node.js nor
   Deno installed. FAFI does not link against it; it is launched by yt-dlp as an external process.
 - **Source / build:** https://github.com/quickjs-ng/quickjs (release v0.15.1, `qjs-windows-x86_64.exe`).
 
@@ -461,3 +513,17 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
+
+---
+
+## SponsorBlock — segment data (web service, optional)
+- **What:** when the optional *SponsorBlock* toggle is enabled, FAFI queries the public
+  SponsorBlock API (`sponsor.ajay.app`) for community-submitted skip segments of the
+  YouTube video being played. No SponsorBlock code is shipped with FAFI; only the
+  service's data is used, at the user's request.
+- **Data license:** the SponsorBlock database and API data are licensed under
+  **CC BY-NC-SA 4.0** (attribution — non-commercial — share-alike). FAFI is free,
+  non-commercial software; the data is used for its intended purpose (skipping segments)
+  and credited here and in the application.
+- **Credit:** SponsorBlock by Ajay Ramachandran — https://sponsor.block.tv / https://sponsor.ajay.app
+- **License text:** https://creativecommons.org/licenses/by-nc-sa/4.0/
