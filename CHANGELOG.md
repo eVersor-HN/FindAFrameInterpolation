@@ -4,6 +4,11 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.13.1 — 2026-07-26
+- **Smooth curved edges.** The curved tube's outline (*Curved* and *Curved CRT*) rendered as hard pixel stairs — it's now one clean, softly-feathered line.
+- **Scanlines slider, scanlines only.** Turning the *Scanlines* strength down no longer strips the CRT's colour mask (and the ring pattern it draws on the tube) with it — the slider now dims just the horizontal lines. A completely bare tube is still one tap away: that's the *Curved* toggle.
+- **Network dot fixes.** The little online indicator in the menu sat exactly in the window's close button — moved below the title bar. And it now turns green while a network stream is playing, not only when your lights are being driven.
+
 ## 1.13.0 — 2026-07-26
 - **Place your lights around the screen (Light layout).** New *Layout* button in the LIGHTS menu opens a top-down view: your screen sits in the middle and each lighting output (WLED, OpenRGB, sACN, Chroma, Hue, Home) is a chip you drag to where it physically sits — above, left, a corner, wherever. Each one then glows the colour of *that* side of the picture instead of a single average, so the light around your room actually follows the scene directionally. Leave a device on the screen to keep the whole-frame average as before.
 - **Every RGB device, placed individually.** Tap the *OpenRGB* chip in the layout and every device OpenRGB knows — Corsair, ASUS, Razer, MSI, keyboard, RAM, fans, GPU — appears as its own chip to place around the screen, several per side if that's how your desk looks. Devices you plug in later show up on their own (no reconnect needed), and a bug that made RGB *keyboards* silently stay dark is fixed. Tap *Chroma* for the same per-device placement of Razer Synapse gear.
