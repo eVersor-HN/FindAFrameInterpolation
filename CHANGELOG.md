@@ -4,6 +4,11 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.13.2 — 2026-07-28
+- **Surround, without the echo.** *Surround* was mixing in a delayed copy of the opposite channel on every track — a full-range echo that hollowed out voices and anything sitting in the middle of the mix, and made music sound like it was coming through a pipe. It's gone. The stage is now widened where widening belongs (the treble) and tightened where headphones exaggerate it (the bass), and centred sound — dialogue, most vocals, anything mono — now passes through completely untouched.
+- **Loudness that doesn't cost you quality.** The automatic level control used to push every single sample through a distortion curve, whether it needed it or not. That is exactly why loud, modern-mastered music — AMVs, music videos, anything squeezed for volume — sounded *worse* with *Loudness* on than with it off. It now leaves everything below the ceiling completely alone and only catches the peaks that would really clip. On typical music that is sixteen times less distortion; on quieter material, none at all.
+- **No more crackle when the volume rides.** The automatic level used to change in steps, once per audio buffer, which added a faint grain whenever it was working. It now glides smoothly, and it behaves identically on every sound card instead of changing character with the device's buffer size.
+
 ## 1.13.1 — 2026-07-26
 - **Smooth curved edges.** The curved tube's outline (*Curved* and *Curved CRT*) rendered as hard pixel stairs — it's now one clean, softly-feathered line.
 - **Scanlines slider, scanlines only.** Turning the *Scanlines* strength down no longer strips the CRT's colour mask (and the ring pattern it draws on the tube) with it — the slider now dims just the horizontal lines. A completely bare tube is still one tap away: that's the *Curved* toggle.
