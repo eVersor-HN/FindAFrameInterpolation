@@ -79,7 +79,7 @@ are shown inside the app under **right-click → About FAFI**.)
 **v1.14.0 — `FAFI-Setup.exe`:**
 
 ```
-0668f54cdb54aa385c3418272637859f98dc11d9cc2dc150833cdd01e72ad2d0
+d402d53a48f8b7322a306398837639811c3c68cddd49fc68ef0e37db6b33a25b
 ```
 
 The authoritative value for each release is in that release's notes and in its
