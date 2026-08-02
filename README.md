@@ -76,10 +76,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.13.2 — `FAFI-Setup.exe`:**
+**v1.14.0 — `FAFI-Setup.exe`:**
 
 ```
-7150c11d4bb6c783509677202d3bf9c430b9c4a5afea21e925948de4c4dff270
+0668f54cdb54aa385c3418272637859f98dc11d9cc2dc150833cdd01e72ad2d0
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -139,6 +139,16 @@ drop and breath of the track.
   **old handheld**, **E-Paper**, **Dye Transfer**, **StayPlaytion 1**, and a clean **Anime Disc**
   sharpen — plus a **curved-screen** toggle. The menu stays open so you can flick through them live. Off by
   default (zero cost).
+- **Antenna** — watching over the air, the way it actually was. The signal drifts on its own: the
+  picture is clean for a while, then it sags — the colour fades out to black and white, a ghost of
+  the image slides in beside itself, everything softens and flickers with snow, lines tear, a bar
+  drifts up the screen. A passing aircraft makes it beat, a fridge or a passing car writes bright
+  dashes across it, and now and then lightning wipes a band of it. Then it settles again. Nothing
+  loops, nothing repeats — and **Antenna + VHS** puts that reception on tape, the way a home
+  recording of a badly received broadcast really looked.
+- **Fill the curved screen** — the curved tube bows the picture inwards and used to leave black
+  bands top and bottom. The **Tube fill** slider pushes it back out until the edges sit flush
+  against your frame, or all the way to the corners for a real television's overscan.
 - **In-player ambient light** — a soft, high-quality glow of the picture's own colours spills into
   the black around the video, so your film lights up its own frame with **no LED strip or extra
   hardware**. Fully tunable: how far it reaches (or leave a crisp black border), how soft, how
@@ -180,7 +190,7 @@ drop and breath of the track.
   straight there, forward or back, with no re-loading the whole file and no freezing. Streaming
   scrubs like a local file.
 - **SponsorBlock** — flip one switch and community-marked sponsor / self-promo segments in
-  YouTube streams are skipped automatically, with a little note telling you how much you were spared.
+  supported streams are skipped automatically, with a little note telling you how much you were spared.
 - **Members-only streams** — pick which browser's login the player should borrow (*Stream login*
   in the menu) for members-only or age-gated videos; *Auto* finds one on its own.
 
@@ -206,6 +216,9 @@ drop and breath of the track.
 - **Real couch input** — media keyboards, Bluetooth remotes and headset buttons just work
   (play/pause, next/previous, volume). `0`–`9` jumps to 0–90%, `Shift+←/→` steps a single frame,
   and a **sleep timer** (30–120 min) quits the player cleanly when you've long stopped watching.
+- **"Are you still watching?"** — fall asleep mid-film and the player notices. After the time you
+  choose without a single key, click or remote press, it **pauses** so you miss nothing and asks. If
+  nobody answers it can stay paused, quit, or **send the PC to sleep / shut it down** — your call.
 - **Chapters** — tick marks on the seekbar, hotkeys to jump, and a named chapter list in the menu.
 - **Screenshot (`F9`)** — a clean **PNG** of just the picture, your filters and looks included —
   no seekbar or menus baked in.
