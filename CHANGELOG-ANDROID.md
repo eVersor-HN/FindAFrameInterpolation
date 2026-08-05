@@ -66,6 +66,11 @@ The honest list of what is missing is at the bottom — please read it before yo
   clip stays portrait, a widescreen film goes landscape), or lock it flat to portrait or landscape.
   The *follow the phone* setting deliberately ignores the system rotation lock, so you can keep
   your home screen locked and still turn a film.
+- **Twelve languages, same as the desktop player.** English, German, French, Spanish, Italian,
+  Portuguese, Dutch, Polish, Russian, Turkish, Japanese and Chinese. It starts in your phone's
+  language if that is one of them and in English if it is not, and you can override it at any time
+  under *Settings → Language* — the list shows each language in its own script, so you can always
+  find your way back out of one you cannot read.
 - **Nothing leaves your phone — and it cannot.** The app has **no internet permission at all**.
   That is not a promise in a privacy policy, it is a missing capability: the operating system will
   not let it open a connection even if it wanted to. No ads, no account, no telemetry, no
@@ -91,8 +96,6 @@ Said plainly, because you should know before you download it:
 - **No streaming of any kind.** No web links, no network shares, no online sources — the app plays
   files that are on the device, and nothing else. This is a deliberate consequence of shipping
   without an internet permission, and it is not coming back later as a surprise.
-- **The interface is in German only.** There is no language picker yet. The desktop player speaks
-  twelve languages and this one will too, but not today.
 - **Tested on exactly one phone.** One handset, one graphics chip, one screen. It is worked
   through carefully on that device — and that is a sample of one. On other hardware it may behave
   differently, look wrong, or refuse the FAFI engine entirely (in which case it falls back to

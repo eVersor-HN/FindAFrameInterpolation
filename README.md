@@ -92,11 +92,13 @@ its Anime4K upscaling and its screen looks do their work on the handset, on your
   *(For completeness, since you will see it in that list: the playback library asks for
   `ACCESS_NETWORK_STATE`, which only lets an app read whether a connection exists. Without
   `INTERNET` it cannot open one.)*
+- **The same twelve languages as the Windows player** — it starts in your phone's language and
+  can be switched at any time under *Settings → Language*.
 - **First release, and it says so.** It plays your own video and music files, does the picture
   work, and has fullscreen, gestures, Picture-in-Picture, background audio with notification
   controls, a history with thumbnails and resume, and folder queues. It does **not** yet have
-  subtitles while the FAFI processing is on, sound-track selection on that path, or an interface
-  in your language. The full and honest list is in
+  subtitles while the FAFI processing is on, or sound-track selection on that path.
+  The full and honest list is in
   [**`CHANGELOG-ANDROID.md`**](CHANGELOG-ANDROID.md) — please read it before installing.
 
 Third-party components of the Android app are listed separately, under *Android app*, in
@@ -121,7 +123,7 @@ are shown inside the Windows app under **right-click → About FAFI**.)
 **Android — v1.15.0 — `FAFI.apk`:**
 
 ```
-d4d7e23e51bc9a33a6aad87d45906db00e9f986fa2227dd0270a86426822a5ec
+0792dfc1f77e1264b150d6cd6c35cc124726a2d0abfa58cb6890bb446eee4357
 ```
 
 The authoritative value for each release is in that release's notes and in its
