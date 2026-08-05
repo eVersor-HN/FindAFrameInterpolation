@@ -123,7 +123,7 @@ are shown inside the Windows app under **right-click → About FAFI**.)
 **Android — v1.15.0 — `FAFI.apk`:**
 
 ```
-77ce61b409c03ad079d3885d4b54ad322e724defb2e41577141b76e613e2702f
+b48a30246694a280b4ae1ef517237429497607bd416e17b9672d565cc93cb8a0
 ```
 
 The authoritative value for each release is in that release's notes and in its

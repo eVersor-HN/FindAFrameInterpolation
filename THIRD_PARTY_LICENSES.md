@@ -569,12 +569,15 @@ third-party list for the **Android app**, which is built and shipped separately.
 The Android app is the same proprietary FAFI product under the same
 [FindAFrameInterpolation License](LICENSE); the components below remain under their own
 licenses. It shares **no** third-party binary with the Windows player: there is no FFmpeg,
-no FriBidi, no libass/FreeType/HarfBuzz, no ncnn, no RIFE, no dav1d, no QuickJS and no
-bundled font in the APK — and therefore **nothing under the LGPL or GPL**. Decoding is done
-by the operating system's own media stack.
+no FriBidi, no libass/FreeType/HarfBuzz, no ncnn, no RIFE, no dav1d and no QuickJS in the
+APK — and therefore **nothing under the LGPL or GPL**. Decoding is done by the operating
+system's own media stack. The one thing both products do share is the **Quantico** typeface,
+which carries the FAFI look on either platform; it is under the SIL Open Font License and is
+listed for each product separately.
 
-Everything the APK bundles is either **Apache License 2.0** (all Java/Kotlin libraries and the
-C++ runtime) or **MIT** (the Anime4K algorithm). The full list follows.
+Everything the APK bundles is **Apache License 2.0** (all Java/Kotlin libraries and the C++
+runtime), **MIT** (the Anime4K algorithm) or the **SIL Open Font License 1.1** (Quantico).
+The full list follows.
 
 ## Summary
 
@@ -588,6 +591,7 @@ C++ runtime) or **MIT** (the Anime4K algorithm). The full list follows.
 | JSpecify, JetBrains annotations | 1.0.0 / 23.0.0 | Apache-2.0 | notice + license text |
 | LLVM libc++ (`libc++_shared.so`) | NDK r29 | Apache-2.0 **with LLVM Exception** | notice + license text |
 | Anime4K algorithm (upscaling look) | v0.9 | MIT | copyright + permission notice |
+| Quantico — interface typeface | Google Fonts release | SIL OFL 1.1 | copyright + licence text, name not reused |
 | Android NDK platform libraries | — | platform API | nothing (not redistributed) |
 | Gradle wrapper / build toolchain | — | Apache-2.0 | nothing (not in the APK) |
 
@@ -780,3 +784,16 @@ The Gradle wrapper, the Android Gradle Plugin, the Kotlin compiler, the NDK tool
 shader compilers are **build tools**. They are not redistributed with the app and impose no
 obligation on anyone who downloads the APK. All are Apache-2.0 (Gradle, AGP, Kotlin, AOSP) or
 Apache-2.0-with-LLVM-Exception (the NDK's Clang and the SPIR-V tooling).
+
+---
+
+## Quantico — interface typeface (bundled) — SIL Open Font License 1.1
+- **License:** SIL Open Font License, Version 1.1.
+- **Bundling:** the `Quantico` regular weight is bundled **unmodified** as an Android font
+  resource inside `FAFI.apk` and used for the app's interface — the same typeface the Windows
+  player uses for its menu.
+- **Copyright:** Copyright (c) 2011, Matthew Desmond (http://www.madtype.com), with Reserved Font Name Quantico.
+- **License text:** included as `licenses/OFL-Quantico.txt` with binary distributions.
+- **Reserved Font Name:** the font is shipped unchanged and under its original name, so the
+  reservation is respected; FAFI claims no rights in it.
+- **Source:** https://github.com/google/fonts/tree/main/ofl/quantico

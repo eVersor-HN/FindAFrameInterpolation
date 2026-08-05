@@ -70,6 +70,12 @@ The honest list of what is missing is at the bottom — please read it before yo
   clip stays portrait, a widescreen film goes landscape), or lock it flat to portrait or landscape.
   The *follow the phone* setting deliberately ignores the system rotation lock, so you can keep
   your home screen locked and still turn a film.
+- **It looks like FAFI, not like a stock Android app.** The same near-black red ground, the same
+  typeface and the same **fifteen accent colours** as the desktop player — from Deep Scarlet
+  through the whole spectrum to *Ice*, the colour-free one with the most contrast. The spread is
+  deliberate: red, green and blue colour blindness each keep a shade they can tell apart. Settings
+  with more than two values open a list instead of cycling one tap at a time, which matters when
+  there are seventeen screen looks to pick from.
 - **Twelve languages, same as the desktop player.** English, German, French, Spanish, Italian,
   Portuguese, Dutch, Polish, Russian, Turkish, Japanese and Chinese. It starts in your phone's
   language if that is one of them and in English if it is not, and you can override it at any time
@@ -109,8 +115,9 @@ Said plainly, because you should know before you download it:
   keeps running, which is the case it is for. Swipe the app out of the recent-apps list while music
   carries on and the timer goes with it, and the music does not stop by itself.
 - **Also not here yet:** playback speed, the equaliser and the rest of the sound suite,
-  zoom and crop controls, chapters, screenshots, and the honeycomb menu. The
-  picture settings are a plain list for now.
+  zoom and crop controls, chapters, and screenshots. The settings are a plain list rather than
+  the desktop player's honeycomb — everything that lives in those tiles is a normal setting here,
+  which on a phone is the better shape anyway.
 
 ---
 
