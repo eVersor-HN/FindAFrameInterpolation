@@ -76,10 +76,10 @@ checksum of your download against the published value proves the file is the **u
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the app under **right-click → About FAFI**.)
 
-**v1.14.0 — `FAFI-Setup.exe`:**
+**v1.15.0 — `FAFI-Setup.exe`:**
 
 ```
-d402d53a48f8b7322a306398837639811c3c68cddd49fc68ef0e37db6b33a25b
+78fed47a66c37834e1010d8f80257b3e8f757344c00b6978e531ec219032cc4f
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -135,10 +135,11 @@ drop and breath of the track.
 - **Image filters (`C`)** — brightness, contrast, saturation, sharpness, colour temperature and
   black point, with presets.
 - **Display filters** — optional retro / creative looks over the picture, each with adjustable
-  strength: **CRT**, **Aperture Grille**, **LCD/TFT**, **NTSC**, **35 mm film**, **Glitch**, **VHS**,
-  **old handheld**, **E-Paper**, **Dye Transfer**, **StayPlaytion 1**, and a clean **Anime Disc**
-  sharpen — plus a **curved-screen** toggle. The menu stays open so you can flick through them live. Off by
-  default (zero cost).
+  strength: **CRT**, **Aperture Grille**, **Aperture Pure**, **LCD/TFT**, **NTSC**, **35 mm film**,
+  **Glitch**, **VHS**, **old handheld**, **E-Paper**, **Dye Transfer**, **StayPlaytion 1**, and a clean
+  **Anime Disc** sharpen — plus a **curved-screen** toggle in three flavours: bare tube, tube with
+  scanlines and mask, or tube with the stripe mask alone. The menu stays open so you can flick through
+  them live. Off by default (zero cost).
 - **Antenna** — watching over the air, the way it actually was. The signal drifts on its own: the
   picture is clean for a while, then it sags — the colour fades out to black and white, a ghost of
   the image slides in beside itself, everything softens and flickers with snow, lines tear, a bar
