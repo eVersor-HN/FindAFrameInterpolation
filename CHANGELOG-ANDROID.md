@@ -61,7 +61,11 @@ The honest list of what is missing is at the bottom — please read it before yo
   queues them up, so an evening of episodes or an album plays through without you touching the
   phone again. **Repeat** does nothing, one title, or the whole queue. A file that is broken or
   half-downloaded gets skipped with a note rather than ending the evening — and if three in a row
-  fail, FAFI stops and tells you, instead of racing to the end of the folder.
+  fail, FAFI stops and tells you, instead of racing to the end of the folder. **Shuffle** throws the
+  order out; switch it off and the folder goes back to the order it had, from wherever you are.
+- **A sleep timer that knows about episodes.** Fifteen minutes to an hour and a half — or simply
+  *end of title*, which is what you actually mean at midnight. The row counts down while it runs,
+  and when the time is up the playback stops where it is and remembers the spot.
 - **The screen turns the way you want.** Follow the phone, follow the film's own shape (a portrait
   clip stays portrait, a widescreen film goes landscape), or lock it flat to portrait or landscape.
   The *follow the phone* setting deliberately ignores the system rotation lock, so you can keep
@@ -101,8 +105,11 @@ Said plainly, because you should know before you download it:
   differently, look wrong, or refuse the FAFI engine entirely (in which case it falls back to
   ordinary playback rather than failing). Treat this release as an invitation to tell me what
   happened on yours.
-- **Also not here yet:** shuffle, playback speed, the equaliser and the rest of the sound suite,
-  zoom and crop controls, a sleep timer, chapters, screenshots, and the honeycomb menu. The
+- **The sleep timer ends if you swipe the app away.** Send FAFI to the background and the timer
+  keeps running, which is the case it is for. Swipe the app out of the recent-apps list while music
+  carries on and the timer goes with it, and the music does not stop by itself.
+- **Also not here yet:** playback speed, the equaliser and the rest of the sound suite,
+  zoom and crop controls, chapters, screenshots, and the honeycomb menu. The
   picture settings are a plain list for now.
 
 ---
