@@ -9,6 +9,12 @@ licenses.
 When you redistribute FAFI in binary form, keep this file and the referenced
 license texts alongside the binaries.
 
+**Two products, two lists.** Everything from here down to the *Android app* heading
+describes the **Windows player** (`FAFI-Setup.exe`). The **Android app** (`FAFI.apk`)
+is a separate build that shares none of the Windows player's third-party binaries;
+its own components are listed in [its own section](#android-app--fafiapk) at the end
+of this file.
+
 **Source code of the LGPL components:** the FFmpeg (8.1.2) and FriBidi (1.0.16)
 libraries shipped with FAFI are built from upstream sources with vcpkg. The author makes
 no source changes of their own; the builds do carry vcpkg's standard build/portability
@@ -300,6 +306,30 @@ THE SOFTWARE.
   code or binaries are shipped; the implementation follows the MIT-licensed reference.
 - **Source:** https://github.com/bloc97/Anime4K
 
+```
+MIT License
+
+Copyright (c) 2019 bloc97
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
 ---
 
 ## Real-ESRGAN — optional AI export upscaler (model not bundled)
@@ -527,3 +557,226 @@ THE SOFTWARE.
   and credited here and in the application.
 - **Credit:** SponsorBlock by Ajay Ramachandran — https://sponsor.block.tv / https://sponsor.ajay.app
 - **License text:** https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+---
+---
+
+# Android app — `FAFI.apk`
+
+*Everything above this line concerns the Windows player only. This section is the complete
+third-party list for the **Android app**, which is built and shipped separately.*
+
+The Android app is the same proprietary FAFI product under the same
+[FindAFrameInterpolation License](LICENSE); the components below remain under their own
+licenses. It shares **no** third-party binary with the Windows player: there is no FFmpeg,
+no FriBidi, no libass/FreeType/HarfBuzz, no ncnn, no RIFE, no dav1d, no QuickJS and no
+bundled font in the APK — and therefore **nothing under the LGPL or GPL**. Decoding is done
+by the operating system's own media stack.
+
+Everything the APK bundles is either **Apache License 2.0** (all Java/Kotlin libraries and the
+C++ runtime) or **MIT** (the Anime4K algorithm). The full list follows.
+
+## Summary
+
+| Component | Version | License | What we owe |
+|---|---|---|---|
+| AndroidX / Jetpack Compose | see list below | Apache-2.0 | notice + license text |
+| AndroidX Media3 (ExoPlayer) | 1.10.0 | Apache-2.0 | notice + license text |
+| Kotlin standard library | 2.3.0 | Apache-2.0 | notice + license text |
+| kotlinx-coroutines / -serialization | 1.11.0 / 1.7.3 | Apache-2.0 | notice + license text |
+| Guava (+ failureaccess, listenablefuture) | 33.3.1-android | Apache-2.0 | notice + license text |
+| JSpecify, JetBrains annotations | 1.0.0 / 23.0.0 | Apache-2.0 | notice + license text |
+| LLVM libc++ (`libc++_shared.so`) | NDK r29 | Apache-2.0 **with LLVM Exception** | notice + license text |
+| Anime4K algorithm (upscaling look) | v0.9 | MIT | copyright + permission notice |
+| Android NDK platform libraries | — | platform API | nothing (not redistributed) |
+| Gradle wrapper / build toolchain | — | Apache-2.0 | nothing (not in the APK) |
+
+---
+
+## AndroidX, Jetpack Compose and Media3 (ExoPlayer) — Apache License 2.0
+
+- **License:** Apache License, Version 2.0 (Copyright © The Android Open Source Project).
+- **Linking:** dynamic — the compiled `.jar`/`.aar` classes are packaged into the APK. One of
+  them, `androidx.graphics:graphics-path`, also contributes a native library
+  (`libandroidx.graphics.path.so`) to the APK.
+- **Media3 / ExoPlayer** is the app's *standard* playback engine (the one that provides the media
+  notification, lock-screen controls, embedded subtitles and audio-track selection). Media3 is
+  released under the same Apache-2.0 license as the rest of AndroidX.
+- **License text:** https://www.apache.org/licenses/LICENSE-2.0
+  (include a copy as `licenses/Apache-2.0.txt` with binary distributions).
+- **Source:** https://github.com/androidx/androidx  ·  https://github.com/androidx/media
+
+Artifacts actually packaged into the release APK (group : artifact : version):
+
+```
+androidx.activity          activity, activity-compose, activity-ktx            1.13.0
+androidx.annotation        annotation, annotation-jvm                          1.9.1
+androidx.annotation        annotation-experimental                             1.4.1
+androidx.arch.core         core-common, core-runtime                           2.2.0
+androidx.autofill          autofill                                            1.0.0
+androidx.collection        collection, collection-jvm, collection-ktx          1.5.0
+androidx.compose           compose-bom                                    2026.06.00
+androidx.compose.animation animation, animation-core (+ -android)              1.11.3
+androidx.compose.foundation foundation, foundation-layout (+ -android)         1.11.3
+androidx.compose.material  material-ripple (+ -android)                        1.11.3
+androidx.compose.material3 material3 (+ -android)                               1.4.0
+androidx.compose.runtime   runtime, runtime-annotation, runtime-retain,
+                           runtime-saveable (+ -android)                       1.11.3
+androidx.compose.ui        ui, ui-geometry, ui-graphics, ui-text,
+                           ui-tooling-preview, ui-unit, ui-util (+ -android)   1.11.3
+androidx.concurrent        concurrent-futures                                   1.2.0
+androidx.core              core, core-ktx                                      1.18.0
+androidx.core              core-viewtree                                        1.0.0
+androidx.customview        customview-poolingcontainer                          1.0.0
+androidx.documentfile      documentfile                                         1.0.0
+androidx.dynamicanimation  dynamicanimation                                     1.0.0
+androidx.emoji2            emoji2                                               1.4.0
+androidx.exifinterface     exifinterface                                         1.3.6
+androidx.graphics          graphics-path                                        1.0.1
+androidx.interpolator      interpolator                                          1.0.0
+androidx.legacy            legacy-support-core-utils                            1.0.0
+androidx.lifecycle         lifecycle-common, -common-java8, -common-jvm,
+                           -livedata(+core,-core-ktx), -process, -runtime,
+                           -runtime-compose, -runtime-ktx, -service,
+                           -viewmodel, -viewmodel-compose,
+                           -viewmodel-ktx, -viewmodel-savedstate (+ -android)  2.10.0
+androidx.loader            loader                                               1.0.0
+androidx.localbroadcastmanager localbroadcastmanager                            1.0.0
+androidx.media            media                                                 1.7.0
+androidx.media3            media3-common, media3-container, media3-database,
+                           media3-datasource, media3-decoder, media3-exoplayer,
+                           media3-extractor, media3-session                    1.10.0
+androidx.navigationevent   navigationevent, navigationevent-compose (+ -android) 1.0.0
+androidx.print             print                                                1.0.0
+androidx.profileinstaller  profileinstaller                                      1.4.0
+androidx.savedstate        savedstate, savedstate-compose, savedstate-ktx       1.4.0
+androidx.startup           startup-runtime                                      1.1.1
+androidx.tracing           tracing                                              1.2.0
+androidx.transition        transition                                           1.6.0
+androidx.versionedparcelable versionedparcelable                                1.1.1
+androidx.window            window, window-core (+ -android)                     1.5.0
+```
+
+---
+
+## Kotlin standard library and kotlinx libraries — Apache License 2.0
+
+- **License:** Apache License, Version 2.0 (Copyright © 2010-2026 JetBrains s.r.o. and Kotlin
+  Programming Language contributors).
+- **Linking:** dynamic — packaged into the APK.
+- **License text:** https://www.apache.org/licenses/LICENSE-2.0
+- **Source:** https://github.com/JetBrains/kotlin  ·  https://github.com/Kotlin/kotlinx.coroutines
+  ·  https://github.com/Kotlin/kotlinx.serialization
+
+```
+org.jetbrains.kotlin    kotlin-stdlib                                    2.3.0
+org.jetbrains.kotlinx   kotlinx-coroutines-android, -core, -core-jvm    1.11.0
+org.jetbrains.kotlinx   kotlinx-serialization-core (+ -jvm)              1.7.3
+org.jetbrains           annotations                                     23.0.0
+```
+
+---
+
+## Guava and annotation libraries — Apache License 2.0
+
+- **License:** Apache License, Version 2.0.
+- **Linking:** dynamic — pulled in by Media3 and packaged into the APK.
+- **License text:** https://www.apache.org/licenses/LICENSE-2.0
+- **Source:** https://github.com/google/guava  ·  https://github.com/jspecify/jspecify
+
+```
+com.google.guava   guava                                       33.3.1-android
+com.google.guava   failureaccess                                        1.0.2
+com.google.guava   listenablefuture   9999.0-empty-to-avoid-conflict-with-guava
+org.jspecify       jspecify                                             1.0.0
+```
+
+---
+
+## LLVM libc++ — C++ runtime (`libc++_shared.so`) — Apache-2.0 WITH LLVM Exception
+
+- **License:** Apache License, Version 2.0, **with the LLVM Exception**.
+- **Bundling:** the app's native core is built with the Android NDK's shared C++ runtime, so
+  `libc++_shared.so` is packaged into the APK as its own file (arm64 only). It is the unmodified
+  library as shipped with the NDK; FAFI does not patch it.
+- **Required notice:** *This product includes software from the LLVM Project
+  (https://llvm.org), licensed under the Apache License v2.0 with LLVM Exceptions.*
+- **License text:** https://llvm.org/LICENSE.txt
+- **Source:** https://github.com/llvm/llvm-project (libc++)
+
+---
+
+## Anime4K — line-art push algorithm (the "Anime4K" upscaling mode) — MIT
+
+- **License:** MIT (Copyright (c) 2019 bloc97).
+- **Linking:** the classic Anime4K v0.9 "push" algorithm (luminance push + gradient refine) is
+  reimplemented as four cheap fullscreen shader passes, compiled to SPIR-V and embedded in the
+  app's native library. No upstream code or binaries are shipped; the implementation follows the
+  MIT-licensed reference. This is the same implementation the Windows player uses, carried over
+  to Vulkan.
+- **Source:** https://github.com/bloc97/Anime4K
+
+```
+MIT License
+
+Copyright (c) 2019 bloc97
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this
+software and associated documentation files (the "Software"), to deal in the Software
+without restriction, including without limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons
+to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or
+substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+```
+
+---
+
+## Android platform libraries (NDK) — no third-party redistribution
+
+The app's native core links against the following **operating-system APIs**, which are
+resolved at load time against the libraries already present on the user's device. Nothing
+from this list is copied into the APK, so there is no license text to reproduce and no
+attribution obligation:
+
+- `libmediandk` — the platform media decoder/extractor API (NDK Media).
+- `libaaudio` — the platform low-latency audio API.
+- `libandroid`, `liblog` — platform native window and logging APIs.
+- `libvulkan` — the Vulkan loader; the actual driver is the device manufacturer's.
+
+The Android SDK/NDK headers and the AOSP platform itself are Apache-2.0; the device's GPU
+driver is the vendor's own and is not distributed by FAFI.
+
+---
+
+## FAFI's own code (for the avoidance of doubt)
+
+The following are **original FAFI work**, ported from the Windows player, not third-party
+components — they are listed here only so nobody has to guess:
+
+- The **motion-interpolation (MEMC)** compute shaders — motion estimation, refinement and
+  frame synthesis — and their motion-vector scaling pass.
+- The **display filters / retro looks** (CRT, aperture grille, LCD, VHS, NTSC, film, glitch,
+  handheld, e-paper, dye transfer, antenna reception, the curvature modes and the rest) and
+  the picture blit.
+- The **audio path** (extraction, decode, ring buffer, clock) of the FAFI engine.
+- The **zero-copy video import** and Vulkan renderer.
+
+Copyright © 2026 Marco Aurelio Fattizzo, under the FindAFrameInterpolation License.
+
+---
+
+## Build-time only — not in the APK
+
+The Gradle wrapper, the Android Gradle Plugin, the Kotlin compiler, the NDK toolchain and the
+shader compilers are **build tools**. They are not redistributed with the app and impose no
+obligation on anyone who downloads the APK. All are Apache-2.0 (Gradle, AGP, Kotlin, AOSP) or
+Apache-2.0-with-LLVM-Exception (the NDK's Clang and the SPIR-V tooling).

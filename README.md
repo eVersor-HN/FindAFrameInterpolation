@@ -58,6 +58,9 @@ This is the **official** distribution repository — get FAFI only from here:
 
 There is nothing else to install — the player ships with everything it needs.
 
+> 📱 **On a phone?** The same release also carries an **Android APK** — see
+> [FAFI for Android](#-fafi-for-android) below.
+
 ### Updating
 
 FAFI checks for a new version **only when you ask** (right-click → *Check for updates* — never in
@@ -69,17 +72,56 @@ shortcuts.
 
 ---
 
+## 📱 FAFI for Android
+
+**The same player, on a phone — and the interpolation really runs there.** Not a remote control
+for the desktop version and not a skin over the system player: FAFI's own motion interpolation,
+its Anime4K upscaling and its screen looks do their work on the handset, on your own files.
+
+- **Comes as an APK you install yourself** — from the same [Releases](https://github.com/eVersor-HN/FindAFrameInterpolation/releases)
+  page as the Windows build. **It is not in any app store**, so your phone will ask you to allow
+  installing from this source once. Verify its checksum first (see below).
+- **Android 10 or newer**, **64-bit ARM only** (`arm64-v8a`) — that is every phone from roughly
+  2018 onwards. There is no 32-bit and no x86 build.
+- **No internet permission at all.** The app does not request `android.permission.INTERNET`,
+  which means the operating system will not let it open a network connection even if something
+  in it tried. No ads, no account, no telemetry, no update check, no phoning home — this is not
+  a promise in a privacy policy, it is a missing capability you can verify yourself in the app's
+  permission list. The flip side is the honest one: **there is no streaming of any kind.** It
+  plays files that are on your device, and nothing else.
+  *(For completeness, since you will see it in that list: the playback library asks for
+  `ACCESS_NETWORK_STATE`, which only lets an app read whether a connection exists. Without
+  `INTERNET` it cannot open one.)*
+- **First release, and it says so.** It plays your own video and music files, does the picture
+  work, and has fullscreen, gestures, Picture-in-Picture, background audio with notification
+  controls, a history with thumbnails and resume, and folder queues. It does **not** yet have
+  subtitles while the FAFI processing is on, sound-track selection on that path, or an interface
+  in your language. The full and honest list is in
+  [**`CHANGELOG-ANDROID.md`**](CHANGELOG-ANDROID.md) — please read it before installing.
+
+Third-party components of the Android app are listed separately, under *Android app*, in
+[`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md). The APK contains no FFmpeg and nothing
+under the LGPL or GPL; decoding is done by the phone's own media stack.
+
+---
+
 ## ✅ Verify authenticity (SHA-256)
 
-Every official release publishes the **SHA-256 checksum** of `FAFI-Setup.exe`. Comparing the
-checksum of your download against the published value proves the file is the **unmodified
+Every official release publishes the **SHA-256 checksum** of each downloadable file. Comparing
+the checksum of your download against the published value proves the file is the **unmodified
 original** and was not tampered with. (The same repository address and this verification hint
-are shown inside the app under **right-click → About FAFI**.)
+are shown inside the Windows app under **right-click → About FAFI**.)
 
-**v1.15.0 — `FAFI-Setup.exe`:**
+**Windows — v1.15.0 — `FAFI-Setup.exe`:**
 
 ```
 78fed47a66c37834e1010d8f80257b3e8f757344c00b6978e531ec219032cc4f
+```
+
+**Android — v1.15.0 — `FAFI.apk`:**
+
+```
+d4d7e23e51bc9a33a6aad87d45906db00e9f986fa2227dd0270a86426822a5ec
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -89,10 +131,17 @@ The authoritative value for each release is in that release's notes and in its
 
 ```powershell
 Get-FileHash .\FAFI-Setup.exe -Algorithm SHA256
+Get-FileHash .\FAFI.apk       -Algorithm SHA256
+```
+
+**Check the APK on a phone or on Linux/macOS:**
+
+```
+sha256sum FAFI.apk
 ```
 
 The printed hash must match the value above (case-insensitive). If it does **not** match, do
-**not** run the file — it is not the genuine FAFI build.
+**not** run or install the file — it is not the genuine FAFI build.
 
 ---
 
@@ -281,6 +330,14 @@ All `rife-v4.x` model weights are **MIT-licensed** (Practical-RIFE / ECCV2022-RI
 - Optional, for their respective features only: an external `ffmpeg.exe` (export) and
   `yt-dlp` (resolving platform URLs). Neither is bundled.
 
+**Android app:**
+
+- **Android 10** or newer, **64-bit ARM** (`arm64-v8a`) only.
+- A phone with **Vulkan** support for the FAFI picture path — every 64-bit device of that
+  vintage has it. If yours doesn't get along with it, the app falls back to ordinary playback
+  instead of failing.
+- Installed by hand from the APK; not distributed through any app store.
+
 ## License (summary)
 
 FAFI is **proprietary, closed-source** software under the **FindAFrameInterpolation License**
@@ -300,5 +357,10 @@ linked, replaceable DLLs), the subtitle stack **libass** (ISC) / **FreeType** (F
 Portions of this software are copyright © The FreeType Project (www.freetype.org).
 All rights reserved. Full details and texts:
 [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md).
+
+The **Android app** is under the same license but bundles a completely different, much shorter
+set of components — the Android platform libraries (Apache-2.0), the Kotlin runtime (Apache-2.0),
+the C++ runtime (Apache-2.0 with LLVM Exception) and the **Anime4K** algorithm (MIT). **No FFmpeg,
+nothing LGPL or GPL** is in the APK. Its list is the *Android app* section of the same file.
 
 No warranty — see [`DISCLAIMER.md`](DISCLAIMER.md).
