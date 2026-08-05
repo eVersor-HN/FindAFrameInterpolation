@@ -6,6 +6,40 @@ The Windows player keeps its own list in [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
+## 1.16.0 — 2026-08-05 — it looks like FAFI now, and the picture sits where it should
+
+- **The picture no longer clings to the top of the screen.** With FAFI's own engine running, the
+  video could end up squeezed into a band across the top with black everywhere else. The renderer
+  was drawing it correctly all along — the surface it was drawn onto had kept the wrong height, and
+  the system quietly squashed the result to a quarter. Fixed, and it cannot come back the same way:
+  the two halves that disagreed now read the same value.
+- **It wears FAFI's face.** The same near-black red ground as the desktop player, the same typeface,
+  and the same accent colours — sixteen of them, from Crimson through the whole spectrum to *Ice*,
+  the colour-free one with the most contrast. The spread is deliberate: red, green and blue colour
+  blindness each keep a shade they can tell apart. *Settings → Colour.*
+- **Settings that open a list instead of counting to seventeen.** Anything with more than two
+  choices now unfolds where your finger already is, so you can see what is on offer instead of
+  tapping through it. Two-value switches stay a single tap.
+- **You can reach the settings without opening a video first.** The gear now sits on the start
+  screen as well — before, the only one was in the title bar of something already playing.
+- **Buttons you can actually hit.** Play/pause was under twenty density-independent pixels wide;
+  the guideline is forty-eight. It is seventy-two now, its neighbours fifty-six, and the symbols
+  fill them.
+- **Extra volume, up to 300 %.** For quiet recordings and for anyone who needs more than the
+  system will give. The same look-ahead limiter the desktop player uses holds the peaks, so it gets
+  louder without getting coarse. *Settings → Extra volume.*
+- **Playback speed, 0.5× to 2×.** For lectures and podcasts. Pitch stays where it belongs.
+- **A frame-rate readout, off by default.** It shows what is really being output against the
+  source rate — "85.3 fps ← 30" is the interpolation doing its job, and it is the only honest way
+  to tell whether it is delivering or has quietly throttled.
+- **New screen look: *Black & White TV*.** The same one the desktop player got: broadcast-weighted
+  brightness, detail lost along the line and not down the screen, no shadow mask because a
+  monochrome tube has none, and a cool blue-white phosphor that blooms around the highlights.
+- **The developer entry points are gone from the shipped build**, and the three look sliders
+  (strength, scanlines, tube fill) are reachable at last — they existed but nothing led to them.
+
+---
+
 ## 1.15.0 — 2026-08-05 — the first Android release
 
 **FAFI's smooth motion and its picture treatment now run on a phone.** Not a remote control for
