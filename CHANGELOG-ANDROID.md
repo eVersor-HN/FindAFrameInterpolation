@@ -6,6 +6,40 @@ The Windows player keeps its own list in [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
+## 1.17.0 — 2026-08-08 — 4K stops stuttering, and the picture you made can now leave the phone
+
+- **4K finally plays like everything else.** A ultra-high-definition film could stumble on hardware
+  that handles 1080p without breaking a sweat, and the reason turned out to be embarrassing: the
+  whole picture chain was doing its work at the resolution of the *file* instead of the resolution
+  of your *screen*. On a phone that is four times the effort for pixels nobody can see — and the
+  buffers alone were eating hundreds of megabytes. It now works at the size the picture actually
+  arrives in, with a proper filter on the way down so brickwork and closing credits do not shimmer.
+  Measured on the test phone across four different clips, from 2.5K to 4K, all at sixty frames:
+  **a rock-steady 60.00 of 60.00**, where before the first seconds were a mess of missed frames.
+- **Export.** The one thing this player could do on the desktop and not on the phone. It writes what
+  you are watching into a new file — with the intermediate frames, the picture correction and the
+  upscaling baked in, exactly as you see it. The original is never re-encoded and the sound is
+  copied across untouched. It survives you leaving the app, shows its progress in a notification,
+  and can be stopped there; whatever was written stays playable. *Settings → Export video*, and the
+  file lands in `Movies/FAFI`.
+- **The output rate is a real limit now.** Setting it below the frame rate of the film used to do
+  nothing at all — it only ever capped what the player *added*. Pull it down now and fewer frames
+  are shown, which is what you wanted when you pulled it down: less heat, more battery. The film
+  does not slow down; individual frames are left out.
+- **More frames out of the same phone.** The graphics chip used to sit idle waiting for its turn,
+  then sit idle again while the player waited for the next frame's moment to arrive. Those two waits
+  are now the same wait. On the clip that pushed the test phone hardest, the peak went from **88 to
+  120 frames per second** — the panel's full rate, reached for the first time.
+- **Nothing is invented that does not need inventing.** Ask for exactly the frame rate the film
+  already has and no intermediate frames are made at all. Give it a film that already has more
+  pixels than the screen and the upscaler stays out of it. And a single hiccup in a stream — one
+  long gap between frames — no longer convinces the player that the whole film just got slower.
+- **Subtitles from a file next to the film.** With FAFI's own engine running there were none at all,
+  because that engine only ever decoded picture and sound. `.srt`, `.vtt` and `.ass` files sitting
+  beside the video are now read and shown. This needs one thing from you first: *Settings → Share
+  folder*. Android does not let an app look into a folder otherwise — and the same permission is
+  what makes playing straight through a folder work, which quietly did nothing until now.
+
 ## 1.16.0 — 2026-08-05 — it looks like FAFI now, and the picture sits where it should
 
 - **The picture no longer clings to the top of the screen.** With FAFI's own engine running, the

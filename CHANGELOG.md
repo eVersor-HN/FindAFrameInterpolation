@@ -4,6 +4,13 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.17.0 — 2026-08-08
+- **No changes for Windows in this version.** It exists so that both products carry the same
+  version number: everything in 1.17.0 happened on the phone (see
+  [`CHANGELOG-ANDROID.md`](CHANGELOG-ANDROID.md)). The installer is a fresh build of the same
+  code, which is why its checksum differs from 1.16.0 — the player itself behaves exactly as
+  it did.
+
 ## 1.16.0 — 2026-08-05
 - **Turn it up to 300 % without it turning ugly.** The *Amplify* slider always went to 300 %, but the way it got there was a shortcut: every sample was bent through a curve, which made quiet material louder and loud material coarse. On a one-kilohertz tone at -6 dBFS that measured **11.8 % distortion**, and at full scale **25.7 %** — audible as grit on anything modern and loud. It now runs through a proper look-ahead limiter: the loudest peak still to come is known before it arrives, so the level is already pulled back when it gets there and nothing is bent that does not have to be. Same tone, same 300 %: **0.000 %**. Below the point where it starts working the signal is passed through untouched, bit for bit, and a single bang no longer ducks the quiet passage behind it.
 - **New screen look: *Black & White TV*.** Not a colour picture with the colour turned off — a monochrome set was a different machine. The broadcast carried brightness only, so the colours are weighed the way the transmitter weighed them (which is why lipstick reads black, exactly as it did in 1965). Detail is lost **along** the line and not down the screen, because that is what the narrower bandwidth did. There is no shadow mask, because a monochrome tube has one continuous coating and nothing to divide it. And the phosphor is a cool blue-white that blooms around bright areas through the thick safety glass — that glow is what makes it look lit rather than printed. Add the curved tube on top for the full living-room set.
