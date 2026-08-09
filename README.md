@@ -58,8 +58,8 @@ This is the **official** distribution repository — get FAFI only from here:
 
 There is nothing else to install — the player ships with everything it needs.
 
-> 📱 **On a phone?** The same release also carries an **Android APK** — see
-> [FAFI for Android](#-fafi-for-android) below.
+> 📱 **On a phone?** The same release also carries an **Android APK** — an **experimental**
+> side project, not a finished product. See [FAFI for Android](#-fafi-for-android) below.
 
 ### Updating
 
@@ -73,6 +73,16 @@ shortcuts.
 ---
 
 ## 📱 FAFI for Android
+
+> ### ⚠️ This one is experimental
+>
+> The Windows player is the finished product. The Android app is me trying to get the same
+> thing working on a phone, on the side, in whatever time is left over — and hoping it holds
+> up. It already does real work, and it is genuinely rough in places: things are missing,
+> some behave differently from the desktop version, and a new build can be better at one
+> thing and worse at another. **If you want something dependable, take the Windows build.**
+> If you want to see how far a phone gets, this is that — and I would rather say so here
+> than have you find out.
 
 **The same player, on a phone — and the interpolation really runs there.** Not a remote control
 for the desktop version and not a skin over the system player: FAFI's own motion interpolation,
@@ -94,10 +104,11 @@ its Anime4K upscaling and its screen looks do their work on the handset, on your
   `INTERNET` it cannot open one.)*
 - **The same twelve languages as the Windows player** — it starts in your phone's language and
   can be switched at any time under *Settings → Language*.
-- **First release, and it says so.** It plays your own video and music files, does the picture
-  work, and has fullscreen, gestures, Picture-in-Picture, background audio with notification
-  controls, a history with thumbnails and resume, and folder queues. It does **not** yet have
-  subtitles while the FAFI processing is on, or sound-track selection on that path.
+- **Young, and it says so.** It plays your own video and music files, does the picture work,
+  and has fullscreen, gestures, Picture-in-Picture, background audio with notification
+  controls, a history with thumbnails and resume, folder queues, and — new and untested by
+  anyone but me — export and subtitles from a file next to the video. Still missing on the
+  FAFI path: subtitle tracks stored **inside** the file, and sound-track selection.
   The full and honest list is in
   [**`CHANGELOG-ANDROID.md`**](CHANGELOG-ANDROID.md) — please read it before installing.
 
@@ -334,7 +345,7 @@ All `rife-v4.x` model weights are **MIT-licensed** (Practical-RIFE / ECCV2022-RI
 
 **Android app:**
 
-- **Android 10** or newer, **64-bit ARM** (`arm64-v8a`) only.
+- **Android 10** or newer, **64-bit ARM** (`arm64-v8a`) only. Experimental — see above.
 - A phone with **Vulkan** support for the FAFI picture path — every 64-bit device of that
   vintage has it. If yours doesn't get along with it, the app falls back to ordinary playback
   instead of failing.

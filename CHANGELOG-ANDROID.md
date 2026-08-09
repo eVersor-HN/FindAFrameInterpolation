@@ -2,6 +2,9 @@
 
 Every release, in plain language — what changed for you. Newest first.
 
+**The Android app is experimental** — a side project next to the finished Windows player,
+built in the time that is left over. It does real work, and it will have rough edges.
+
 The Windows player keeps its own list in [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
