@@ -332,14 +332,20 @@ SOFTWARE.
 
 ---
 
-## Real-ESRGAN — optional AI export upscaler (model not bundled)
+## Real-ESRGAN — AI export upscaler + bundled model
 - **License:** BSD 3-Clause (Copyright (c) 2021 Xintao Wang). Code AND released model
-  weights come from the same repository under that license.
+  weights come from the same repository under that license; the full text ships alongside
+  the binaries as `BSD-3-Clause-Real-ESRGAN.txt`.
 - **Linking:** FAFI contains its own ncnn-based inference engine (`src/gfx/upscale_engine.*`,
-  compiled in). **No Real-ESRGAN model is bundled** — the AI export upscale only activates
-  when the user drops an official model pair (`realesr-animevideov3-x2/x3/x4`,
-  `realesrgan-x4plus`, `realesrgan-x4plus-anime`) into `models\`. Each model remains
-  governed by its own upstream terms.
+  compiled in).
+- **Bundled model:** **`realesr-animevideov3-x2`** (`.param` + `.bin`, ~1.2 MB) is installed
+  next to the player, so the neural export upscale works out of the box and offline. These are
+  the unmodified upstream weights, redistributed under the BSD 3-Clause license above with its
+  notice and disclaimer retained.
+- **Other models are optional and not bundled:** drop any official pair
+  (`realesr-animevideov3-x3/x4`, `realesrgan-x4plus`, `realesrgan-x4plus-anime`) next to the
+  player or into a `models` subfolder, and select it with `FAFI_UPSCALE_MODEL`. Each model
+  remains governed by its own upstream terms.
 - **Source:** https://github.com/xinntao/Real-ESRGAN
 
 ---

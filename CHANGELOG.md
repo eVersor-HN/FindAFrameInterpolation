@@ -4,6 +4,26 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.18.0 — 2026-08-09
+- **Export finally has a menu.** Everything the export does — the frame rate it renders at, whether
+  it lifts the picture to 4K, whether the neural upscaler runs, H.264 or HEVC, 8-bit or 10-bit,
+  what happens to the subtitles — was previously reachable only by setting environment variables
+  before launching the player. Which meant, in practice, that nobody could reach it. It now has its
+  own page in the honeycomb menu, sitting next to the button that starts the job, and every choice
+  survives a restart. The 10-bit switch pulls the codec along with it, because ten bits only exist
+  as HEVC and an option that quietly does nothing is worse than no option.
+- **Six settings that could not be operated at all.** Deep in the code that turns a menu click into
+  an action, one test swallowed every command above a certain number and stopped there. Everything
+  written after it was unreachable, and nobody had noticed which features that was: **jumping to a
+  chapter, the sleep timer, saved profiles, the "are you still watching?" prompt and the phone
+  remote**. All of them are live again. If you ever set one of these and it did nothing, that was
+  this, and it was not your fault.
+- **The menu text now fills the tile.** Labels were drawn at a fixed size, so a short word left half
+  the hexagon empty while a long translation had to squeeze. Every label on a page is now measured,
+  and the page draws at the largest size where they all still fit — bigger, and still perfectly even
+  across every tile, in all twelve languages. Values are no longer cut off after fifteen characters
+  either, which used to slice words in half in German and Russian.
+
 ## 1.17.0 — 2026-08-08
 - **No changes for Windows in this version.** It exists so that both products carry the same
   version number: everything in 1.17.0 happened on the phone (see

@@ -9,6 +9,12 @@ The Windows player keeps its own list in [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
+## 1.18.0 — 2026-08-09
+- **No changes for Android in this version.** It exists so that both products carry the same version
+  number: everything in 1.18.0 happened on the Windows player (see [`CHANGELOG.md`](CHANGELOG.md)).
+  The app is a fresh build of the same code, which is why its checksum differs from 1.17.0 — it
+  behaves exactly as it did.
+
 ## 1.17.0 — 2026-08-08 — 4K stops stuttering, and the picture you made can now leave the phone
 
 - **4K finally plays like everything else.** A ultra-high-definition film could stumble on hardware
