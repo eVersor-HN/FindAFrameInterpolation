@@ -9,6 +9,12 @@ The Windows player keeps its own list in [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
+## 1.19.0 — 2026-08-10
+- **No changes for Android in this version.** It exists so that both products carry the same version
+  number: everything in 1.19.0 happened on the Windows player (see [`CHANGELOG.md`](CHANGELOG.md)).
+  The app is a fresh build of the same code, which is why its checksum differs from 1.18.0 — it
+  behaves exactly as it did.
+
 ## 1.18.0 — 2026-08-09
 - **No changes for Android in this version.** It exists so that both products carry the same version
   number: everything in 1.18.0 happened on the Windows player (see [`CHANGELOG.md`](CHANGELOG.md)).

@@ -4,6 +4,42 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.19.0 — 2026-08-10
+- **Five new screen looks.** Each one built from what the real thing actually does, not from a
+  colour tint with noise over it. ***Projector***: the print wanders in the gate — mostly up and
+  down, because that is the axis the claw pulls along — the two-blade shutter flickers at 48 Hz,
+  dust in the gate blocks the light and reads *dark* while emulsion damage reads bright, a hair
+  hangs in the corner for a few frames, and the lens is only sharp in the middle. ***Plasma***: a
+  plasma cell can only be on or off, and everything follows from that — the sub-field dither
+  crawling in the shadows (the one thing that tells plasma from LCD), the brightness limiter that
+  dims a full white field while a small highlight stays brilliant, tall cells with black ribs.
+  ***Halftone***: four printing plates screened at 15, 75, 0 and 45 degrees — that spread is what
+  makes the rosette you can see with a loupe — laid down subtractively on paper. ***Thermal***:
+  soft germanium optics, the gain stretch, the edge halo of the sensor correction, a fixed column
+  pattern under live noise. ***Night vision***: the sparkle of individual photon events, strongest
+  where it is *darkest*, tube bloom, and the sharp round field of the eyepiece.
+- **Shutter angle.** A film camera does not expose in an instant: the shutter stands open for part
+  of each frame, and whatever moves in that time draws a streak. That is the reason interpolated
+  video can look so bare — more frames, but every one of them frozen by a flash. The new *Shutter*
+  slider in PICTURE puts that streak back, following the motion the interpolator already measured.
+  180° is the cinema standard; it works on playback and on export alike.
+- **Black frame insertion.** A flat panel holds every frame for its whole interval, and your eye
+  keeps moving and smears it. Showing a dark frame in between shortens that hold and sharpens
+  motion — what a tube did by itself. Costs half the brightness, and needs a 100 Hz screen or
+  faster; below that it would flicker visibly, so the tile says so instead of pretending to work.
+- **Every menu page now uses the same tile size.** A page with more than 18 tiles used to shrink to
+  about 72 % — which, with the new looks, hit the page you browse. The honeycomb now grows sideways
+  into the space a widescreen window has going spare instead of shrinking everything.
+- **Long names are shortened, not chopped.** Tile text was cut at a fixed number of characters, a
+  measure that has nothing to do with how wide it actually is. Now the tile measures for itself and
+  ends on "…" exactly where it runs out of room. Playlist entries, chapters and track names all
+  benefit — and because one long entry no longer drags the whole page down, the small print on
+  *Stream login*, *Repeat*, *Speed* and the app settings is considerably bigger.
+- **Filter strength starts at full for every new look.** Pick a look and you see it, rather than
+  thirty percent of it because that is where you left the slider on the last one. Turn it down
+  afterwards as you like — until the next one. The three curvature switches now follow that slider
+  as well; they used to bend the picture at full force no matter what it said.
+
 ## 1.18.0 — 2026-08-09
 - **Export finally has a menu.** Everything the export does — the frame rate it renders at, whether
   it lifts the picture to 4K, whether the neural upscaler runs, H.264 or HEVC, 8-bit or 10-bit,
