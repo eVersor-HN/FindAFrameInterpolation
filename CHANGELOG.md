@@ -4,6 +4,50 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.20.0 — 2026-08-11
+- **The *Antenna* look was rebuilt from the physics up.** It named the right causes before, but it
+  drew them as patterns laid over the picture — and a pattern reads as fake immediately. Three
+  things were wrong, and the first one mattered most. **The grain was the wrong shape.** Receiver
+  noise passes through the set's video filter, and that filter limits *time* — and time runs along
+  the scan line. At 5 MHz over a 52 µs line, about 260 independent noise values fit on one line,
+  while one line tells the next nothing. A grain of snow is therefore a short horizontal *streak*,
+  not a dot — roughly seven pixels wide and two tall, ten times coarser than what was there.
+  **Snow is not scattered white dots.** Thermal noise is a dense, drifting veil that adds itself to
+  the picture and lifts the blacks; single bright pixels are what a *digital* fault looks like.
+  **A ghost is not a second copy.** Multipath arrives through the same narrow channel, so it lands
+  as a decaying trail, and you see it almost only at edges, because it adds. Its delay is fixed —
+  it is geometry, a roof or a wall — and only its strength wavers; before, the spacing drifted with
+  signal strength, which read as animation. On top of that the reception now *comes and goes*: a
+  fault that never stops becomes a texture. Roughly two fifths of the time the picture is clean,
+  and a real breakdown is rare — with a thunderstorm rolling through now and then, hammering the
+  picture with impulse noise. Colour is smeared four times wider than luma, because the colour
+  channel really is that much narrower; the filter's ringing leaves a bright edge on hard
+  transitions; the mains hum bar *bends* the picture instead of only brightening it; interference
+  spikes start sharp and ring away to the right; and a lightning strike overloads the front end
+  rather than lighting up the scene.
+- **The *Plasma* look stopped pumping.** Its brightness limiter was reading a single pixel — the one
+  in the dead centre of the screen — instead of the whole scene. Anything bright passing through the
+  middle dimmed the entire picture by a third and let it back up again.
+- **Shutter angle now works with the neural engine too.** It only ever affected the standard motion
+  engine; with RIFE selected, the tile happily showed *180°* and nothing happened.
+- **When something fails, the player says so again.** Pop-up notices were switched off a while back
+  because they appeared for every trivial thing — but that also swallowed the cases where you asked
+  for something and it did *not* happen: a link refused for safety, a subtitle file that will not
+  open, a missing profile, a backup or update that failed. Those went to a console you cannot see,
+  so the player simply looked like it had missed your click. They now appear briefly at the top.
+  Everything else stays quiet.
+- **Chapters beyond the twelfth are reachable.** The chapter tiles always showed the first twelve;
+  in a film with thirty, the rest could not be reached at all, and past the twelfth the "you are
+  here" mark was wrong as well. The list now follows along with the chapter you are in.
+- **Settings keep responding while something loads.** Sleep timer, profiles, the phone remote and
+  the login-cookie setting were all silently ignored during a load — seconds of clicking into
+  nothing on a stream — although none of them has anything to do with loading.
+- **Sharp on a second screen.** With two screens at different scaling — a laptop at 150 % next to an
+  external screen at 100 % is the everyday case — Windows used to take the finished window and
+  stretch it as a bitmap on the second one. The picture now stays real pixels everywhere.
+- **The program file finally carries its version.** Right-click, Properties, Details showed no
+  version, no product and no author for the player itself; only the installer had them.
+
 ## 1.19.0 — 2026-08-10
 - **Five new screen looks.** Each one built from what the real thing actually does, not from a
   colour tint with noise over it. ***Projector***: the print wanders in the gate — mostly up and
