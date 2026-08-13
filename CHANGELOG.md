@@ -4,6 +4,37 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.21.0 — 2026-08-13
+- **Your 120 Hz screen is finally used.** The frame-rate limit was meant to follow your display, but
+  only the *number* was ever saved, never the "follow along" state — so the first time you closed
+  the player, the automatic died, and a saved 60 counted as your personal choice forever after.
+  Plugging in a faster screen changed nothing. It follows again, there is an **Auto** tile for it,
+  and the limit now actually *hits* its target: it used to land at 58 instead of 60 and 113 instead
+  of 120, because every overslept millisecond was added to the next frame instead of being absorbed.
+  Measured after: 60.0 and 120.0.
+- **Dolby and DTS go to your receiver untouched.** For AC3, E-AC3, DTS and TrueHD the receiver is
+  simply the better decoder — it knows its own speakers, its own room, its own licences. Until now
+  the player decoded those tracks itself and mixed them down. Now the original bitstream leaves the
+  machine unaltered, Atmos included.
+- **You can choose where the sound goes.** The player was nailed to whatever Windows called the
+  default. On a machine whose sound runs to a TV while headphones hang off the front, that is the
+  wrong device half the time — and changing it system-wide drags every other program along.
+  There is also an exclusive mode now: no Windows mixer, no resampling behind your back.
+- **Old TV and DVD material stops combing.** A deinterlacer that only touches what actually moved,
+  so static detail stays exactly as sharp as it was. It runs before frame generation, which is what
+  keeps the interpolation from tracking the comb teeth instead of the picture.
+- **The player appears in the Windows media overlay.** Title, position and play state, and
+  play/pause/next from other apps, headsets and Bluetooth remotes — not just while it has focus.
+- **Two subtitle tracks at once.** The original below, a translation on top. For watching in a
+  language you are still learning.
+- **"Resumed at 12:34" is visible now, and it is a button.** That message existed before and was
+  cleared again on every single frame, so nobody ever saw the one line explaining why a film starts
+  twenty minutes in. Clicking it starts over.
+- **Three sliders were unusable.** Amplify, Balance and Volume ran to their maximum the moment you
+  dragged them and could never be dragged back. Amplify also lives on the Sound page now, next to
+  Volume, instead of only on the accessibility page where nobody looking for "louder" would find it.
+- **Settings that needed explaining have it.** 35 tiles — Shutter, BFI, HDR out, the export
+  switches, the subtitle controls — showed nothing at all when you hovered them.
 ## 1.20.0 — 2026-08-11
 - **The *Antenna* look was rebuilt from the physics up.** It named the right causes before, but it
   drew them as patterns laid over the picture — and a pattern reads as fake immediately. Three

@@ -9,6 +9,11 @@ The Windows player keeps its own list in [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
+## 1.21.0 — 2026-08-13
+- **No changes for Android in this version.** It exists so that both products carry the same version
+  number: everything in 1.21.0 happened on the Windows player (see [CHANGELOG.md](CHANGELOG.md)).
+  The app was rebuilt for this release, so its checksum differs from 1.20.0 even though the code
+  behind it is unchanged.
 ## 1.20.0 — 2026-08-11
 - **No changes for Android in this version.** It exists so that both products carry the same version
   number: everything in 1.20.0 happened on the Windows player (see [`CHANGELOG.md`](CHANGELOG.md)).
