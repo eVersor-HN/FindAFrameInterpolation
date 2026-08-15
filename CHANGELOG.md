@@ -4,6 +4,11 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.23.0 — 2026-08-15
+- **No changes for Windows in this version.** It exists so that both products carry the same version
+  number: everything in 1.23.0 happened on the Android app (see
+  [CHANGELOG-ANDROID.md](CHANGELOG-ANDROID.md)). The player was rebuilt for this release, so its
+  checksum differs from 1.22.0 even though the code behind it is unchanged.
 ## 1.22.0 — 2026-08-15
 - **Every setting finally explains itself.** Rest on any tile and a clean card tells you three
   things in plain words: what the name actually stands for, what the setting does to your picture

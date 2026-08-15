@@ -9,6 +9,16 @@ The Windows player keeps its own list in [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
+## 1.23.0 — 2026-08-15
+- **Subtitles work.** Plainly: with FAFI processing switched on, they never appeared at all — neither
+  the ones built into a film nor a subtitle file sitting next to it. Both work now: the tracks inside
+  the file are found and listed with their language, a matching file beside the video is picked up
+  automatically, and there is finally a button in the bar to switch between them or turn them off.
+- **Every setting explains itself.** Rest on any entry and you get three things in plain words: what
+  the name actually stands for, what it does to your picture or sound, and what is worth choosing on
+  a phone. No jargon left standing — in all twelve languages.
+- **The extra-volume slider does something while a film is running.** It only ever took effect at the
+  start of playback before, so moving it mid-film did nothing you could hear.
 ## 1.22.0 — 2026-08-15
 - **No changes for Android in this version.** It exists so that both products carry the same version
   number: everything in 1.22.0 happened on the Windows player (see [CHANGELOG.md](CHANGELOG.md)).
