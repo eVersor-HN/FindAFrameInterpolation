@@ -4,6 +4,24 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.22.0 — 2026-08-15
+- **Every setting finally explains itself.** Rest on any tile and a clean card tells you three
+  things in plain words: what the name actually stands for, what the setting does to your picture
+  or sound, and what's worth picking for your setup. No jargon left unexplained — BFI, VRR, MEMC,
+  all spelled out — in every one of the twelve languages.
+- **A performance pass across the whole player.** Streams start noticeably sooner and glide over
+  rough network moments instead of stumbling; menus, subtitles and overlays draw with a fraction of
+  the effort; the frame-generation modes stopped doing work that never reached the screen. The same
+  machine simply has more headroom now.
+- **Sound that ends politely and survives bad Wi-Fi.** A short network dropout no longer silences a
+  stream for good. Exclusive mode plays tracks to their last moment and hands the sound device back
+  to the rest of Windows the second it is done — and switching it off and on again behaves the way
+  you'd expect.
+- **Black-frame motion clarity for half the price.** The BFI mode now delivers the same crisp motion
+  at a much lower graphics load — and screenshots taken while it runs always catch the picture, not
+  the dark in between.
+- **A basket of small repairs.** The help pages stay inside their card, automatic picture tuning
+  reacts at the same pace on every display, and a dozen other rough edges are gone.
 ## 1.21.0 — 2026-08-13
 - **Your 120 Hz screen is finally used.** The frame-rate limit was meant to follow your display, but
   only the *number* was ever saved, never the "follow along" state — so the first time you closed

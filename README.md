@@ -125,16 +125,16 @@ the checksum of your download against the published value proves the file is the
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the Windows app under **right-click → About FAFI**.)
 
-**Windows — v1.21.0 — `FAFI-Setup.exe`:**
+**Windows — v1.22.0 — `FAFI-Setup.exe`:**
 
 ```
-96f907e244d03a2ec1accd02debb8179af84758b14c6819799c255b95fc7d2bb
+b41e2c5e90f3c12aa1fc068e34d33280bf09cc8bb71bebdddcc8097ba8ac5a45
 ```
 
-**Android — v1.21.0 — `FAFI.apk`:**
+**Android — v1.22.0 — `FAFI.apk`:**
 
 ```
-c82809b60d58623735ce3be934d1016a21d329a1fe441196b7ffee510ba04899
+60800baff03d86361ea4a5fcd4655705af08b6ed214e6cdf52fc473a378160f0
 ```
 
 The authoritative value for each release is in that release's notes and in its
