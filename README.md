@@ -18,6 +18,7 @@ so it stays light.
 > See [LICENSE](LICENSE) and [DISCLAIMER](DISCLAIMER.md).
 
 > 💸 You extracted joy and gave nothing back. History's worst people started exactly this small.<br>
+> **Ko-fi:** [ko-fi.com/eversorhn](https://ko-fi.com/eversorhn)<br>
 > **PayPal:** [paypal.me/FAMarco](https://paypal.me/FAMarco)<br>
 > **Bitcoin:** `bc1qv92c3eyeqvhgfnez7spfd7v2aytkhpshsl65yv`
 
