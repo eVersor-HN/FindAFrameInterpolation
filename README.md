@@ -126,16 +126,16 @@ the checksum of your download against the published value proves the file is the
 original** and was not tampered with. (The same repository address and this verification hint
 are shown inside the Windows app under **right-click → About FAFI**.)
 
-**Windows — v1.23.0 — `FAFI-Setup.exe`:**
+**Windows — v1.24.0 — `FAFI-Setup.exe`:**
 
 ```
-3e28fde649f13f8f89c2fa660c1ee1d456e555ac2bf090d957ac9888ed623f25
+db74a079edd8649733ce35bc9f80e83c4cb98ca09a4c2e8db396c78b0cf2d982
 ```
 
-**Android — v1.23.0 — `FAFI.apk`:**
+**Android — v1.24.0 — `FAFI.apk`:**
 
 ```
-2bc1d201a3c977bd8a3373ce54cbbf8166280c2f0f70cbbd621927a5534c63b4
+db0f7a9dc74da222203c0a79f2f955e0683b638d5c2c7b1e6fc5ae3b22075513
 ```
 
 The authoritative value for each release is in that release's notes and in its
@@ -203,13 +203,14 @@ drop and breath of the track.
   **Anime Disc** sharpen — plus a **curved-screen** toggle in three flavours: bare tube, tube with
   scanlines and mask, or tube with the stripe mask alone. The menu stays open so you can flick through
   them live. Off by default (zero cost).
-- **Antenna** — watching over the air, the way it actually was. The signal drifts on its own: the
-  picture is clean for a while, then it sags — the colour fades out to black and white, a ghost of
-  the image slides in beside itself, everything softens and flickers with snow, lines tear, a bar
-  drifts up the screen. A passing aircraft makes it beat, a fridge or a passing car writes bright
-  dashes across it, and now and then lightning wipes a band of it. Then it settles again. Nothing
-  loops, nothing repeats — and **Antenna + VHS** puts that reception on tape, the way a home
-  recording of a badly received broadcast really looked.
+- **Storm Signal** — a broadcast fighting the weather, the way it actually was. The signal drifts
+  on its own: the picture is clean for a while, then it sags — the colour fades out to black and
+  white, a ghost of the image slides in beside itself, everything softens and flickers with snow,
+  lines tear, a bar drifts up the screen. A passing aircraft makes it beat, a fridge or a passing
+  car writes bright dashes across it, and now and then lightning wipes a band of it — and the
+  sound sags and cuts out with it. Then it settles again. Nothing loops, nothing repeats — and
+  **Storm Signal (VHS)** puts that reception on tape, the way a home recording of a badly received
+  broadcast really looked.
 - **Fill the curved screen** — the curved tube bows the picture inwards and used to leave black
   bands top and bottom. The **Tube fill** slider pushes it back out until the edges sit flush
   against your frame, or all the way to the corners for a real television's overscan.

@@ -9,6 +9,10 @@ The Windows player keeps its own list in [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
+## 1.24.0 — 2026-08-19
+- **Cleaner motion interpolation.** The same picture-quality work as the Windows player: fewer
+  colour artefacts and less smear around moving objects, so animation and fast scenes look tidier.
+
 ## 1.23.0 — 2026-08-15
 - **Subtitles work.** Plainly: with FAFI processing switched on, they never appeared at all — neither
   the ones built into a film nor a subtitle file sitting next to it. Both work now: the tracks inside

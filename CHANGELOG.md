@@ -4,6 +4,20 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.24.0 — 2026-08-19
+- **Smoother, cleaner motion.** The interpolation was reworked around moving objects: the coloured
+  fringing and smear that used to creep in at the edges of anything in motion is largely gone, and
+  the in-between frames blend more naturally. Fast, high-contrast scenes hold together better.
+- **The retro screens look like real tubes again.** The CRT and aperture-grille looks — flat and
+  curved — were rebuilt from the ground up: fine phosphor stripes, a soft scan beam, honest colour.
+  The old wire-mesh look is gone. And the screen curvature no longer drifts when you change the
+  filter strength; it is its own switch now.
+- **The sound follows the picture.** Pick an old-television, tape, handheld or projector look and the
+  audio takes on its character — muffled, thinner, mono, and during a storm it even fades in and out
+  the way a struggling signal did. The clean, modern looks leave your sound exactly as it was.
+- **A test card while nothing plays.** Open the player with no video and you are greeted by the
+  colour bars every set showed with no reception, instead of a blank screen.
+
 ## 1.23.0 — 2026-08-15
 - **No changes for Windows in this version.** It exists so that both products carry the same version
   number: everything in 1.23.0 happened on the Android app (see
