@@ -4,6 +4,15 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.24.3 — 2026-08-19
+- **The Raster slider now works the way it should.** On the curved CRT and curved aperture looks it
+  fades the whole tube pattern — stripes, dots and scanlines together — from off (a clean picture) up
+  to full, instead of only changing the brightness. The curvature itself is untouched.
+- **The Help texts scroll now** — long explanations glide past as a ticker so you can read all of
+  them, and the window stays compact instead of stretching wide.
+- **A test card fills the player when nothing is playing** — the colour bars now cover the whole
+  window instead of sitting in a small box.
+
 ## 1.24.2 — 2026-08-19
 - **The retro tube raster is fully adjustable now.** The slider — renamed **Raster** — smoothly takes
   the curved CRT and curved aperture looks from off (just the fine phosphor stripes) all the way up to

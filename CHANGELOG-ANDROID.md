@@ -9,6 +9,10 @@ The Windows player keeps its own list in [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
+## 1.24.3 — 2026-08-19
+- **Version sync.** No Android changes; shares the version number with the Windows player. Rebuilt for
+  this release, so its checksum differs.
+
 ## 1.24.2 — 2026-08-19
 - **Version sync.** No Android changes in this version; it shares the version number with the Windows
   player, which got the update. Rebuilt for this release, so its checksum differs.
