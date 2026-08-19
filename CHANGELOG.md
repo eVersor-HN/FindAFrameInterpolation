@@ -4,6 +4,11 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.24.2 — 2026-08-19
+- **The retro tube raster is fully adjustable now.** The slider — renamed **Raster** — smoothly takes
+  the curved CRT and curved aperture looks from off (just the fine phosphor stripes) all the way up to
+  the full grid with scanlines. Before, it barely seemed to do anything.
+
 ## 1.24.1 — 2026-08-19
 - **The retro screens got two fixes.** Curved CRT and Curved Aperture now look clearly different
   again — the curved CRT shows the shadow-mask dot pattern, the aperture its straight vertical
