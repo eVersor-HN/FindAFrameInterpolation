@@ -4,6 +4,13 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.24.1 — 2026-08-19
+- **The retro screens got two fixes.** Curved CRT and Curved Aperture now look clearly different
+  again — the curved CRT shows the shadow-mask dot pattern, the aperture its straight vertical
+  stripes — and the **Scanlines** slider once more visibly changes both.
+- **Under-the-hood hardening.** Some behind-the-scenes work to make the build harder to tamper with.
+  Nothing changes for you.
+
 ## 1.24.0 — 2026-08-19
 - **Smoother, cleaner motion.** The interpolation was reworked around moving objects: the coloured
   fringing and smear that used to creep in at the edges of anything in motion is largely gone, and
