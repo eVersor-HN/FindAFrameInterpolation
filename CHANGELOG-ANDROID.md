@@ -10,8 +10,7 @@ The Windows player keeps its own list in [`CHANGELOG.md`](CHANGELOG.md).
 ---
 
 ## 1.24.1 — 2026-08-19
-- **Under-the-hood hardening.** Behind-the-scenes work to make the app harder to tamper with, and a
-  smaller download. Nothing changes for you.
+- **Maintenance update.** Minor housekeeping and a smaller download. Nothing changes for you.
 
 ## 1.24.0 — 2026-08-19
 - **Cleaner motion interpolation.** The same picture-quality work as the Windows player: fewer
