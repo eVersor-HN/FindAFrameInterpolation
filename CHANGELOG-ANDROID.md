@@ -9,6 +9,13 @@ The Windows player keeps its own list in [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
+## 1.24.4 — 2026-08-20
+- **Files your phone can't hardware-decode now play anyway.** Instead of failing on an unsupported
+  format, the app hands the file to its standard engine and plays it.
+- **Smoother playback.** Repeated source frames reuse their imported buffers instead of being rebuilt
+  every time, and after a brief slowdown the player climbs back to full quality on its own rather than
+  staying in the reduced mode.
+
 ## 1.24.3 — 2026-08-19
 - **Version sync.** No Android changes; shares the version number with the Windows player. Rebuilt for
   this release, so its checksum differs.

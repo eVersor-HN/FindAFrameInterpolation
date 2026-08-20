@@ -4,6 +4,13 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.24.4 — 2026-08-20
+- **The equaliser keeps its headroom now.** Boosting bands — or switching on Dialogue Boost over
+  already-loud material — used to push the sound into clipping. It now trims the level just enough to
+  stay clean, so the shape of the sound comes through without the crackle.
+- **Steadier HDR and a lighter audio engine.** HDR highlights hold their brightness more consistently,
+  and the sound path stops burning effort on dead-silent passages — small smoothness gains throughout.
+
 ## 1.24.3 — 2026-08-19
 - **The Raster slider now works the way it should.** On the curved CRT and curved aperture looks it
   fades the whole tube pattern — stripes, dots and scanlines together — from off (a clean picture) up
