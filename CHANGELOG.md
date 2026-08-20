@@ -4,6 +4,14 @@ Every release, in plain language — what changed for you. Newest first.
 
 ---
 
+## 1.24.5 — 2026-08-20
+- **The amplifier is genuinely louder now — and still clean.** Turning it up past 100 % used to add
+  barely any loudness, or start to distort near the top. It now lifts the level well across the whole
+  range without any crackle, right up to the maximum.
+- **Renamed to “Amplifier”, and the “300 %” readout is gone.** That number was the input gain, not how
+  much louder it actually gets — it promised more than the control can deliver. The slider position now
+  shows the strength instead.
+
 ## 1.24.4 — 2026-08-20
 - **The equaliser keeps its headroom now.** Boosting bands — or switching on Dialogue Boost over
   already-loud material — used to push the sound into clipping. It now trims the level just enough to

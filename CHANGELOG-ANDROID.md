@@ -9,6 +9,17 @@ The Windows player keeps its own list in [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
+## 1.24.5 — 2026-08-20
+- **The amplifier is genuinely louder now — and still clean.** The same fix as the Windows player:
+  turning it up lifts the level well across the whole range without distortion, right to the maximum.
+  Renamed to “Amplifier”; the misleading “300 %” number is gone.
+- **Pick any audio track.** Files with more than one soundtrack — dual-audio anime, films with several
+  dubs — now show an **Audio** entry in the pop-up menu. Switch on the fly; even tracks with a different
+  format (stereo ↔ 5.1) change over cleanly.
+- **Set a default audio and subtitle language once.** In Settings, pick your preferred spoken and
+  subtitle language; on every file the matching track is chosen automatically — no matter how the
+  language is written in the file (jpn, jp, Japanese, …). You can still switch by hand any time.
+
 ## 1.24.4 — 2026-08-20
 - **Files your phone can't hardware-decode now play anyway.** Instead of failing on an unsupported
   format, the app hands the file to its standard engine and plays it.
